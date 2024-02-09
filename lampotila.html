@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Lämpötilamuunnin</title>
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navigointivalikko" >
+            <ul>
+                <li><a href=index.html>Etusivu</a></li>
+                <li><a href=kaverilista.html>Kaverilista 1</a></li>
+                <li><a href=kaverilista2.html>Kaverilista 2</a></li>
+                <li><a href=lampotila.html>Lämpötilamuunnin</a></li>
+                <li><a href=lomake.html>Lomakkeen validiointi</a></li>
+                <li><a href=clicker.html>Clicker-peli</a></li>
+                <li><a href=sikanoppa.html>Sikanoppapeli</a></li>
+                <li><a href=hedelma.html>Hedelmäpeli</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p> Työn alla</p>
+        </section>
+
+        <section>
+
+            <div class="container" >
+            <form class="muunnin" action="">
+                <select name="" id="">
+                    <option value="celsius">  Celsius -> Fahrenheit</option>
+                    <option value="fahrenheit"> Fahrenheit -> Celcius</option>
+                </select> <br> <br>
+
+                <label for="asteet">Syötä lämpötila:</label><br>
+                <input type="text" id="asteet" name="asteet" value=""> <br> <br>
+                
+                
+                <div class="tasaus" >
+                    <input type="radio" name="desimaalit" id="yksi">
+                    <label for="yksi">1 desimaali </label> <br>
+                    <input type="radio" name="desimaalit" id="kaksi">
+                    <label for="kaksi">2 desimaalia</label> <br>
+                    <input type="radio" name="desimaalit" id="kolme">
+                    <label for="kolme">3 desimaalia</label>
+                </div> <br>
+                <input type="submit" value="Muunna"> <br>
+                <p>Tulos:</p>
+                <p id="muunnos"></p>
+                </form>
+            </div>
+
+        </section>
+    
+        
+    
+
+    <script src="lampotila.js" ></script>
+    </main>
+
+    
+    <footer>
+        <div class="footer"> 
+            Copyright &copy; 2024 <span>Mikko Pyykkönen</span>
+        </div>
+    </footer>  
+</body>
+
+</html>

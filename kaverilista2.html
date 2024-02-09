@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>Kaverilista 2</title>
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navigointivalikko" >
+            <ul>
+                <li><a href=index.html>Etusivu</a></li>
+                <li><a href=kaverilista.html>Kaverilista 1</a></li>
+                <li><a href=kaverilista2.html>Kaverilista 2</a></li>
+                <li><a href=lampotila.html>Lämpötilamuunnin</a></li>
+                <li><a href=lomake.html>Lomakkeen validiointi</a></li>
+                <li><a href=clicker.html>Clicker-peli</a></li>
+                <li><a href=sikanoppa.html>Sikanoppapeli</a></li>
+                <li><a href=hedelma.html>Hedelmäpeli</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h3>Kaverilista versio 2</h3>
+            <div class="container" >
+                <div class="sticky" >
+                    <input class="firstInput" type="text" id="friendInput" placeholder="Syötä kaverin nimi">
+                    <button class="firstButton" onclick="manageFriend('add')">Lisää kaveri</button>
+                    <button class="firstButton" onclick="manageFriend('remove')">Poista nimi</button>
+                    <button class="firstButton" onclick="manageFriend('sort')">Järjestä nimet</button>
+                    <p id="friends2"></p>
+                    <ul id="friends1"></ul>
+                </div>
+            </div>
+            
+            <script src="kaverilista2.js"></script>
+        </section>
+
+        
+    </main>
+
+    
+    <footer>
+        <div class="footer"> 
+            Copyright &copy; 2024 <span>Mikko Pyykkönen</span>
+        </div>
+    </footer>  
+</body>
+
+</html>
