@@ -261,7 +261,7 @@ footer{
         width:auto;
         max-width: 100%;
         background: url("images/13.png");
-        background-size:cover;
+        background-size:contain;
         background-position: center;
         margin: auto;
         display: flex;
