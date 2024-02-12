@@ -1,0 +1,98 @@
+#puhelin{
+    position: relative;
+    width: 250px;
+    height:450px;
+    background: url("images/13.png");
+    background-size:cover;
+    background-position: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+#valitse{
+    position:absolute;
+    display: block;
+    top: 70px;
+    margin: 0 auto;
+    background-color:gainsboro;
+    width: 160px;
+    padding: 2px;
+    font-size: 13px;
+    border: 1px solid #a3a2a2;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: bold;
+
+}
+
+#teksti{
+    font-size: medium;
+    position: absolute;
+    top: 20px;
+    font-weight: bold;
+
+}
+
+.tasaus{
+    text-align: start;
+    font-size: medium;
+    position: absolute;
+    top: 120px;
+    font-weight: bold;
+}
+
+#annetutAsteet{
+    position:absolute;
+    display:block;
+    top: 200px;
+    text-align: center;
+    font-size: medium;
+}
+
+
+#asteet{
+
+    position:absolute;
+    display:block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 160px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #a3a2a2;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#muunna{
+   
+    display:block;
+    top: 240px;
+    margin: 10px auto;
+    background-color:gainsboro;
+    width: 80px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #a3a2a2;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: bold;
+
+
+}
+
+#tulos{
+    position:absolute;
+    display:block;
+    top: 300px;
+    text-align: center;
+    font-size:xx-large;
+    color: azure;
+}

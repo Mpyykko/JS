@@ -103,10 +103,7 @@ footer{
     min-height: 250px;
 }
 
-.tasaus{
-    text-align: start;
-    font-size: small;
-}
+
 #asteet{
     width: 100px;
 }
@@ -173,7 +170,7 @@ footer{
 
 
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 800px){
     .navigointivalikko {
         display: block;
         float: none;

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lampotila.css">
+
+    
 
 
     <title>Lämpötilamuunnin</title>
@@ -34,33 +37,37 @@
         </section>
 
         <section>
+            <form id="lampotilamuunnin">
+             <div id="puhelin" action="">
+             <p id="teksti" >Valitse asteikko</p>
+                 <select id="valitse" name="">
+                     <option value="celsius">  Celsius -> Fahrenheit</option>
+                     <option value="fahrenheit"> Fahrenheit -> Celcius</option>
+                 </select> <br> <br>
+                 <div class="tasaus" >
+                     <input type="radio" name="desimaalit" id="yksi">
+                     <label for="yksi">1 desimaali </label> <br>
+                     <input type="radio" name="desimaalit" id="kaksi">
+                     <label for="kaksi">2 desimaalia</label> <br>
+                     <input type="radio" name="desimaalit" id="kolme">
+                     <label for="kolme">3 desimaalia</label>
+                 </div>
+                 <div id="annetutAsteet" >
+                     <label style="color: azure;" id="syote" for="asteet">Syötä lämpötila:</label><br>
+                     <input type="text" id="asteet" name="asteet" value=""><br>
+                     <button id="muunna" >Muunna</button>
+                     <button id="muunna" >Tyhjennä</button>
+                 </div>
+                     <p id="tulos" ></p>
+             </div>
+            </form>
+            <p id="abso" ></p>
 
-            <div class="container" >
-            <form class="muunnin" action="">
-                <select name="" id="">
-                    <option value="celsius">  Celsius -> Fahrenheit</option>
-                    <option value="fahrenheit"> Fahrenheit -> Celcius</option>
-                </select> <br> <br>
+         </section>
 
-                <label id="syote" for="asteet">Syötä lämpötila:</label><br>
-                <input type="text" id="asteet" name="asteet" value=""> <br> <br>
-                
-                
-                <div class="tasaus" >
-                    <input type="radio" name="desimaalit" id="yksi">
-                    <label for="yksi">1 desimaali </label> <br>
-                    <input type="radio" name="desimaalit" id="kaksi">
-                    <label for="kaksi">2 desimaalia</label> <br>
-                    <input type="radio" name="desimaalit" id="kolme">
-                    <label for="kolme">3 desimaalia</label>
-                </div> <br>
-                <input id="klik" type="submit" value="Muunna"> <br>
-                <p>Tulos:</p>
-                <p id="muunnos"></p>
-                </form>
-            </div>
+        
 
-        </section>
+     
     
         
     
