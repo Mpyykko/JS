@@ -259,6 +259,7 @@ footer{
       #puhelin{
         position: relative;
         width:auto;
+        max-width: 100%;
         background: url("images/13.png");
         background-size:cover;
         background-position: center;
