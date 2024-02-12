@@ -255,6 +255,19 @@ footer{
         background-color: #555;
         color: white;
       }
+
+      #puhelin{
+        position: relative;
+        width:auto;
+        background: url("images/13.png");
+        background-size:cover;
+        background-position: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    }
 }
 
 
