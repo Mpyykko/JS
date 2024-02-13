@@ -9,19 +9,17 @@ function manageFriend(toiminto) {
 
     // Jos syöte ei ole tyhjä, lisätään nimi listalle
     if (toiminto === 'add') {
-        if (friendName !== '') {
-            friendList.push(friendName);
+        if (friendName !== '') 
+            friendList.push(friendName); 
         }
-    // Poistetaan haluttu nimi
-    } else if (toiminto === 'remove') {
-        const indexToRemove = friendList.indexOf(friendName);
-        if (indexToRemove !== -1) {
-            friendList.splice(indexToRemove, 1);
-        }
-    // Järjestetään kaverilista
-    } else if (toiminto === 'sort') {
+    // poistetaan haluttu nimi tai nimet jos useampi sama nimi
+    else if (toiminto === 'remove') {
+        friendList = friendList.filter(item => item !== friendName);
+        } 
+    // järjestetään lista
+    else if (toiminto === 'sort') {
         friendList.sort();
-    }
+        }
 
     displayFriends();
     // Tyhjennetään lopuksi input seuraavaa syötettä varten

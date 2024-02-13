@@ -26,6 +26,7 @@ document.getElementById('muunna').addEventListener('click', function(event) {
     }
     
     // tähän vielä desimaalille vaihtoehdot
+    // miten napataan valittu desimaali muuttujaksi?
     let valittuDesimaali = 3;
 
     if (muunnettuLuku > -273.15){
