@@ -241,13 +241,22 @@ footer{
         color: white;
       }
 
+     
+    .sticky{
+        display: grid;
+        width: 70%;
+        margin: auto;
+
+}
       section{
         max-width: 100%;
         width: 100%;
-        margin: 40px auto;
+        margin: auto;
         text-align: center;
         align-items: center;
     }
+
+
 
       
 
@@ -256,6 +265,16 @@ footer{
         img{
             max-width: 100%;
     }
+
+    #puhelin {
+        max-width: 100%;
+        background-size: 100%;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+    }
+
+    
 
 
 }

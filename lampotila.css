@@ -6,10 +6,11 @@
     background-size:cover;
     background-position: center;
     margin: auto;
-    display: flex;
+    display:flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center;
+    flex: 1;
 }
 
 
@@ -20,6 +21,7 @@
     margin: 0 auto;
     background-color:gainsboro;
     width: 160px;
+    max-width: 100%;
     padding: 2px;
     font-size: 13px;
     border: 1px solid #a3a2a2;
@@ -62,7 +64,8 @@
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
-    width: 160px;
+    width: 100px;
+    max-width: 100%;
     padding: 5px;
     font-size: 13px;
     border: 1px solid #a3a2a2;
@@ -78,6 +81,7 @@
     margin: 10px auto;
     background-color:gainsboro;
     width: 80px;
+    max-width: 100%;
     padding: 5px;
     font-size: 13px;
     border: 1px solid #a3a2a2;
@@ -92,6 +96,7 @@
     position:absolute;
     display:block;
     top: 300px;
+    max-width: 100%;
     text-align: center;
     font-size:xx-large;
     color: azure;
