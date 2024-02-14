@@ -248,19 +248,10 @@ footer{
         margin: auto;
 
 }
-    main{
-        max-width: 100%;
-        width: 100%;
-        margin: 0;
-        text-align: center;
-        align-items: center;
-
-    }
-
       section{
         max-width: 100%;
         width: 100%;
-        margin: 0;
+        margin: auto;
         text-align: center;
         align-items: center;
     }
@@ -281,8 +272,7 @@ footer{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        margin-left: 0px;
-        margin-right: 0px;
+        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center; 
@@ -353,5 +343,9 @@ footer{
 
 
 }
+
+
+
+
 
 
