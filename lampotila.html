@@ -37,34 +37,35 @@
         </section>
 
         <section>
-             <div id="puhelin">
-             <p id="teksti" >Valitse asteikko</p>
-                 <select id="valitse" name="">
-                     <option value="celsius">  Celsius -> Fahrenheit</option>
-                     <option value="fahrenheit"> Fahrenheit -> Celcius</option>
-                 </select> <br> <br>
-                 <div class="tasaus" >
-                     <input type="radio" name="desimaalit" id="yksi">
-                     <label for="yksi">1 desimaali </label> <br>
-                     <input type="radio" name="desimaalit" id="kaksi">
-                     <label for="kaksi">2 desimaalia</label> <br>
-                     <input type="radio" name="desimaalit" id="kolme">
-                     <label for="kolme">3 desimaalia</label>
-                 </div>
-                 <div id="annetutAsteet" >
-                     <label style="color: azure;" id="syote" for="asteet">Syötä lämpötila:</label><br>
-                     <input type="text" id="asteet" name="asteet" value=""><br>
-                     <button class="muunna" id="muunto" >Muunna</button>
-                     <button class="muunna" id="nollaa" >Tyhjennä</button>
+          
+                <div class="puhelin-sisalto">
+                    <p id="teksti">Valitse asteikko</p>
+                    <select id="valitse" name="">
+                        <option value="celsius">Celsius -> Fahrenheit</option>
+                        <option value="fahrenheit">Fahrenheit -> Celsius</option>
+                    </select>
+                    <br><br>
+                    <div class="tasaus">
+                        <input type="radio" name="desimaalit" id="yksi">
+                        <label for="yksi">1 desimaali</label><br>
+                        <input type="radio" name="desimaalit" id="kaksi">
+                        <label for="kaksi">2 desimaalia</label><br>
+                        <input type="radio" name="desimaalit" id="kolme">
+                        <label for="kolme">3 desimaalia</label>
+                    </div>
+                    <div id="annetutAsteet">
+                        <label style="color: azure;" id="syote" for="asteet">Syötä lämpötila:</label><br>
+                        <input type="text" id="asteet" name="asteet" value=""><br>
+                        <button class="muunna" id="muunto">Muunna</button>
+                        <button class="muunna" id="nollaa">Tyhjennä</button>
+                    </div>
+                   
+                    <p id="tulos"></p>
+               
                 </div>
-               
-                <p id="tulos" ></p>
-               
-               
-             </div>
+          
 
             <p id="abso" ></p>
-
          </section>
 
         
