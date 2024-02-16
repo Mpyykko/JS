@@ -46,9 +46,9 @@ document.getElementById('muunto').addEventListener('click', function(event) {
     let muunnettuLuku;
     // määritellään mihin muutetaan
     if (document.getElementById('valitse').value === 'celsius') {
-        muunnettuLuku = (syotettyLuku * 1.8) + 32;
+        muunnettuLuku = (syotettyLuku * 9/5 ) + 32;
     } else {
-        muunnettuLuku = (syotettyLuku - 32) * 1.8; 
+        muunnettuLuku = (syotettyLuku - 32 ) * 5/9;
     }
     
     // tähän vielä desimaalille vaihtoehdot
@@ -72,7 +72,7 @@ document.getElementById('muunto').addEventListener('click', function(event) {
     
 
        
-
+        
         // absoluuttinen nollapisteen tarkistus
         if (muunnettuLuku > -273.15) {
             document.getElementById('tulos').innerHTML = muunnettuLuku.toFixed(tallennettuArvo).slice(0, 10); // maksimi merkkimäärä 10
