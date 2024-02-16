@@ -144,22 +144,7 @@ footer{
     transition: color 0.3s;
     font-weight: bold;
 }
-.secondButton{
-    background-color: #050044;
-    border: none;
-    color: white; 
-    padding: 10px 10px;
-    text-align: center;
-    font-family: inherit;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: color 0.3s;
-    font-weight: bold;
 
-}
 
 .firstButton:hover{
     color: rgb(109, 159, 220);
@@ -192,30 +177,29 @@ footer{
     transition: opacity 2s ease;
 }
 
-.pystyvalikko{
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        width:100%;
-        background-color: #050044;
-      }
-      
-      li a {
-        display: block;
-        color: white;
-        font-weight: bold;
-        padding: 8px 16px;
-        text-decoration: none;
-        text-align: center;
-      }
-      
-      li a:hover {
-        background-color: #555;
-        color: white;
-      }
- 
+.pystyvalikko ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #050044;
 }
+
+.pystyvalikko li a {
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.pystyvalikko li a:hover {
+    background-color: #555;
+    color: white;
+}
+ 
+
 
 
 
@@ -268,11 +252,13 @@ footer{
         justify-content: center;
         margin: auto;
 
-        .secondButton{
-           
-            width: 50%;
-        
+        .firstButton {
+            width: 50%; 
         }
+
+        
+
+    
         
     }
     img{
