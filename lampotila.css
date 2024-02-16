@@ -2,8 +2,8 @@
     position: relative;
     width: 100%;
     height: 450px;
-    background-image: url("images/13.png");
-    background-size: contain;
+    background-image: url("images/iphone-12-red.jpg");
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
@@ -18,7 +18,7 @@
 #valitse{
     position:absolute;
     display: block;
-    top: 70px;
+    top: 90px;
     margin: 0 auto;
     background-color:gainsboro;
     width: 160px;
@@ -35,7 +35,7 @@
 #teksti{
     font-size: medium;
     position: absolute;
-    top: 20px;
+    top: 30px;
     font-weight: bold;
     max-width: 100%;
 
