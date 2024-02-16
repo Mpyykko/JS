@@ -251,6 +251,8 @@ footer{
         align-items: center;
         justify-content: center;
         margin: auto;
+      }
+      
 
         .firstButton {
             width: 50%; 
@@ -258,9 +260,7 @@ footer{
 
         
 
-    
-        
-    }
+
     img{
         max-width: 100%;
     }

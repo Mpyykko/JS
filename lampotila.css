@@ -20,15 +20,16 @@
     display: block;
     top: 90px;
     margin: 0 auto;
-    background-color:gainsboro;
+    background-color:rgba(248, 248, 248, 0.61);
     width: 160px;
     max-width: 100%;
     padding: 2px;
     font-size: 13px;
-    border: 1px solid #a3a2a2;
-    border-radius: 7px;
+    border: none;
+    border-radius: 5px;
     font-family: inherit;
     font-weight: bold;
+    color: black;
 
 }
 
@@ -73,7 +74,7 @@
     padding: 5px;
     font-size: 13px;
     border: 1px solid #a3a2a2;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: inherit;
     font-weight: bold;
 }
@@ -83,16 +84,16 @@
     display:block;
     top: 240px;
     margin: 10px auto;
-    background-color:gainsboro;
+    background-color:rgba(248, 248, 248, 0.61);
     width: 80px;
     max-width: 100%;
     padding: 5px;
     font-size: 13px;
-    border: 1px solid #a3a2a2;
-    border-radius: 7px;
+    border: 1px solid rgba(80, 80, 80, 0.61);
+    border-radius: 5px; 
     font-family: inherit;
     font-weight: bold;
-
+    color: black;
 
 }
 
