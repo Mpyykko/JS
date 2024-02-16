@@ -144,6 +144,22 @@ footer{
     transition: color 0.3s;
     font-weight: bold;
 }
+.secondButton{
+    background-color: #050044;
+    border: none;
+    color: white; 
+    padding: 10px 10px;
+    text-align: center;
+    font-family: inherit;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: color 0.3s;
+    font-weight: bold;
+
+}
 
 .firstButton:hover{
     color: rgb(109, 159, 220);
@@ -251,6 +267,13 @@ footer{
         align-items: center;
         justify-content: center;
         margin: auto;
+
+        .secondButton{
+           
+            width: 50%;
+        
+        }
+        
     }
     img{
         max-width: 100%;
@@ -347,7 +370,7 @@ footer{
         transform: translateX(-50%);
         max-width: 100%;
         text-align: center;
-        
+
         color: azure;
     }
     
