@@ -33,6 +33,11 @@
 
 }
 
+#valitse:hover{
+    background-color: rgba(165, 165, 165, 0.788);
+    cursor: pointer;
+}
+
 #teksti{
     font-size: medium;
     position: absolute;
@@ -96,6 +101,14 @@
     color: black;
 
 }
+
+.muunna:hover{
+    background-color: rgba(165, 165, 165, 0.788);
+    cursor:pointer;
+    
+}
+
+
 
 #tulos {
     position: absolute;
