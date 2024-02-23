@@ -1,0 +1,115 @@
+
+
+#kayttaja, #salasana1, #salasana2, #email, #nimi, #osoite, #postinumero {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 20%;
+    border: 1px solid #ccc;
+    
+  
+}
+
+.pakolliset::before{
+    content: '* ';
+    color: red;
+    font-size: small;
+}
+
+
+
+#lisatietoa {
+    margin-bottom: 10px;
+    padding: 15px;
+
+    height: 150px;
+    border: 1px solid #ccc;
+    text-align: left;
+    white-space: normal;
+    
+}
+
+#lomake {
+    width: 100%;
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    text-align: left;
+}
+
+#lomake label {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    text-align: left;
+}
+
+#lomake input[type="text"] {
+   
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 100%;
+}
+#lomake input[type="password"] {
+   
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.rekkausNappi{
+   
+        background-color: #050044;
+        border: 1px solid black;
+        color: white; 
+        padding: 8px 8px;
+        text-align: center;
+        font-family: inherit;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: color 0.3s;
+        font-weight: bold;
+    }
+    
+    
+    .rekkausNappi:hover{
+        color: rgb(109, 159, 220);
+    }
+
+    .tyhjennysNappi{
+   
+        background-color: #969696;
+        border: 1px solid rgb(75, 74, 74);
+        color: white; 
+        padding: 8px 8px;
+        text-align: center;
+        font-family: inherit;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: color 0.3s;
+        font-weight: bold;
+    }
+    
+    
+    .tyhjennysNappi:hover{
+        color: rgb(66, 67, 68);
+    }
+
+    .valitseMaa{
+   
+      
+        border: 1px solid #050044;
+        padding: 5px 5px;
+        text-align: left;
+        font-family: inherit;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight:bolder;
+    }
+

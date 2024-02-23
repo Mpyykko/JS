@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lomake.css">
 
 
     <title>Lomake</title>
@@ -30,10 +31,79 @@
 
     <main>
         <section>
-            <p>Tulossa</p>
+            <h4>Työn alla</h4>
+            
             
         </section>
     
+  
+
+      <section>
+            <div id="rekkauslomake" >
+                <form id="lomake" onsubmit="kasitteleLomake(event)">
+                    <h2>Rekisteröitymislomake</h2>
+                 
+                    
+                        <label for="kayttaja" class="pakolliset" >Käyttäjänimi:</label>
+                        <input type="text" id="kayttaja" name="kayttaja"><br>
+
+                        <label for="salasana1" class="pakolliset" >Salasana:</label>
+                        <input type="password" id="salasana1" name="salasana1"><br>
+
+                        <label for="salasana2" class="pakolliset" >Vahvista salasana:</label>
+                        <input type="password" id="salasana2" name="salasana2"><br>
+
+                        <label for="nimi" class="pakolliset" >Nimi:</label>
+                        <input type="text" id="nimi" name="nimi"><br>
+
+                        <label for="osoite" class="pakolliset" >Osoite:</label>
+                        <input type="text" id="osoite" name="osoite"><br>
+                        <div >
+                        <label for="maa" class="pakolliset" >Maa:</label>
+                        <select class="valitseMaa" id="maa" name="maa">
+                        <option value="valinta" selected disabled>Valitse maa</option>
+                        <option value="suomi">Suomi</option>
+                        <option value="ruotsi">Ruotsi</option>
+                        <option value="muu">Muu maa</option>
+                        </select>
+                        </div> <br>
+
+                        <label for="postinumero" class="pakolliset" >Postinumero:</label>
+                        <input type="text" id="postinumero" name="postinumero"><br>
+
+                        <label for="email" class="pakolliset" >Sähköposti:</label>
+                        <input type="text" id="email" name="email"><br>
+
+                        <label for="mies" class="pakolliset" >Sukupuoli:
+                            <input type="radio" id="mies" name="sukupuoli" value="mies"> Mies
+                        </label>
+                        <label>
+                            <input type="radio" id="nainen" name="sukupuoli" value="nainen"> Nainen
+                        </label> <br> <br>
+
+                        <label for="suomi" class="pakolliset" >Kieli:
+                            <input type="checkbox" id="suomi" name="kieli" value="suomi"> Suomi
+                        </label>
+                        <label>
+                            <input type="checkbox" id="muukieli" name="kieli" value="muu kieli"> Muu kieli
+                        </label> <br> <br>
+
+                        <label for="lisatietoa">Lisätietoa</label> <br>
+                        <input type="text" id="lisatietoa" name="lisatietoa"><br>
+
+                        <input class="rekkausNappi" type="submit" value="Lähetä">
+                        <input class="tyhjennysNappi" type="button" value="Tyhjennä" onclick="tyhjenna()">
+
+                        <p class="pakolliset" style="font-size: smaller;"> Pakolliset kentät</p>
+                    
+                </form>
+            </div>
+                        <p id="lahetysviesti"></p>
+           
+                
+        </section>
+
+        
         
     
 
@@ -45,7 +115,10 @@
         <div class="footer"> 
             Copyright &copy; 2024 <span>Mikko Pyykkönen</span>
         </div>
-    </footer>  
+    </footer>
+
+<script src="lomake.js" ></script>
+
 </body>
 
 </html>
