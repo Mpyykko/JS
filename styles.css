@@ -24,7 +24,7 @@ body {
 
 section{
     max-width: 100%;
-    width: 80%;
+    width: 100%;
     margin: 0px auto;
     text-align: center;
     align-items: center;
@@ -219,19 +219,8 @@ color: rgb(109, 159, 220);
         padding: 0;
         
     }
-    body{
-    font-family: Open Sans, sans-serif;
-    transition: background 0.8s ease;
-    background-color:azure;
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    background-position: center; 
-    width: 100%;
-    margin: 0;
-    padding: 0; 
+
    
-    }
-    
     .navigointivalikko ul {
         list-style-type: none;
         margin: 0;
