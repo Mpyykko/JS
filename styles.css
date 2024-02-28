@@ -209,8 +209,11 @@ color: rgb(109, 159, 220);
 
 
 
-@media only screen and (max-width: 100px){
-    .navigointivalikko {
+@media only screen and (max-width: 800px){
+    
+
+
+    /*.navigointivalikko {
         display: block;
         float: none;
         height: auto;
@@ -221,6 +224,7 @@ color: rgb(109, 159, 220);
         
     }
 
+    
    
     .navigointivalikko ul {
         list-style-type: none;
@@ -249,6 +253,7 @@ color: rgb(109, 159, 220);
         background-color: #555;
         color: white;
       }
+      */
 
       .allekkain {
         display: flex;
