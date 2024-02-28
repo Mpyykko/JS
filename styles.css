@@ -208,7 +208,7 @@ color: rgb(109, 159, 220);
 
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 400px){
     .navigointivalikko {
         display: block;
         float: none;
@@ -222,7 +222,7 @@ color: rgb(109, 159, 220);
     body{
     font-family: Open Sans, sans-serif;
     transition: background 0.8s ease;
-    background-color: #050044;
+    background-color:azure;
     background-size:100% 100%;
     background-repeat: no-repeat;
     background-position: center; 
