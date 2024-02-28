@@ -93,7 +93,7 @@ function pakollisetKentat(){
     
     
     else if (!salasananTarkistus(salasana1)) {
-        document.getElementById('lahetysviesti').innerHTML = 'Tarkista salasana. Salasanassa tulee olla vähintään 6 merkkiä ja sen täytyy sisältää vähintään 1 iso kirjain, 1 numero ja jokin erikoismerkki';
+        document.getElementById('lahetysviesti').innerHTML = 'Tarkista salasana. Salasanassa tulee olla vähintään 6 merkkiä ja sen täytyy sisältää vähintään 1 iso kirjain, 1 numero ja jokin erikoismerkki "!@£$€&%#"';
         document.getElementById('salasana1').value = '';
         document.getElementById('salasana2').value = ''; 
     }
