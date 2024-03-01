@@ -1,0 +1,23 @@
+#cookie{
+
+    background-size: cover;
+    width: 200px;
+    cursor: pointer;
+
+  
+    
+}
+#cookie:hover{
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+    
+}
+#cookie:active {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+}
+
+.ominaisuudet{
+    cursor: pointer;
+    width: 100px;
+}

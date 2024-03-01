@@ -36,19 +36,24 @@
             background-size: 100% 100%;
         }
 
-            @media only screen and (max-width: 900px) {
+            @media only screen and (max-width: 1200px) {
        
         .tippuvat {
             width: 20%;
         }
         .pelikone-container{
-            height: 400px;
+            height: 60vh;
             width: 90%;
         }
         .rulla{
             top: 42%;
             width: 15%;
             height: 25%;
+        }
+        .rulla-symboli{
+            width: 80%;
+            height: 40%;
+
         }
 
        
@@ -57,6 +62,7 @@
      </style>
 
     <main>
+        <h1 style="color: rgb(100, 90, 1);" > Coming soon </h1>
       
         
         <img src="pelikuvat/bar.png" width=10% class="tippuvat" alt="bar">
@@ -67,6 +73,10 @@
         <img src="pelikuvat/seiska.png" width=10% class="tippuvat" alt="seiska">
 
         <div class="pelikone-container">
+            <h4 id="viestirivi">Saldo 100.00</h4>
+            
+
+
             <div id="rulla1" class="rulla">
                 <img src="pelikuvat/bar.png" class="rulla-symboli" alt="bar">
                 <img src="pelikuvat/rypale.png" class="rulla-symboli" alt="rypäle">
@@ -91,12 +101,21 @@
                 <img src="pelikuvat/bar.png" class="rulla-symboli" alt="bar">
 
             </div>
-    
+
+            <button id="lukitse1" class="lukitse-painikkeet"></button>
+            <button id="lukitse2" class="lukitse-painikkeet"></button>
+            <button id="lukitse3" class="lukitse-painikkeet"></button>
+            <button id="lukitse4" class="lukitse-painikkeet"></button>
+
+            <button id="panos-painike" class="peli-painikkeet" ></button>
+
+           
+            <button id="pelaa-painike" class="peli-painikkeet" ></button>
+            <audio id="pelaa-klik" src="sounds/klik1.wav"> </audio>
             
-      
-                
+        
             </div>
-            <h1 style="color: rgb(100, 90, 1);" > Coming soon </h1>
+            
 
    
     

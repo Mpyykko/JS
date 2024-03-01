@@ -66,54 +66,53 @@
   
     .pelikone-container {
         position: relative;
-        width: 70%;
+        width: 60%;
         margin: 20px auto;
         border: 2px solid black;
         height: 90vh;
-        background-image: url(pelikuvat/rullatausta.png);
+        background-image: url(pelikuvat/rullataustamarley.png);
         background-size: 100% 100%;
         background-position: center;
     }
     .rulla{
         position: absolute;
         background-color: rgb(243, 245, 245, 0.8);
-        width: 10%;
-        height: 25%;
-        border: 2px solid black;
-        border-radius: 2px;
+        width: 15%;
+        height: 30%;
+        border: 3px solid black;
+        border-radius: 5px;
         top: 42%;
         overflow: hidden;
       
     }
     #rulla1 {
         left: 16%;
-        }
+    }
         
-        #rulla2 {
-            left: 34%;
-        }
+    #rulla2 {
+        left: 34%;
+    }
         
         #rulla3 {
-            left: 52%;
-        }
+        left: 52%;
+    }
         
-        #rulla4 {
-            left: 70%;
-        }
+    #rulla4 {
+        left: 70%;
+    }
 
-        .rulla-symboli {
+    .rulla-symboli {
     
-            width: 70%;
-            height: auto;
-            position: absolute;
-            margin: 0px auto;
-            left: 0;
-            right: 0;
-            animation: liikuYlhaaltaAlas 1s linear infinite;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            
-        }
+        width: 60%;
+        height: auto;
+        position: absolute;
+        margin: 0px auto;
+        left: 0;
+        right: 0;
+        animation: liikuYlhaaltaAlas 1s linear infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;      
+    }
         @keyframes liikuYlhaaltaAlas {
             0% {
                 top: -100px;
@@ -137,5 +136,83 @@
             animation-delay: 0.7s;
           
         }
+
+    .lukitse-painikkeet{
+        position: absolute;
+        background-image: url(pelikuvat/lukitse.png);
+        background-size: 100% 100%;
+        width: 15%;
+        height: 40px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        top: 75%;
+    }
+
+    .lukitse-painikkeet:hover{
+        transform: scale(0.95);
+        transition: transform 0.2s ease;  
+    }
+
+
+
+    #lukitse1 {
+        left: 16%;
+    }
         
+    #lukitse2 {
+        left: 34%;
+    }
+        
+    #lukitse3 {
+        left: 52%;
+    }
+        
+    #lukitse4 {
+        left: 70%;
+    }
     
+
+        
+
+
+    #pelaa-painike{
+        position: absolute;
+        background-image: url(pelikuvat/pelaa.png);
+        background-size: 100% 100%;
+        top: 90%;
+        width: 15%;
+        left: 70%;
+        height: 40px;
+        border: 2px solid grey;
+        border-radius: 5px;
+    }
+    #pelaa-painike:hover{
+        transform: scale(0.95);
+        transition: transform 0.2s ease;  
+    }
+
+    #panos-painike{
+        position: absolute;
+        background-image: url(pelikuvat/panos.png);
+        background-size: 100% 100%;
+        top: 90%;
+        left: 16%;
+        width: 15%;
+        height: 40px;
+        border: 2px solid grey;
+        border-radius: 5px;
+    }
+    #panos-painike:hover{
+        transform: scale(0.95);
+        transition: transform 0.2s ease;
+        
+    }
+
+    #viestirivi{
+        position:absolute;
+        top: 30%;
+        left: 16%;
+        color:whitesmoke;
+        font-size: large;
+       
+    }

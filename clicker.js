@@ -45,6 +45,7 @@ function upgradeClicked(){
     else {
         alert('Ei tarpeeksi pisteitä!')
     }
+   
 }
 
 function autoClickerClicked(){
