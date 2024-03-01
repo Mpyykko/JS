@@ -70,9 +70,15 @@
         margin: 20px auto;
         border: 2px solid black;
         height: 90vh;
-        background-image: url(pelikuvat/rullataustamarley.png);
+        background-image: url(pelikuvat/pelkkalippu.png);
         background-size: 100% 100%;
         background-position: center;
+    }
+
+    .peli-otsikko{
+        position: relative;
+        width: 70%;
+       
     }
     .rulla{
         position: absolute;
@@ -212,6 +218,6 @@
         top: 30%;
         left: 16%;
         color:whitesmoke;
-        font-size: large;
+        font-size: medium;
        
     }
