@@ -3,7 +3,7 @@
     width: 60%;
     margin: 20px auto;
     border: 2px solid black;
-    height: 70vh;
+    height: auto;
     background-size: 100% 100%;
     background-position: center;
   
@@ -12,13 +12,12 @@
 #cookie{
   
   
-    width: 30%;
+    width: 20%;
     cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
   
     
-
-
-  
     
 }
 #cookie:hover{
@@ -32,7 +31,58 @@
 }
 
 .ominaisuudet{
-   
     cursor: pointer;
     width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.valikko{
+   
+    width: 100%;
+    background-color: rgb(2, 11, 95);
+    height: 40px;
+    border-bottom: 5px solid rgb(60, 22, 228);
+
+}
+
+#ohjesivu{
+    display: none;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-image: url(clicker-kuvat/peliohjetausta.png);
+    background-size: 100% 100%;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.naytaOhje{
+    position: absolute;
+    background-image: url(clicker-kuvat/infobutton.png);
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    top: 0%;
+    right: 3%;
+}
+
+.piilotaOhje{
+    position: absolute;
+    background-image: url(clicker-kuvat/closebutton.png);
+    background-size: 100% 100%;
+    width: 40px;
+    height: 40px;
+    bottom: 10%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+   
+
 }
