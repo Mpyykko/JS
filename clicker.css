@@ -9,20 +9,23 @@
     background-color: whitesmoke;
     background-size: 100% 100%;
     background-position: center;
+    margin: 0 auto;
+    padding: 0;
   
 }
 
 
 
 #cookie{
-
-    width: 15%;
+    position: relative;
+    width: 22%;
     cursor: pointer;
     margin-top: 80px;
  
 
    
 }
+
 
 
 @keyframes move {
@@ -46,6 +49,22 @@
 }
 
 
+#naytaPromillet{
+    position: absolute;
+    left: 1%;
+}
+
+#naytaTuopit{
+    position: absolute;
+    left: 45%;
+}
+
+.naytaPisteet{
+    position: absolute;
+    left: 40%;
+    bottom: 0%;
+
+}
 
 .ominaisuudet{
     cursor: pointer;
@@ -185,6 +204,9 @@
     #cookie{
         width: 30%;
     }
+    #logo{
+        width: 70%;
+    }
 
 }
 
@@ -196,6 +218,9 @@
     #cookie{
         width: 35%;
     }
+    #logo{
+        width:100%;
+    }
 
 }
 
@@ -206,6 +231,9 @@
     }
     #cookie{
         width: 40%;
+    }
+    #logo{
+        width: 100%;
     }
 
 }
