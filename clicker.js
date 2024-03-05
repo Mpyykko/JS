@@ -1,5 +1,5 @@
 
-const cookie = document.getElementById('cookie');
+const klikki = document.getElementById('cookie');
 const displayCookies = document.getElementById('displayCookies');
 const uusiPeli = document.getElementById('uusiPeli');
 const upgrade = document.getElementById('upgrade');
@@ -10,14 +10,14 @@ let ilmoitus = document.getElementById('ilmoitusteksti');
 
 
 
-cookie.addEventListener('click', cookieClicked);
+klikki.addEventListener('click', cookieClicked);
 uusiPeli.addEventListener('click', aloitaUusiPeli);
 upgrade.addEventListener('click', upgradeClicked);
 autoClicker.addEventListener('click', autoClickerClicked);
 
 
 
-let cookies = 0;
+let klikit = 0;
 let multiplier = 1;
 let multiplierCost = 25;
 let autoClickers = 0;
@@ -25,32 +25,53 @@ let autoClickerCost = 50;
 
 
 function cookieClicked(){
-    cookies = cookies + multiplier;
+    klikit = klikit + multiplier;
     displayCookiesAmount();
     ilmoitusteksti.innerHTML = ('');
+
+    if(klikit >= 10 && klikit < 20){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppiekahorppy.png';
+    }
+    else if(klikit >=20 && klikit <30){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
+    }
+
+    else if(klikit >=30 && klikit <40){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
+    }
+
+
+    if(klikit >=50){
+        klikit = 0;
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png'
+        ilmoitusteksti.innerHTML = ('Tuoppi tyhjennetty!');
+
+    }
+
 }
 
 
 
 
 function displayCookiesAmount(){
-displayCookies.innerHTML = (`Pisteet ${cookies}`);
+displayCookies.innerHTML = (`Pisteet ${klikit}`);
 
 }
 
 
 
 function aloitaUusiPeli() {
-    cookies = 0;
+    klikit = 0;
     autoClickers = 0;
     
     displayCookiesAmount();
     ilmoitusteksti.innerHTML = ('');
+    document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
 }
 
 function upgradeClicked(){
-    if (cookies >= multiplierCost){
-        cookies = cookies - multiplierCost;
+    if (klikit >= multiplierCost){
+        klikit = klikit - multiplierCost;
         displayCookiesAmount();
 
     }
@@ -61,8 +82,8 @@ function upgradeClicked(){
 }
 
 function autoClickerClicked(){
-    if (cookies >= autoClickerCost){
-        cookies = cookies - autoClickerCost;
+    if (klikit >= autoClickerCost){
+        klikit = klikit - autoClickerCost;
         displayCookiesAmount();
         autoClickers = autoClickers + 1
        
@@ -72,12 +93,12 @@ function autoClickerClicked(){
         ilmoitusteksti.innerHTML = ('Ei tarpeeksi klikkejä!');
     }
 
-
-
 }
 
+
+
 setInterval(function(){
-    cookies = cookies + autoClickers;
+    klikit = klikit + autoClickers;
     displayCookiesAmount();
 }, 100)
 
@@ -94,3 +115,5 @@ document.getElementById('naytaOhje').addEventListener('click', function() {
 document.getElementById('piilotaOhje').addEventListener('click', function() {
     document.getElementById('ohjesivu').style.display = 'none';
 });
+
+

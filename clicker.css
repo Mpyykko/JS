@@ -2,24 +2,37 @@
     position: relative;
     width: 60%;
     margin: 20px auto;
-    border: 2px solid black;
-    height: auto;
+    border: 3px solid black;
+    border-radius: 5px;
+    height: 70vh;
+    background-color: whitesmoke;
     background-size: 100% 100%;
     background-position: center;
   
 }
 
 #cookie{
-  
-  
-    width: 20%;
+ 
+    width: 15%;
     cursor: pointer;
     margin-top: 30px;
     margin-bottom: 20px;
+   
   
-    
-    
+  
 }
+
+
+@keyframes move {
+    0% {
+        transform: translate(10%, 0);
+    }
+    100% {
+        transform: translate(50%, 50%);
+    }
+}
+
+
 #cookie:hover{
     transform: scale(1.1);
     transition: transform 0.4s ease;
@@ -30,6 +43,8 @@
     transition: transform 0.2s ease;
 }
 
+
+
 .ominaisuudet{
     cursor: pointer;
     width: 100px;
@@ -39,28 +54,18 @@
     margin-top: 20px;
 }
 
-.valikko{
-   
-    width: 100%;
-    background-color: rgb(2, 11, 95);
-    height: 40px;
-    border-bottom: 5px solid rgb(60, 22, 228);
 
-}
 
 #ohjesivu{
     display: none;
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-image: url(clicker-kuvat/peliohjetausta.png);
     background-size: 100% 100%;
-    border: 3px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0px;
+    text-align: center;
+   
 }
 
 .naytaOhje{
@@ -79,10 +84,22 @@
     background-size: 100% 100%;
     width: 40px;
     height: 40px;
-    bottom: 10%;
+    bottom: 10px;
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
    
 
 }
+
+@media only screen and (max-width: 1200px) {
+    .clicker-kehys{
+        width: 90%;
+        height: 60vh;
+    }
+    #cookie{
+        width: 30%;
+    }
+
+}
+
