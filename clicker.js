@@ -5,6 +5,9 @@ const uusiPeli = document.getElementById('uusiPeli');
 const upgrade = document.getElementById('upgrade');
 const autoClicker = document.getElementById('autoClicker');
 const displayAutoclickerCost = document.getElementById('displayAutoclickerCost');
+const tuoppi = document.getElementById('naytaTuopit');
+const promille = document.getElementById('naytaPromillet');
+
 
 
 
@@ -19,39 +22,50 @@ autoClicker.addEventListener('click', autoClickerClicked);
 
 
 
-let klikit = 0;
+let klikit = 40;
 let multiplier = 1;
 let multiplierCost = 25;
 let autoClickers = 0;
-let autoClickerCost = 50;
+let autoClickerCost = 35;
+let tuopit = 0;
+let promillet = 0.00;
 
 
 
 function cookieClicked(){
-    klikit = klikit + multiplier;
-    displayCookiesAmount();
+    klikit = klikit - multiplier;
+ 
     ilmoitusteksti.innerHTML = ('');
 
-    if(klikit >= 10 && klikit < 20){
+    if(klikit <= 40 && klikit > 30){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
+    }
+
+    else if(klikit <= 30 && klikit >20){
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppiekahorppy.png';
     }
-    else if(klikit >=20 && klikit <30){
+    else if(klikit <= 20 && klikit >10){
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
     }
 
-    else if(klikit >=30 && klikit <40){
-        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
+    else if(klikit <= 10 && klikit >=1){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppikolmashorppy.png';
     }
 
 
-    if(klikit >=50){
+    if(klikit === 0){
         
-        klikit = 0;
-        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png'
+        klikit = 40;
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
         ilmoitusteksti.innerHTML = ('Tuoppi tyhjennetty!');
+        tuopit = tuopit + 1;
+        promillet = promillet + 0.25;
+        
 
 
     }
+    Tuopit();
+    Promillet();
 
 }
 
@@ -61,14 +75,26 @@ displayCookies.innerHTML = (`Pisteet ${klikit}`);
 
 }
 
+function Tuopit(){
+   naytaTuopit.innerHTML = (`Tuopit ${tuopit}`);
+    
+    }
+
+function Promillet(){
+    naytaPromillet.innerHTML = (`Promillet ${promillet}`);
+         
+    }
+    
+
 
 
 
 function aloitaUusiPeli() {
-    klikit = 0;
+    klikit = 40;
     autoClickers = 0;
-    
-    displayCookiesAmount();
+    tuopit = 0;
+    promillet = 0;
+  
     ilmoitusteksti.innerHTML = ('');
     document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
 }
@@ -77,22 +103,8 @@ function upgradeClicked(){
     if (klikit >= multiplierCost){
         klikit = klikit - multiplierCost;
 
-        displayCookiesAmount();
-        if(klikit >= 10 && klikit < 20){
-            document.getElementById('cookie').src = 'clicker-kuvat/tuoppiekahorppy.png';
-        }
-        else if(klikit >=20 && klikit <30){
-            document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
-        }
-    
-        else if(klikit >=30 && klikit <40){
-            document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
-        }
-    
-    
-       else{
-        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
-       }
+       
+        
     }
 
     
@@ -105,23 +117,56 @@ function upgradeClicked(){
 function autoClickerClicked(){
     if (klikit >= autoClickerCost){
         klikit = klikit - autoClickerCost;
-        displayCookiesAmount();
-        autoClickers = autoClickers + 1
-       
+      
+        autoClickers = autoClickers + 1; 
 
     }
     else {
         ilmoitusteksti.innerHTML = ('Ei tarpeeksi klikkejä!');
     }
 
+    
+
 }
 
 
 
 setInterval(function(){
-    klikit = klikit + autoClickers;
-    displayCookiesAmount();
-}, 100)
+    klikit = klikit - autoClickers;
+   
+    if(klikit ===0){
+        klikit = 40;
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
+        tuopit = tuopit + 1;
+        promillet = promillet + 0.25;
+        
+    }
+
+    if(klikit <= 40 && klikit > 30){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
+    }
+
+    else if(klikit <= 30 && klikit >20){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppiekahorppy.png';
+    }
+    else if(klikit <= 20 && klikit >10){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
+    }
+
+    else if(klikit <= 10 && klikit >=1){
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppikolmashorppy.png';
+    }
+
+    
+
+
+
+
+    
+    Tuopit();
+    Promillet();
+  
+}, 300)
 
 
 // ohjesivu

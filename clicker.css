@@ -3,9 +3,9 @@
     position: relative;
     width: 60%;
     margin: 20px auto;
-    border: 3px solid black;
-    border-radius: 5px;
-    height: 70vh;
+    border: 5px solid rgba(109, 83, 0, 0.76);
+    border-radius: 10px;
+    height:auto;
     background-color: whitesmoke;
     background-size: 100% 100%;
     background-position: center;
@@ -18,12 +18,12 @@
 
 #cookie{
     position: relative;
-    width: 22%;
+    width: 20%;
     cursor: pointer;
-    margin-top: 80px;
- 
+    margin-top: 100px;
+    
+    
 
-   
 }
 
 
@@ -102,9 +102,9 @@
     position: absolute;
     background-image: url(clicker-kuvat/infobutton.png);
     background-size: 100% 100%;
-    width: 35px;
-    height: 35px;
-    top: 0%;
+    width: 25px;
+    height: 25px;
+    top: 2%;
     right: 3%;
 }
 
@@ -112,8 +112,8 @@
     position: absolute;
     background-image: url(clicker-kuvat/closebutton.png);
     background-size: 100% 100%;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     bottom: 10px;
     text-align: center;
     left: 50%;
@@ -195,17 +195,36 @@
     animation-delay: 15s;
     right: 10%;
 }
+@media only screen and (max-width: 2000px) {
+    .clicker-kehys{
+        width: 60%;
+        height: 500px;
+    }
+    #cookie{
+        width: 15%;
+    }
+    #logo{
+
+        width:40%;
+    }
+
+}
+
+
+
+
+
 
 @media only screen and (max-width: 1200px) {
     .clicker-kehys{
-        width: 90%;
+        width: 80%;
         height: 60vh;
     }
     #cookie{
-        width: 30%;
+        width: 15%;
     }
     #logo{
-        width: 70%;
+        width:70%;
     }
 
 }
@@ -215,9 +234,11 @@
         width: 90%;
         height: 60vh;
     }
+
     #cookie{
-        width: 35%;
+        width: 20%;
     }
+  
     #logo{
         width:100%;
     }
@@ -230,12 +251,14 @@
         height: 60vh;
     }
     #cookie{
-        width: 40%;
+        width: 20%;
     }
     #logo{
         width: 100%;
     }
 
 }
+
+
 
 
