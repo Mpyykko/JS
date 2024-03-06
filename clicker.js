@@ -33,7 +33,12 @@ let promillet = 0.00;
 
 
 function cookieClicked(){
-    klikit = klikit - multiplier;
+
+    if (klikit >= multiplier) {
+        klikit = klikit - multiplier;
+       
+    } 
+ 
  
     ilmoitusteksti.innerHTML = ('');
 
@@ -53,9 +58,9 @@ function cookieClicked(){
     }
 
 
-    if(klikit === 0){
+    else if(klikit === 0){
         
-        klikit = 40;
+        
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
         ilmoitusteksti.innerHTML = ('Tuoppi tyhjennetty!');
         tuopit = tuopit + 1;
@@ -94,7 +99,8 @@ function aloitaUusiPeli() {
     autoClickers = 0;
     tuopit = 0;
     promillet = 0;
-  
+    
+    displayCookiesAmount();
     ilmoitusteksti.innerHTML = ('');
     document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
 }
@@ -103,7 +109,7 @@ function upgradeClicked(){
     if (klikit >= multiplierCost){
         klikit = klikit - multiplierCost;
 
-       
+        displayCookiesAmount();
         
     }
 
@@ -117,7 +123,7 @@ function upgradeClicked(){
 function autoClickerClicked(){
     if (klikit >= autoClickerCost){
         klikit = klikit - autoClickerCost;
-      
+        autoplayActive = true;
         autoClickers = autoClickers + 1; 
 
     }
@@ -129,6 +135,9 @@ function autoClickerClicked(){
 
 }
 
+function startAutoplay(){
+
+}
 
 
 setInterval(function(){
@@ -137,8 +146,6 @@ setInterval(function(){
     if(klikit ===0){
         klikit = 40;
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
-        tuopit = tuopit + 1;
-        promillet = promillet + 0.25;
         
     }
 
@@ -156,16 +163,11 @@ setInterval(function(){
     else if(klikit <= 10 && klikit >=1){
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppikolmashorppy.png';
     }
+   
 
-    
-
-
-
-
-    
     Tuopit();
     Promillet();
-  
+    displayCookiesAmount();
 }, 300)
 
 
