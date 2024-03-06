@@ -20,7 +20,7 @@
     position: relative;
     width: 20%;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 150px;
     
     
 
@@ -245,7 +245,7 @@
         height: 500px;
     }
     #cookie{
-        width: 20%;
+        height: 20%;
     }
     #logo{
         width:70%;
@@ -256,11 +256,11 @@
 @media only screen and (max-width: 800px) {
     .clicker-kehys{
         width: 90%;
-        height: 400px;
+        height: 500px;
     }
 
     #cookie{
-        width: 25%;
+        height: 20%;
     }
   
     #logo{
@@ -272,7 +272,7 @@
 @media only screen and (max-width: 550px) {
     .clicker-kehys{
         width: 90%;
-        height: 400px;
+        height: 500px;
     }
     #cookie{
         width: 25%;

@@ -81,7 +81,7 @@ displayCookies.innerHTML = (`Pisteet ${klikit}`);
 }
 
 function Tuopit(){
-   naytaTuopit.innerHTML = (`Tuopit ${tuopit}`);
+   naytaTuopit.innerHTML = (`Kolikot ${tuopit}`);
     
     }
 
