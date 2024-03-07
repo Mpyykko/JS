@@ -21,6 +21,8 @@
     width: 20%;
     cursor: pointer;
     margin-top: 130px;
+   
+    
 
    
     
@@ -38,11 +40,11 @@
 
 }
 .animated3{
-    animation: move 2s infinite;
+    animation: move 3s infinite;
 
 }
 .animated4{
-    animation: move 1s infinite;
+    animation: move 2s infinite;
 
 }
 

@@ -50,6 +50,15 @@ function cookieClicked() {
     if(promillet === 0.25){
         level1();
     }
+    else if(promillet === 0.5){
+        level2();
+    }
+    else if(promillet === 0.75){
+        level3();
+    }
+    else if(promillet === 1){
+        level4();
+    }
 }
 
 
@@ -66,12 +75,11 @@ function Promillet() {
 }
 
 function aloitaUusiPeli() {
-    document.getElementById('cookie').classList.remove('animated1');
+    document.getElementById('cookie').classList.remove('animated1','animated2','animated3','animated4');
     klikki.addEventListener('click', cookieClicked);
     klikit = 40;
     tuopit = 0;
     promillet = 0.00;
-    level = 0;
     displayCookiesAmount();
     ilmoitusteksti.innerHTML = ('');
     document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
@@ -109,7 +117,7 @@ function level4(){
 
 // Game over
 function gameOver(){
-    if(promillet >= 0.5){
+    if(promillet >= 3){
         klikki.removeEventListener('click', cookieClicked);
         ilmoitusteksti.innerHTML = ('Pääsit pelin läpi. Olet melkoinen juoppo!');
         document.getElementById('cookie').classList.remove('animated1');
