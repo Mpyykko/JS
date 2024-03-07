@@ -29,8 +29,12 @@ function cookieClicked() {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppiekahorppy.png';
     } else if (klikit <= 20 && klikit > 10) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
-    } else if (klikit <= 10 && klikit >= 1) {
+    } else if (klikit <= 10 && klikit >= 2) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppikolmashorppy.png';
+    } else if (klikit === 1) {
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
+
+
     } else if (klikit === 0) {
        
         klikit = 40;
@@ -42,7 +46,7 @@ function cookieClicked() {
         Promillet();
         gameOver();
        
-        document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
+        document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
     }
     
     displayCookiesAmount();
@@ -53,17 +57,17 @@ function cookieClicked() {
     else if(promillet === 0.5){
         level2();
     }
-    else if(promillet === 0.75){
+    else if(promillet === 1){
         level3();
     }
-    else if(promillet === 1){
+    else if(promillet >= 1.5){
         level4();
     }
 }
 
 
 function displayCookiesAmount() {
-    displayCookies.innerHTML = (`Pisteet ${klikit}`);
+    displayCookies.innerHTML = (`Klikit ${klikit}`);
 }
 
 function Tuopit() {
@@ -73,6 +77,8 @@ function Tuopit() {
 function Promillet() {
     naytaPromillet.innerHTML = (`Promillet ${promillet}`);
 }
+
+// Uuden pelin aloitus
 
 function aloitaUusiPeli() {
     document.getElementById('cookie').classList.remove('animated1','animated2','animated3','animated4');
@@ -139,7 +145,17 @@ document.getElementById('piilotaOhje').addEventListener('click', function() {
 });
 //Kauppasivut
 
+// näytetään kauppasivu
 
+document.getElementById('naytaOhje2').addEventListener('click', function() {
+    document.getElementById('ohjesivu2').style.display = 'block';
+});
+
+// suljetaan ohjesivu
+document.getElementById('piilotaOhje2').addEventListener('click', function() {
+    document.getElementById('ohjesivu2').style.display = 'none';
+
+});
 
 
 
