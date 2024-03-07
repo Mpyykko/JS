@@ -20,20 +20,42 @@
     position: relative;
     width: 20%;
     cursor: pointer;
-    margin-top: 150px;
+    margin-top: 130px;
+
+   
     
     
 
 }
 
 
+.animated1{
+    animation: move 6s infinite;
+
+}
+.animated2{
+    animation: move 4s infinite;
+
+}
+.animated3{
+    animation: move 2s infinite;
+
+}
+.animated4{
+    animation: move 1s infinite;
+
+}
+
 
 @keyframes move {
     0% {
-        transform: translate(10%, 0);
+        transform: translate(-100%);
+    }
+    50%{
+        transform: translate(100%);
     }
     100% {
-        transform: translate(50%, 50%);
+        transform: translate(-100%);
     }
 }
 
@@ -48,10 +70,20 @@
     transition: transform 0.2s ease;
 }
 
+.pelivalikko{
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid rgb(163, 172, 0);
+    background-color: darkgoldenrod;
+    color:white;
+}
 
 #naytaPromillet{
     position: absolute;
-    left: 1%;
+    left: 3%;
+   
 }
 
 #naytaTuopit{
@@ -61,8 +93,9 @@
 
 .naytaPisteet{
     position: absolute;
-    left: 40%;
-    bottom: 0%;
+    right: 3%;
+    color:white;
+  
 
 }
 
@@ -83,7 +116,6 @@
     background-color:rgba(141, 102, 2, 0.87);
 
 }
-
 
 
 #ohjesivu{
@@ -116,7 +148,7 @@
     background-size: 100% 100%;
     width: 25px;
     height: 25px;
-    top: 2%;
+    bottom: 2%;
     right: 3%;
 }
 
@@ -133,6 +165,9 @@
    
 
 }
+
+
+
 
 
 
@@ -228,10 +263,10 @@
         height: 500px;
     }
     #cookie{
-        width: 15%;
+        width: 12%;
     }
     #logo{
-        width:70%;
+        width:40%;
     }
 
 }

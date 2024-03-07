@@ -7,10 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="clicker.css">
+    <link rel="shortcut icon" href="clicker-kuvat/d.png" type="image/x-icon">
     
 
 
-    <title>Clicker</title>
+    <title>Drink it!</title>
 
     <style>
         body{
@@ -48,10 +49,17 @@
    <img src="clicker-kuvat/logo.png" id="logo" width="40%" style="text-align: center;" alt="logo"> 
 
     <div class="clicker-kehys" >
+        <div id="pelivalikko" class="pelivalikko" >
+            <span class="naytaTuopit" id="naytaTuopit">Kolikot 0</span>
+            <span id="naytaPromillet">Promillet 0.00</span>
+        </div>
 
-        <span class="naytaTuopit" id="naytaTuopit">Kolikot</span>
 
-       <span id="naytaPromillet">Promillet</span>
+        
+        
+            
+
+       
 
        
 
@@ -66,6 +74,13 @@
         <div id="klikattava" > <img src="clicker-kuvat/tuoppitaysi2.png" id="cookie" alt="tuoppi"> </div> <br>
 
         <div id="ilmoitusteksti"></div>
+        
+                   
+        <button class="ominaisuudet" type="button" id="upgrade">Tuplanopeus</button>
+        <button class="ominaisuudet" type="button" id="uusiPeli">Uusi peli <br> </button>
+
+        
+        
 
         <div id="naytaOhje" class="naytaOhje" ></div>
             <div id="ohjesivu" >
@@ -80,12 +95,17 @@
             </div>
            
     </div>
+            
 
-    <button class="ominaisuudet" type="button" id="upgrade">Tuplanopeus</button>
-    <button class="ominaisuudet" type="button" id="autoClicker">Autoklikkeri</button>
-    
-    <button class="ominaisuudet" type="button" id="uusiPeli">Uusi peli <br> </button>
         
+
+            
+
+        
+           
+    </div>
+
+   
 
         
 
