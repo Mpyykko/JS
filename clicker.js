@@ -99,6 +99,8 @@ function upgradeClicked() {
     if (tuopit >= multiplierCost) {
         tuopit = tuopit - multiplierCost;
         displayCookiesAmount();
+        ilmoitusteksti.innerHTML = ('Ostettu tuplanopeus!');
+
     } else {
         ilmoitusteksti.innerHTML = ('Ei tarpeeksi kolikoita!');
     }
@@ -149,6 +151,8 @@ document.getElementById('piilotaOhje').addEventListener('click', function() {
 
 document.getElementById('naytaOhje2').addEventListener('click', function() {
     document.getElementById('ohjesivu2').style.display = 'block';
+  
+   
 });
 
 // suljetaan ohjesivu

@@ -104,6 +104,7 @@
 }
 
 .ominaisuudet{
+    position: relative;
     cursor: pointer;
     font-family: inherit;
     width: 100px;
@@ -114,6 +115,7 @@
     background-color:darkgoldenrod;
     color: whitesmoke;
     font-weight: bold;
+    bottom: -65px;
 }
 
 .ominaisuudet:hover{
