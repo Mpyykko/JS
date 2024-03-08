@@ -12,7 +12,9 @@ uusiPeli.addEventListener('click', aloitaUusiPeli);
 tuplaklikki.addEventListener('click', tuplanopeusKlikattu);
 promillejapois.addEventListener('click', promilleKlikattu);
 
-let klikit = 40;
+
+
+let klikit = 10;
 let multiplier = 1;
 let multiplierCost = 1;
 let tuopit = 0;
@@ -41,15 +43,13 @@ function cookieClicked() {
 
     } else if (klikit === 0) {
        
-        klikit = 40;
+        klikit = 10;
         tuopit++;
         promillet += 0.25;
       
         displayCookiesAmount();
         Tuopit();
         Promillet();
-        gameOver();
-       
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
     }
     
@@ -58,22 +58,30 @@ function cookieClicked() {
 
  
 
-    if(promillet === 0.25){
+    if(promillet >=0.25 && promillet < 0.5){
         level1();
     }
-    else if(promillet === 0.5){
+    else if(promillet >= 0.5 && promillet < 1 ){
         level2();
     }
-    else if(promillet === 1){
+    else if(promillet >= 1 && promillet < 1.5){
         level3();
     }
     else if(promillet >= 1.5){
         level4();
     }
+    else{
+        level0()
+
+    }
 
     if(tuplanopeus)
     {
         klikit -= 1;
+    }
+
+    if(tuopit === 10){
+        gameOver();
     }
 
     
@@ -114,7 +122,7 @@ function aloitaUusiPeli() {
 function promilleKlikattu(){
 
     if(tuopit <1){
-        ilmoitusteksti.innerHTML = ('Ei tarpeeksi rahaa!');
+        kauppateksti.innerHTML = ('Ei tarpeeksi kolikoita!');
     }
 
     else if (promillet >= 0.25){
@@ -122,11 +130,32 @@ function promilleKlikattu(){
         promillet -= 0.25;
         Promillet();
         Tuopit();
+        kauppateksti.innerHTML = ('Ostettu!');
+
     }
+    
+ 
 
     else {
-        ilmoitusteksti.innerHTML = ('Computer says no');
+        kauppateksti.innerHTML = ('Computer says no');
     }
+
+    if(promillet >= 1.5){
+        level4(promillet);
+    }
+    else if(promillet >= 1 && promillet < 1.5){
+        level3(promillet);
+    }
+    else if(promillet >= 0.5 && promillet < 1 ){
+        level2(promillet);
+    }
+    else if(promillet >=0.25 && promillet < 0.5){
+        level1(promillet);
+    }
+    else{
+        level0(promillet)
+    }
+    
 }
 
 
@@ -140,20 +169,24 @@ function tuplanopeusKlikattu() {
         tuopit = tuopit - multiplierCost;
         Tuopit();
         displayCookiesAmount();
-        ilmoitusteksti.innerHTML = ('Ostettu tuplanopeus!');
+        kauppateksti.innerHTML = ('Ostettu tuplanopeus!');
         tuplanopeus = true;
 
         
 
 
     } else {
-        ilmoitusteksti.innerHTML = ('Ei tarpeeksi kolikoita!');
+        kauppateksti.innerHTML = ('Ei tarpeeksi kolikoita!');
     }
 
    
 }
 
 // Vaikeustasoja
+
+function level0(){
+    document.getElementById('cookie').classList.remove('animated1','animated2','animated3','animated4');
+}
 
 function level1(){
     document.getElementById('cookie').classList.add('animated1');
@@ -172,12 +205,10 @@ function level4(){
 
 // Game over
 function gameOver(){
-    if(promillet >= 2){
         klikki.removeEventListener('click', cookieClicked);
         ilmoitusteksti.innerHTML = ('Pääsit pelin läpi. Olet melkoinen juoppo!');
         document.getElementById('cookie').classList.remove('animated1','animated2','animated3','animated4');
         tuplanopeus = false;
-    }
 }
 
 // ohjesivu
@@ -207,6 +238,7 @@ document.getElementById('naytaOhje2').addEventListener('click', function() {
 // suljetaan ohjesivu
 document.getElementById('piilotaOhje2').addEventListener('click', function() {
     document.getElementById('ohjesivu2').style.display = 'none';
+    kauppateksti.innerHTML = ('');
 
 });
 

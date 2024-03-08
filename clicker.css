@@ -21,13 +21,17 @@
     width: 20%;
     cursor: pointer;
     margin-top: 130px;
-   
-    
 
-   
-    
-    
 
+}
+#ilmoitusteksti{
+    position: absolute;
+    margin: auto;
+    top: 15%;
+    text-align: center;
+   
+    left: 0;
+    right: 0;
 }
 
 
@@ -115,7 +119,7 @@
     background-color:darkgoldenrod;
     color: whitesmoke;
     font-weight: bold;
-    bottom: -65px;
+    bottom: -55px;
 }
 
 .ominaisuudet:hover{
@@ -128,7 +132,7 @@
     cursor: pointer;
     font-family: inherit;
     width: 100px;
-    height: 50px;
+    height: 70px;
     border: 3px solid rgb(153, 82, 0);
     border-radius: 20px;
     margin-top: 20px;
@@ -143,6 +147,8 @@
 }
 
 
+
+
 #ohjesivu{
     display: none;
     position: absolute;
@@ -154,6 +160,8 @@
     text-align: center;
    
 }
+
+
 
 #ohjeet{
     position: relative;
@@ -200,8 +208,19 @@
     background-size: 100% 100%;
     bottom: 0px;
     text-align: center;
-   
+  
 }
+
+#kauppateksti{
+    position:relative;
+    color: black;
+    font-weight: bold;
+    bottom: 23%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 #ohjeet2{
     position: relative;
