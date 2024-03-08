@@ -80,7 +80,7 @@ function cookieClicked() {
         klikit -= 1;
     }
 
-    if(tuopit === 10){
+    if(tuopit === 8){
         gameOver();
     }
 

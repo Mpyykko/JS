@@ -229,7 +229,7 @@
             width: 20%;
         }
         .pelikone-container{
-            height: 100vh;
+            height: 80vh;
             width: 70%;
         
         }
@@ -255,14 +255,14 @@
         
         }
 
-        @media only screen and (max-width: 1500px) {
+        @media only screen and (max-width: 1800px) {
        
             .tippuvat {
                 width: 20%;
             }
             .pelikone-container{
-                height: 80vh;
-                width: 70%;
+                height: 90vh;
+                width: 80%;
             
             }
     
@@ -289,7 +289,7 @@
                     width: 20%;
                 }
                 .pelikone-container{
-                    height: 70vh;
+                    height: 60vh;
                     width: 90%;
                 
                 }
@@ -319,7 +319,7 @@
                     width: 20%;
                 }
                 .pelikone-container{
-                    height: 70vh;
+                    height: 60vh;
                     width: 90%;
                 
                 }
