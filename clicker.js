@@ -14,7 +14,7 @@ promillejapois.addEventListener('click', promilleKlikattu);
 
 
 
-let klikit = 10;
+let klikit = 20;
 let multiplier = 1;
 let multiplierCost = 1;
 let tuopit = 0;
@@ -29,13 +29,13 @@ function cookieClicked() {
     
     ilmoitusteksti.innerHTML = ('');
 
-    if (klikit <= 40 && klikit > 30) {
+    if (klikit <= 20 && klikit > 15) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppitaysi2.png';
-    } else if (klikit <= 30 && klikit > 20) {
+    } else if (klikit <= 15 && klikit > 10) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppiekahorppy.png';
-    } else if (klikit <= 20 && klikit > 10) {
+    } else if (klikit <= 10 && klikit > 5) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppitokahorppy.png';
-    } else if (klikit <= 10 && klikit >= 2) {
+    } else if (klikit <= 5 && klikit >= 2) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppikolmashorppy.png';
     } else if (klikit === 1) {
         document.getElementById('cookie').src = 'clicker-kuvat/tuoppityhja.png';
@@ -43,7 +43,7 @@ function cookieClicked() {
 
     } else if (klikit === 0) {
        
-        klikit = 10;
+        klikit = 20;
         tuopit++;
         promillet += 0.25;
       
@@ -105,7 +105,7 @@ function Promillet() {
 function aloitaUusiPeli() {
     document.getElementById('cookie').classList.remove('animated1','animated2','animated3','animated4');
     klikki.addEventListener('click', cookieClicked);
-    klikit = 40;
+    klikit = 20;
     tuopit = 0;
     promillet = 0.00;
     displayCookiesAmount();
@@ -130,33 +130,40 @@ function promilleKlikattu(){
         promillet -= 0.25;
         Promillet();
         Tuopit();
+        promillenLasku();
         kauppateksti.innerHTML = ('Ostettu!');
+        
 
     }
+
     
- 
 
     else {
         kauppateksti.innerHTML = ('Computer says no');
     }
 
-    if(promillet >= 1.5){
-        level4(promillet);
-    }
-    else if(promillet >= 1 && promillet < 1.5){
-        level3(promillet);
+    
+   
+}
+
+function promillenLasku(promillet){
+    if(promillet >=0.25 && promillet < 0.5){
+        level1();
     }
     else if(promillet >= 0.5 && promillet < 1 ){
-        level2(promillet);
+        level2();
     }
-    else if(promillet >=0.25 && promillet < 0.5){
-        level1(promillet);
+    else if(promillet >= 1 && promillet < 1.5){
+        level3();
+    }
+    else if(promillet >= 1.5){
+        level4();
     }
     else{
-        level0(promillet)
+        level0()
+
     }
-    
-}
+};
 
 
 // Tähän tuplanopeus
