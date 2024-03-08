@@ -261,7 +261,7 @@
                 width: 20%;
             }
             .pelikone-container{
-                height: 100vh;
+                height: 80vh;
                 width: 70%;
             
             }
@@ -289,8 +289,8 @@
                     width: 20%;
                 }
                 .pelikone-container{
-                    height: 100vh;
-                    width: 70%;
+                    height: 70vh;
+                    width: 90%;
                 
                 }
         
@@ -319,8 +319,8 @@
                     width: 20%;
                 }
                 .pelikone-container{
-                    height: 100vh;
-                    width: 70%;
+                    height: 70vh;
+                    width: 90%;
                 
                 }
         
@@ -333,7 +333,7 @@
                 .rulla{
                     top: 50%;
                     width: 15%;
-                    height: 18%;
+                    height: 24%;
                 }
                 .rulla-symboli{
                     width: 60%;
