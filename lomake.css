@@ -29,10 +29,9 @@
 }
 
 #lomake {
-    width: 100%;
+    width: 30%;
     display: inline-block;
-    width: auto;
-    margin-right: 10px;
+    max-width: 100%;
     text-align: left;
 }
 
@@ -118,3 +117,55 @@
     padding: 0;
 
 }
+
+@media only screen and (max-width: 1600px) {
+    #lomake {
+        width: 40%;
+        display: inline-block;
+        max-width: 100%;
+        text-align: left;
+    }
+  
+
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #lomake {
+        width: 40%;
+        display: inline-block;
+        max-width: 100%;
+        text-align: left;
+    }
+   
+
+}
+
+@media only screen and (max-width: 800px) {
+    #lomake {
+        width: 60%;
+        display: inline-block;
+        max-width: 100%;
+        text-align: left;
+    }
+    
+
+}
+
+@media only screen and (max-width: 600px) {
+    #lomake {
+        width: auto;
+        display: inline-block;
+        max-width: 100%;
+        text-align: left;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+   
+
+}
+
+
+

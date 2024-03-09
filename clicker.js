@@ -16,7 +16,7 @@ promillejapois.addEventListener('click', promilleKlikattu);
 
 let klikit = 20;
 let multiplier = 1;
-let multiplierCost = 1;
+let multiplierCost = 2;
 let tuopit = 0;
 let promillet = 0.00;
 
@@ -56,6 +56,8 @@ function cookieClicked() {
     displayCookiesAmount();
 
 
+
+    
  
 
     if(promillet >=0.25 && promillet < 0.5){
@@ -75,10 +77,13 @@ function cookieClicked() {
 
     }
 
+    
+
     if(tuplanopeus)
     {
         klikit -= 1;
     }
+
 
     if(tuopit === 8){
         gameOver();
@@ -114,10 +119,13 @@ function aloitaUusiPeli() {
     Tuopit();
     Promillet();
     tuplanopeus = false;
+   
 
 }
 
 // promilleja pois-toiminto
+
+
 
 function promilleKlikattu(){
 
@@ -126,11 +134,11 @@ function promilleKlikattu(){
     }
 
     else if (promillet >= 0.25){
+
         tuopit --;
         promillet -= 0.25;
         Promillet();
         Tuopit();
-        promillenLasku();
         kauppateksti.innerHTML = ('Ostettu!');
         
 
@@ -142,28 +150,12 @@ function promilleKlikattu(){
         kauppateksti.innerHTML = ('Computer says no');
     }
 
+  
     
    
 }
 
-function promillenLasku(promillet){
-    if(promillet >=0.25 && promillet < 0.5){
-        level1();
-    }
-    else if(promillet >= 0.5 && promillet < 1 ){
-        level2();
-    }
-    else if(promillet >= 1 && promillet < 1.5){
-        level3();
-    }
-    else if(promillet >= 1.5){
-        level4();
-    }
-    else{
-        level0()
 
-    }
-};
 
 
 // Tähän tuplanopeus
@@ -214,7 +206,7 @@ function level4(){
 function gameOver(){
         klikki.removeEventListener('click', cookieClicked);
         ilmoitusteksti.innerHTML = ('Pääsit pelin läpi. Olet melkoinen juoppo!');
-        document.getElementById('cookie').classList.remove('animated1','animated2','animated3','animated4');
+        level0();
         tuplanopeus = false;
 }
 
