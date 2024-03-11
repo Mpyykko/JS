@@ -131,6 +131,7 @@ function promilleKlikattu(){
 
     if(tuopit <1){
         kauppateksti.innerHTML = ('Ei tarpeeksi kolikoita!');
+        return;
     }
 
     else if (promillet >= 0.25){
@@ -140,7 +141,23 @@ function promilleKlikattu(){
         Promillet();
         Tuopit();
         kauppateksti.innerHTML = ('Ostettu!');
-        
+
+        if(promillet >=0.25 && promillet < 0.5){
+            level1();
+        }
+        else if(promillet >= 0.5 && promillet < 1 ){
+            level2();
+        }
+        else if(promillet >= 1 && promillet < 1.5){
+            level3();
+        }
+        else if(promillet >= 1.5){
+            level4();
+        }
+        else{
+            level0()
+    
+        }
 
     }
 
