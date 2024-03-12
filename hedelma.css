@@ -117,7 +117,8 @@
         margin: 0px auto;
         left: 0;
         right: 0;
-        animation: liikuYlhaaltaAlas 1s linear infinite;
+        animation: liikuYlhaaltaAlas 1s  linear 10s;
+        animation-play-state: paused;
        
     }
         @keyframes liikuYlhaaltaAlas {
@@ -311,7 +312,141 @@
 
            
 
-            @media only screen and (max-width: 1000px) {
+            @media only screen and (max-width: 1500px) {
+       
+                .tippuvat {
+                    width: 20%;
+                }
+                .pelikone-container{
+                    height: 90vh;
+                    width: 70%;
+                
+                }
+        
+                .peli-otsikko{
+                position: relative;
+                width: 60%;
+                height: 20vh;
+               
+            }
+                .rulla{
+                    top: 23%;
+                    width: 14%;
+                    height: 30%;
+                }
+                .rulla-symboli{
+                    width: 50%;
+                    height: auto;
+        
+                }
+
+                .lukitse-painikkeet{
+                    position: absolute;
+                 
+                    background-size: 100% 100%;
+                    width: 14%;
+                    height: 30px;
+                    border: 2px solid grey;
+                    border-radius: 5px;
+                    top: 53%;
+                }
+
+                #pelaa-painike{
+                    position: absolute;
+                    background-color: transparent;
+                    background-size:  100% 100%;
+                    background-image: url(pelikuvat/play2.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    top: 68%;
+                    width: 20%;
+                    height: 15%;
+                    left: 39%;
+                    border: none;
+                  
+                }
+                #pelaa-painike:hover{
+                    transform: scale(0.95);
+                    transition: transform 0.2s ease;  
+                }
+            
+                #panosAlas-painike{
+                    position: absolute;
+                    background-color: transparent;
+                    background-image: url(pelikuvat/betdown.png);
+                    background-size: 100% 100%;
+                    top: 74%;
+                    left: 33%;
+                    width: 5%;
+                    height: 5%;
+                    border: none;
+                  
+                }
+                #panosAlas-painike:hover{
+                    transform: scale(0.95);
+                    transition: transform 0.2s ease;
+                }
+            
+                #panosYlos-painike{
+                    position: absolute;
+                    background-color: transparent;
+                    background-image: url(pelikuvat/betup.png);
+                    background-size: 100% 100%;
+                    top: 74%;
+                    left:60%;
+                    width: 5%;
+                    height: 5%;
+                    border: none;
+                  
+                }
+                #panosYlos-painike:hover{
+                    transform: scale(0.95);
+                    transition: transform 0.2s ease;
+                }
+            
+            
+                #pelitiedot{
+                  
+                    position: absolute;
+                    width: 100%;
+                    max-width: 100%;
+                    background-color: rgba(250, 235, 215, 0.17);
+                    height: 9%;
+                    bottom: 0%;
+                }
+            
+                
+            
+                #saldo{
+                    position:absolute;
+                    font-size:medium;
+                    font-weight: bold;
+                    left: 1%;
+                    color:white;
+                    bottom: 6px;
+                }
+            
+                #panos{
+                    position:absolute;
+                    font-size: medium;
+                    font-weight: bold;
+                    left: 44%;
+                    color:white;
+                    bottom: 6px;
+                }
+            
+                #voitto{
+                    position:absolute;
+                    font-size: medium;
+                    font-weight: bold;font-weight: bold;
+                    right: 1%;
+                    color:white;
+                    bottom: 6px;
+                }
+    
+            }
+
+            @media only screen and (max-width: 600px) {
        
                 .tippuvat {
                     width: 20%;
@@ -353,7 +488,7 @@
                 #pelaa-painike{
                     position: absolute;
                     background-color: transparent;
-                    background-size:  90% 90%;
+                    background-size:  100% 100%;
                     background-image: url(pelikuvat/play2.png);
                     background-position: center;
                     background-repeat: no-repeat;
@@ -363,7 +498,6 @@
                     left: 37%;
                     border: none;
                   
-                
                 }
                 #pelaa-painike:hover{
                     transform: scale(0.95);
@@ -423,7 +557,7 @@
                     font-weight: bold;
                     left: 1%;
                     color:white;
-                    bottom: 10px;
+                    bottom: 6px;
                 }
             
                 #panos{
@@ -432,7 +566,7 @@
                     font-weight: bold;
                     left: 44%;
                     color:white;
-                    bottom: 10px;
+                    bottom: 6px;
                 }
             
                 #voitto{
@@ -441,7 +575,7 @@
                     font-weight: bold;font-weight: bold;
                     right: 1%;
                     color:white;
-                    bottom: 10px;
+                    bottom: 6px;
                 }
     
             }

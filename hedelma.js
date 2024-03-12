@@ -24,6 +24,7 @@ panosSuuremmalle.addEventListener('click', suurennaPanosta);
 // pääohjelma
 function pelikierros(){
     if(saldo > 0 && panos <= saldo ){
+        rullatPyorii();
         saldo = saldo - panos;
         naytaSaldo();
     }
@@ -36,8 +37,20 @@ function pelikierros(){
 // pääohjelma loppuu
 
 
+// rullien pyöriminen
 
 function rullatPyorii(){
+    const rullaSymbolit = document.querySelectorAll('.rulla-symboli');
+    
+    rullaSymbolit.forEach(function(symbol, index) {
+        
+        setTimeout(function() {
+            symbol.style.animationPlayState = 'running';
+        }, index * 10);
+
+
+
+    });
    
 }
 // saldon päivitys-funktio
@@ -60,5 +73,7 @@ function suurennaPanosta() {
     naytaUusipanos.innerHTML = (`Panos <br> ${panos} €`);
     }
 }
+
+
 
 
