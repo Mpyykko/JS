@@ -42,14 +42,14 @@ function rullatPyorii(){
 }
 // saldon päivitys-funktio
 function naytaSaldo() {
-    naytaUusisaldo.innerHTML = (`Saldo ${saldo} €`);
+    naytaUusisaldo.innerHTML = (`Saldo <br> ${saldo} €`);
 }
 
 // panoksen päivitys-funktio
 function vahennaPanosta() {
     if(panos >1){
     panos--;
-    naytaUusipanos.innerHTML = (`Panos ${panos} €`);
+    naytaUusipanos.innerHTML = (`Panos <br> ${panos} €`);
     }
 }
 
@@ -57,7 +57,7 @@ function vahennaPanosta() {
 function suurennaPanosta() {
     if(panos <10 ){
     panos++;
-    naytaUusipanos.innerHTML = (`Panos ${panos} €`);
+    naytaUusipanos.innerHTML = (`Panos <br> ${panos} €`);
     }
 }
 
