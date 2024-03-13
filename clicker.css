@@ -378,10 +378,10 @@
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     .clicker-kehys{
         width: 90%;
-        height: 500px;
+        height: 80vh;
     }
 
     #cookie{

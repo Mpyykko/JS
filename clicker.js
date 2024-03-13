@@ -21,7 +21,11 @@ let tuopit = 0;
 let promillet = 0.00;
 
 
+
 function cookieClicked() {
+    
+   
+
     if (klikit >= 1) {
         klikit = klikit - multiplier;
     }
@@ -55,27 +59,35 @@ function cookieClicked() {
     
     displayCookiesAmount();
 
-
-
-    
- 
-
-    if(promillet >=0.25 && promillet < 0.5){
+    if(promillet >0.25 && promillet <= 0.5){
         level1();
+   
     }
-    else if(promillet >= 0.5 && promillet < 1 ){
+    
+   else if( promillet === 0.75 || promillet === 1){
         level2();
+      
     }
-    else if(promillet >= 1 && promillet < 1.5){
+    else if(promillet >1 && promillet <= 1.5){
         level3();
+ 
     }
-    else if(promillet >= 1.5){
+    else if(promillet > 1.5){
         level4();
+   
     }
     else{
         level0()
-
+      
     }
+
+
+
+
+   
+
+
+
 
     
 
@@ -85,11 +97,11 @@ function cookieClicked() {
     }
 
 
-    if(tuopit === 8){
+    if(tuopit === 10){
         gameOver();
     }
 
-    
+   
 }
 
 
@@ -119,6 +131,7 @@ function aloitaUusiPeli() {
     Tuopit();
     Promillet();
     tuplanopeus = false;
+    document.getElementById('naytaOhje2').disabled = false;
    
 
 }
@@ -127,34 +140,39 @@ function aloitaUusiPeli() {
 
 
 
-function promilleKlikattu(){
-
-    if(tuopit <1){
+function promilleKlikattu() {
+    if (tuopit < 1) {
         kauppateksti.innerHTML = ('Ei tarpeeksi kolikoita!');
         return;
     }
 
-    else if (promillet >= 0.25){
-
-        tuopit --;
-        promillet -= 0.25;
+    if (promillet >= 0.5) {
+        tuopit--;
+        promillet -= 0.5;
         Promillet();
         Tuopit();
         kauppateksti.innerHTML = ('Ostettu!');
-       
-
-    }
-
+        if(level1){
+            level0();
+        }
+        else if(level2){
+            level1();
+        }
+        else if(level3){
+            level2();
+        }
+        else if(level4){
+            level3();
+        }
+      
+    } 
     else {
         kauppateksti.innerHTML = ('Computer says no');
     }
 
-  
-    
-   
+    return promillet;
+ 
 }
-
-
 
 
 // Tähän tuplanopeus
@@ -207,6 +225,8 @@ function gameOver(){
         ilmoitusteksti.innerHTML = ('Pääsit pelin läpi. Olet melkoinen juoppo!');
         level0();
         tuplanopeus = false;
+        document.getElementById('naytaOhje2').disabled = true;
+
 }
 
 // ohjesivu

@@ -9,6 +9,10 @@ let saldo = 100;
 const naytaUusisaldo = document.getElementById('saldo');
 let panos = 1;
 const naytaUusipanos = document.getElementById('panos');
+let voitto = 0;
+const naytaVoitto = document.getElementById('voitto');
+
+
 
 
 // panos pienenee
