@@ -190,9 +190,9 @@
     background-size: 100% 100%;
     width: 40px;
     height: 40px;
-    bottom: 10%;
+    top: 5%;
     text-align: center;
-    left: 50%;
+    left: 95%;
     transform: translateX(-50%);
    
 
@@ -378,10 +378,10 @@
 
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     .clicker-kehys{
         width: 90%;
-        height: 80vh;
+        height: 50vh;
     }
 
     #cookie{
@@ -394,7 +394,7 @@
 
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 500px) {
     .clicker-kehys{
         width: 90%;
         height: 500px;

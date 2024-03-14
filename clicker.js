@@ -20,7 +20,7 @@ let multiplierCost = 2;
 let tuopit = 0;
 let promillet = 0.00;
 
-
+// pääohjelma alkaa
 
 function cookieClicked() {
     
@@ -82,13 +82,6 @@ function cookieClicked() {
     }
 
 
-
-
-   
-
-
-
-
     
 
     if(tuplanopeus)
@@ -103,6 +96,8 @@ function cookieClicked() {
 
    
 }
+
+// pääohjelma loppuu
 
 
 function displayCookiesAmount() {
@@ -243,21 +238,26 @@ document.getElementById('piilotaOhje').addEventListener('click', function() {
 });
 
 
-//Kauppasivut
 
-// näytetään kauppasivu
+//kauppasivut
 
 document.getElementById('naytaOhje2').addEventListener('click', function() {
-    document.getElementById('ohjesivu2').style.display = 'block';
-  
    
+    document.getElementById('ohjesivu2').style.display = 'none';
+    
+    // tarkistetaan, onko taustakuva ladattu
+    let taustakuva = new Image();
+
+    taustakuva.onload = function() {
+        document.getElementById('ohjesivu2').style.display = 'block';
+    };
+    taustakuva.src = 'clicker-kuvat/kauppatausta.png';
 });
 
-// suljetaan ohjesivu
+// suljetaan kauppasivu
 document.getElementById('piilotaOhje2').addEventListener('click', function() {
     document.getElementById('ohjesivu2').style.display = 'none';
     kauppateksti.innerHTML = ('');
-
 });
 
 
