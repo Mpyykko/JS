@@ -188,11 +188,11 @@
     position: absolute;
     background-image: url(clicker-kuvat/closebutton.png);
     background-size: 100% 100%;
-    width: 40px;
-    height: 40px;
-    top: 5%;
+    width: 30px;
+    height: 30px;
+    bottom: 2%;
     text-align: center;
-    left: 95%;
+    left: 50%;
     transform: translateX(-50%);
    
 
@@ -381,7 +381,7 @@
 @media only screen and (max-width: 800px) {
     .clicker-kehys{
         width: 90%;
-        height: 50vh;
+        height: 80vh;
     }
 
     #cookie{
