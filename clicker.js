@@ -224,19 +224,30 @@ function gameOver(){
 
 }
 
-// ohjesivu
 
-// näytetään ohjesivu
+
+
+
+//ohjesivut
 
 document.getElementById('naytaOhje').addEventListener('click', function() {
-    document.getElementById('ohjesivu').style.display = 'block';
+   
+    document.getElementById('ohjesivu').style.display = 'none';
+    
+    // tarkistetaan, onko taustakuva ladattu
+    let taustakuva = new Image();
+
+    taustakuva.onload = function() {
+        document.getElementById('ohjesivu').style.display = 'block';
+    };
+    taustakuva.src = 'clicker-kuvat/peliohjetausta.png';
 });
 
 // suljetaan ohjesivu
 document.getElementById('piilotaOhje').addEventListener('click', function() {
     document.getElementById('ohjesivu').style.display = 'none';
+ 
 });
-
 
 
 //kauppasivut
