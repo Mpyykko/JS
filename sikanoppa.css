@@ -4,6 +4,7 @@
     margin: 0 auto;
     height: 90vh;
     border: 2px solid black;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +12,18 @@
    
 }
 
+.pelikentta{
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(116, 4, 222);
+}
+
+
+
 .pelivalikko{
-    
+   
     position: relative;
     width: 85%;
     height: auto;
@@ -20,6 +31,7 @@
     margin: 0 auto;
     align-items: center;
     border: 2px solid black;
+    border-radius: 10px;
     background-color: antiquewhite;
     
 
@@ -34,6 +46,7 @@
     margin: 0 auto;
     align-items: center;
     border: 2px solid black;
+    border-radius: 10px;
     background-color: antiquewhite;
 
 }
@@ -91,6 +104,53 @@
 #aloitapeli-button{
     display: none;
     margin: 0 auto;
+}
+
+
+
+  
+
+   
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .sikanoppa-kehys{
+        width: 90%;
+        height:70vh;
+       
+        
+    }
+  
+   
+    .pelikentta{
+        width: 85%;
+        height: auto;
+        min-height: 90%;
+       
+    }
+    
+    
+    
+    .pelivalikko{
+        width: 85%;
+        height: auto;
+        min-height: 90%;
+       
+       
+    
+    }
+    
+    .pelivalikko2{
+        width: 85%;
+        height: auto;
+        min-height: 90%;
+            
+    
+    }
+   
+
 }
 
 

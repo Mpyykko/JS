@@ -68,6 +68,16 @@ function naytaToinenValikko() {
 }
 //////////////////////////////////////////////////////////////////////////////////////
 
+function naytaPelikentta() {
+    // Piilota muut valikot
+    document.getElementById('aloitusnaytto').style.display = 'none';
+    document.getElementById('pelivalikko2').style.display = 'none';
+
+    // Näytä toinen valikko
+    document.getElementById('pelikentta').style.display = 'block';
+}
+//////////////////////////////////////////////////////////////////////////////////////
+
 
 
 // yhden nopan pelin valinta
@@ -136,6 +146,9 @@ function naytaKotivalikko() {
 
     // piilota nykyinen valikko
     document.getElementById('pelivalikko2').style.display = 'none';
+    // piilota nykyinen valikko
+    document.getElementById('pelikentta').style.display = 'none';
+
     // Näytä kotivalikko
     document.getElementById('aloitusnaytto').style.display = 'block';
 
