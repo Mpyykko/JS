@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sikanoppa.css">
 
 
     <title>Sikanoppa</title>
@@ -32,6 +33,59 @@
         <section>
             <h4> Tulossa </h4>
         </section>
+
+        <section>
+            <div class="sikanoppa-kehys">
+
+                <div id="aloitusnaytto" class="pelivalikko">
+                    <h4>Tervetuloa pelaamaan sikanoppaa!</h4> <br>
+                    <p> Valitse pelimuoto</p>
+        
+                <button id="yhdellanopalla" class="pelivalintabuttonit" >1 noppa</button>
+                <button id="kahdellanopalla" class="pelivalintabuttonit" >2 noppaa</button> <br>
+
+                <button id="seuraava" class="seuraava-painike" onclick="naytaToinenValikko()" disabled>Seuraava</button>
+        
+                </div>
+                
+
+                <div id="pelivalikko2" class="pelivalikko2">
+
+                    <button id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button> <br>
+                    <button id="uusipeli" onclick="uusiPeli()" >Uusi peli</button> <br>
+                    
+                    <h4>Syötä pelaajien nimet </h4>
+                    <h6>(2-4 pelaajaa)</h6>
+                    <button id="aloitapeli-button">Aloita peli</button>
+
+                    <span id="pelaajainfo" ></span> <br>
+                  
+
+                    <input id="pelaajat" class="pelaajat" type="text"  placeholder="Syötä pelaajan nimi">
+                    <button id="lisattyPelaaja" class="pelaajat" onclick="pelaajalisatty('lisaa')">Lisää</button>
+                    
+                    <br>
+
+                    
+ 
+                    
+                    <span id="pelaajanaytto"></span>
+
+                    
+                
+                </div>
+
+            
+
+                
+
+
+
+
+            </div>
+        </section>
+
+        
     
         
     
@@ -40,6 +94,7 @@
     </main>
 
     
+    <script src="sikanoppa.js" ></script>
     <footer>
         <div class="footer"> 
             Copyright &copy; 2024 <span>Mikko Pyykkönen</span>

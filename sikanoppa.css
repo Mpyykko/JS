@@ -1,0 +1,96 @@
+.sikanoppa-kehys{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    height: 90vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: palevioletred;
+   
+}
+
+.pelivalikko{
+    
+    position: relative;
+    width: 85%;
+    height: auto;
+    min-height: 90%;
+    margin: 0 auto;
+    align-items: center;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    
+
+}
+
+.pelivalikko2{
+    display: none;
+    position: relative;
+    width: 85%;
+    height: auto;
+    min-height: 90%;
+    margin: 0 auto;
+    align-items: center;
+    border: 2px solid black;
+    background-color: antiquewhite;
+
+}
+
+.pelivalintabuttonit{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+    background-color:indianred;
+    color: white;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.pelivalintabuttonit:hover{
+    background-color:rgba(205, 92, 92, 0.792);
+}
+
+
+
+.seuraava-painike{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+    background-color:indianred;
+    color: white;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: inherit;
+
+}
+
+.seuraava-painike:hover{
+    background-color:rgba(205, 92, 92, 0.792);
+}
+
+
+.pelaaja-nimi{
+    font-size: medium;
+    text-align: center;
+
+}
+
+#pelaajainfo{
+    color: red;
+}
+
+#aloitapeli-button{
+    display: none;
+    margin: 0 auto;
+}
+
+
