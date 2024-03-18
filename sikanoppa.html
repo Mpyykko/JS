@@ -15,6 +15,11 @@
         
     
 </head>
+<style>
+    body{
+        background-color: pink;
+    }
+</style>
 
 <body>
     <header>
@@ -34,15 +39,38 @@
 
     <main>
         <section>
-            <h4> Tulossa </h4>
+            <h4> Työn alla </h4>
+            
+                <img id="logo" src="sikanoppa-kuvat/sikalogo.png" width="50%" alt="sikalogo">
+           
         </section>
 
         <section>
             <div class="sikanoppa-kehys">
                 <div id="pelikentta" class="pelikentta">
 
-                <h4>Tähän tulee sikapeli</h4>
-                <button id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button> <br>
+                <h4>Tähän tulee sikapeli</h4><br>
+
+                <button class="pelivalintabuttonit2" id="heita" onclick="heitaNoppaa()" >Heitä</button>
+                <button class="pelivalintabuttonit2" id="eiheita" >Jää</button>
+
+                <div id="noppanaytto" class="noppanaytto">
+                    <div class="tulosnaytto" id="tulosnaytto" >
+
+                    </div>
+
+
+              
+                        
+                    
+
+                </div>
+
+
+
+
+                <button class="pelivalintabuttonit2" id="uusipeli" onclick="uusiPeli()" >Uusi peli</button>
+
 
                 </div>
 
@@ -62,18 +90,19 @@
 
                 <div id="pelivalikko2" class="pelivalikko2">
 
-                    <button id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button> <br>
-                    <button id="uusipeli" onclick="uusiPeli()" >Uusi peli</button> <br>
+                    <button class="pelivalintabuttonit2" id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button> 
+                    <button class="pelivalintabuttonit2" id="aloitapeli-button" onclick="naytaPelikentta()">Aloita peli</button>
+                    
                     
                     <h4>Syötä pelaajien nimet </h4>
                     <h6>(2-4 pelaajaa)</h6>
-                    <button id="aloitapeli-button" onclick="naytaPelikentta()">Aloita peli</button>
+                    <button class="pelivalintabuttonit2" id="aloitapeli-button" onclick="naytaPelikentta()">Aloita peli</button>
 
                     <span id="pelaajainfo" ></span> <br>
                   
 
                     <input id="pelaajat" class="pelaajat" type="text"  placeholder="Syötä pelaajan nimi">
-                    <button id="lisattyPelaaja" class="pelaajat" onclick="pelaajalisatty('lisaa')">Lisää</button>
+                    <button id="lisattyPelaaja" class="pelivalintabuttonit2" onclick="pelaajalisatty('lisaa')">Lisää</button>
                     
                     <br>
 

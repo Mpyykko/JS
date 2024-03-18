@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: palevioletred;
+    background-color: rgb(216, 138, 164);
    
 }
 
@@ -18,7 +18,35 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgb(116, 4, 222);
+    background-color: rgb(235, 235, 235);
+}
+
+.noppanaytto{
+    position: relative;
+    width: 25%;
+    height: 40%;
+    display: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+.tulosnaytto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30%;
+}
+.tulosnaytto img{
+    width: 40%;
 }
 
 
@@ -32,7 +60,7 @@
     margin: 0 auto;
     align-items: center;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: antiquewhite;
     
 
@@ -70,6 +98,24 @@
     background-color:rgba(205, 92, 92, 0.792);
 }
 
+.pelivalintabuttonit2{
+ 
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+    background-color:indianred;
+    color: white;
+    border: 2px solid rgb(49, 49, 49);
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.pelivalintabuttonit2:hover{
+    background-color:rgba(205, 92, 92, 0.792);
+}
+
 
 
 .seuraava-painike{
@@ -91,10 +137,17 @@
     background-color:rgba(205, 92, 92, 0.792);
 }
 
+.pelaajat{
+    height:50px;
+    font-family: inherit;
+}
+
 
 .pelaaja-nimi{
     font-size: medium;
     text-align: center;
+    font-size: large;
+    font-weight: bold;
 
 }
 
@@ -116,6 +169,10 @@
 
 
 @media only screen and (max-width: 800px) {
+
+    #logo{
+        width: 80%;
+    }
 
     .sikanoppa-kehys{
         width: 90%;
@@ -149,6 +206,10 @@
         min-height: 90%;
             
     
+    }
+
+    .noppanaytto{
+        width: 50%;
     }
    
 

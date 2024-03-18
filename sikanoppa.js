@@ -63,6 +63,7 @@ function naytaButtoni() {
 function naytaToinenValikko() {
     // Piilota kotivalikko
     document.getElementById('aloitusnaytto').style.display = 'none';
+    document.getElementById('noppanaytto').style.display = 'none';
     // Näytä toinen valikko
     document.getElementById('pelivalikko2').style.display = 'block';
 }
@@ -72,9 +73,11 @@ function naytaPelikentta() {
     // Piilota muut valikot
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('pelivalikko2').style.display = 'none';
+    
 
     // Näytä toinen valikko
     document.getElementById('pelikentta').style.display = 'block';
+    document.getElementById('noppanaytto').style.display = 'block';
 }
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -177,3 +180,43 @@ function uusiPeli(){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
+
+const nopat = [1,2,3,4,5,6];
+
+// yhden nopan heitto
+
+function heitaNoppaa(){
+    let indeksi = Math.floor(Math.random() * nopat.length);
+
+    const tulos = nopat[indeksi];
+
+    if(tulos === 1){
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/yksi.png'>";
+    }
+    else if(tulos === 2){
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kaksi.png'>";
+    }
+    else if(tulos === 3){
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kolme.png'>";
+    }
+    else if(tulos === 4){
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/nelja.png'>";
+    }
+    else if(tulos === 5){
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/viisi.png'>";
+    }
+    else{
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kuusi.png'>";
+    
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
