@@ -3,23 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="sikanoppa.css">
+    <link rel="shortcut icon" href="sikanoppa-kuvat/possu1.png" type="image/x-icon">
 
 
     <title>Sikanoppa</title>
 
-  
+    <style>
+        body{
+            background-color: pink;
+        }
+    </style>
         
     
 </head>
-<style>
-    body{
-        background-color: pink;
-    }
-</style>
+
 
 <body>
     <header>
@@ -37,11 +38,14 @@
         </nav>
     </header>
 
+    
+
     <main>
+        
         <section>
             <h4> Työn alla </h4>
             
-                <img id="logo" src="sikanoppa-kuvat/sikalogo.png" width="50%" alt="sikalogo">
+                <img id="logo" src="sikanoppa-kuvat/sikalogo.png" width="600" alt="sikalogo">
            
         </section>
 
@@ -49,27 +53,34 @@
             <div class="sikanoppa-kehys">
                 <div id="pelikentta" class="pelikentta">
 
-                <h4>Tähän tulee sikapeli</h4><br>
-
-                <button class="pelivalintabuttonit2" id="heita" onclick="heitaNoppaa()" >Heitä</button>
-                <button class="pelivalintabuttonit2" id="eiheita" >Jää</button>
-
-                <div id="noppanaytto" class="noppanaytto">
-                    <div class="tulosnaytto" id="tulosnaytto" >
-
+                    <div class="pelaajan-pisteet">
+                        <span  id="pelaajan-pisteet" ></span>
                     </div>
 
-
               
-                        
-                    
+
+                <span class="pelaajan-pisteet" id="kukaPelaa-naytto" ></span> <br> <br>
+
+                
+
+                <button class="pelivalintabuttonit2" id="heita" onclick="heitaNoppaa()" >Heitä</button>
+                <button class="pelivalintabuttonit2" id="eiheita" >Kerää</button>
+
+                <div id="noppanaytto" class="noppanaytto">
+                    <div class="noppien-summanaytto"> <span  id="noppien-summa" >Summa</span></div>
+                    <div class="tulosnaytto" id="tulosnaytto" ></div>
 
                 </div>
 
+              
 
-
+                    
+                    
+                
+                
 
                 <button class="pelivalintabuttonit2" id="uusipeli" onclick="uusiPeli()" >Uusi peli</button>
+
 
 
                 </div>
@@ -91,7 +102,6 @@
                 <div id="pelivalikko2" class="pelivalikko2">
 
                     <button class="pelivalintabuttonit2" id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button> 
-                    <button class="pelivalintabuttonit2" id="aloitapeli-button" onclick="naytaPelikentta()">Aloita peli</button>
                     
                     
                     <h4>Syötä pelaajien nimet </h4>
@@ -114,11 +124,6 @@
                     
                 
                 </div>
-
-            
-
-                
-
 
 
 

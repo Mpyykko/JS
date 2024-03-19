@@ -43,6 +43,8 @@ function pelikierros(){
 
 // rullien pyöriminen
 
+//const voittoKuviot = [1,2,3,4,5,6,7];
+
 function rullatPyorii(){
     const rullaSymbolit = document.querySelectorAll('.rulla-symboli');
     

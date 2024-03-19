@@ -9,6 +9,7 @@ const pelaajatInput = document.getElementById('pelaajat');
 
 function pelaajalisatty(toiminto) {
     const pelaajanNimi = pelaajatInput.value;
+    
 
     if (toiminto === 'lisaa') {
         // Tarkista, onko jo lisätty neljä pelaajaa
@@ -17,6 +18,7 @@ function pelaajalisatty(toiminto) {
             if (pelaajanNimi.trim() !== '') {
                 pelaajaLista.push(pelaajanNimi);
                 naytaPelaajat();
+                console.log(pelaajaLista);
             }
         } else {
             // Näytä viesti, jos pelaajien enimmäismäärä on saavutettu
@@ -69,7 +71,22 @@ function naytaToinenValikko() {
 }
 //////////////////////////////////////////////////////////////////////////////////////
 
+// 
+let nykyinenPelaajaIndeksi = 0;
+
+let kukaPelaa = document.getElementById('kukaPelaa-naytto');
+
+function paivitaPelaajanNimi() {
+
+    kukaPelaa.innerHTML  = `Vuorossa: ${pelaajaLista[nykyinenPelaajaIndeksi]}`;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
 function naytaPelikentta() {
+
+    // Näytetään vuorossa oleva pelaaja
+    paivitaPelaajanNimi();
     // Piilota muut valikot
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('pelivalikko2').style.display = 'none';
@@ -102,6 +119,7 @@ function yksiNoppaaValittu() {
         }
     }
     paivitaSeuraavaButton();
+    
 }
 
 yksiNoppa.addEventListener('click', yksiNoppaaValittu);
@@ -181,38 +199,109 @@ function uusiPeli(){
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+// muuttujia
 const nopat = [1,2,3,4,5,6];
+let noppienSummanaytto = document.getElementById('noppien-summa');
+let noppienSumma = 0;
+
+let pelajaanPisteNaytto = document.getElementById('pelaajan-pisteet');
+
+let pistelista = [];
+
+
+
+
 
 // yhden nopan heitto
 
-function heitaNoppaa(){
-    let indeksi = Math.floor(Math.random() * nopat.length);
 
+let yhteispisteet = 0;
+
+
+function heitaNoppaa() {
+
+    paivitaPelaajanNimi(); 
+
+    let indeksi = Math.floor(Math.random() * nopat.length);
     const tulos = nopat[indeksi];
 
-    if(tulos === 1){
+    if (tulos === 1) {
         document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/yksi.png'>";
-    }
-    else if(tulos === 2){
+    } else if (tulos === 2) {
         document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kaksi.png'>";
-    }
-    else if(tulos === 3){
+    } else if (tulos === 3) {
         document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kolme.png'>";
-    }
-    else if(tulos === 4){
+    } else if (tulos === 4) {
         document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/nelja.png'>";
-    }
-    else if(tulos === 5){
+    } else if (tulos === 5) {
         document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/viisi.png'>";
-    }
-    else{
+    } else {
         document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kuusi.png'>";
+    }
+
+    document.getElementById('pelaajan-pisteet').innerHTML =(`Pelaaja: 0`);
     
+
+    noppienSumma += tulos;
+    if(noppienSumma !=1){
+
+        yhteispisteet += noppienSumma;
+    }
+
+    if (noppienSumma > 1 && tulos === 1) {
+        noppienSumma = 0;
+        noppienSummanaytto.innerHTML = (`Sait ykkösen! <br> ${noppienSumma}`);
+
+        // päivitä pelaajan vuoro
+        nykyinenPelaajaIndeksi = (nykyinenPelaajaIndeksi + 1) % pelaajaLista.length;
+        paivitaPelaajanNimi();
+    }
+
+    naytaSumma();
+    
+
+    
+
+
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+function naytaSumma(){
+    noppienSummanaytto.innerHTML = (`Summa: ${noppienSumma}`);
+    if(noppienSumma >= 100){
+        noppienSummanaytto.innerHTML = 'Sata ylitetty!'
+        return;
     }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+// kerää-toiminto
+
+
+
+let keraa = document.getElementById('eiheita');
+keraa.addEventListener('click', function() {
+    alaHeita();
+   
+});
+
+function alaHeita(){
+    
+    nykyinenPelaajaIndeksi = (nykyinenPelaajaIndeksi + 1) % pelaajaLista.length;
+    paivitaPelaajanNimi();
+    noppienSumma = 0;
+    
+    naytaSumma();
+    
+    document.getElementById('pelaajan-pisteet').innerHTML =(`Pelaaja: ${yhteispisteet}`);
+
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
 
 
 
