@@ -38,6 +38,7 @@
 
 
 
+
 .tulosnaytto{
     position: relative;
     display: flex;
@@ -50,7 +51,12 @@
     width: 40%;
 }
 
-
+.voittaja{
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(0, 15, 128);
+    
+}
 
 .pelivalikko{
    
@@ -63,6 +69,7 @@
     border: 2px solid black;
     border-radius: 5px;
     background-color: antiquewhite;
+    margin-top: 25px;
     
 
 }
@@ -78,6 +85,7 @@
     border: 2px solid black;
     border-radius: 10px;
     background-color: antiquewhite;
+    margin-top: 25px;
 
 }
 
