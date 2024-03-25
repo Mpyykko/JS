@@ -59,6 +59,12 @@
 
 }
 
+.pelitekstit{
+    color:rgb(25, 4, 143);
+    font-weight: bold;
+
+}
+
 
 
 
@@ -71,10 +77,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 1s ease;
+    
 }
 .tulosnaytto img{
     width: 20%;
+    transition: transform 1s ease;
 }
 
 @keyframes pyorahdys {
@@ -94,7 +101,7 @@
     font-size: larger;
     color: rgb(0, 15, 128);
     bottom: 0%;
-   
+
     transform: translate(-50%, -50%);
     
 }
