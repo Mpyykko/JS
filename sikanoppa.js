@@ -219,6 +219,7 @@ let pistelista = [];
 let yhteispisteet = 0;
 
 function heitaNoppaa() {
+    noppaPyorii();
     paivitaPelaajanNimi();
 
     let indeksi = Math.floor(Math.random() * nopat.length);
@@ -240,12 +241,14 @@ function heitaNoppaa() {
 
     noppienSumma += tulos;
 
+   
+
     // Näytä noppien summa
-    naytaSumma();
+    setTimeout(naytaSumma, 1000);
 
     if (noppienSumma > 1 && tulos === 1) {
         noppienSumma = 0;
-        noppienSummanaytto.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen! <br> Summa: ${noppienSumma}`);
+        noppienSummanaytto.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen! <br> Pisteet: ${noppienSumma}`);
 
         // päivitä pelaajan vuoro
         nykyinenPelaajaIndeksi = (nykyinenPelaajaIndeksi + 1) % pelaajaLista.length;
@@ -265,7 +268,7 @@ keraa.addEventListener('click', function() {
 //////////////////////////////////////////////////////////////////////////////////////
 
 function naytaSumma(){
-    noppienSummanaytto.innerHTML = (`Summa: ${noppienSumma}`);
+    noppienSummanaytto.innerHTML = (`Pisteet: ${noppienSumma}`);
     
 }
 
@@ -295,7 +298,7 @@ function alaHeita(){
      paivitaPelaajanNimi();
 
       noppienSumma = 0;
-      noppienSummanaytto.innerHTML = (`Summa: ${noppienSumma}`);
+      noppienSummanaytto.innerHTML = (`Pisteet: ${noppienSumma}`);
 
 
 }
@@ -347,8 +350,17 @@ function uusiPeli(){
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
+// animaatio nopille
 
+function noppaPyorii() {
+    let noppa = document.getElementById('tulosnaytto');
+    noppa.style.animation = 'pyorahdys 1s ease';
+    setTimeout(function() {
+      noppa.style.animation = '';
+    }, 1000);
+  }
 
+  //////////////////////////////////////////////////////////////////////////////////////
 
 
 
