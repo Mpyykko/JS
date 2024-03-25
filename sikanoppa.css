@@ -68,8 +68,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 60px;
+    
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     transition: transform 1s ease;
 }
@@ -215,7 +216,7 @@
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 
     #logo{
         width: 100%;
@@ -224,6 +225,7 @@
     .sikanoppa-kehys{
         width: 90%;
         height:auto;
+        min-height: 70vh;
         
         
     }
@@ -232,6 +234,7 @@
     .pelikentta{
         width: 100%;
         height: 100%;
+        min-height: 70vh;
         
        
     }
@@ -241,6 +244,7 @@
     .pelivalikko{
         width: 85%;
         height: auto;
+        min-height: 80vh;
         margin-bottom: 20px;
       
 
@@ -249,12 +253,14 @@
     .pelivalikko2{
         width: 85%;
         height: auto;
+        min-height: 80vh;
         margin-bottom: 20px;
   
     }
 
     .noppanaytto{
-        width: 50%;
+        width: 70%;
+        height: 50vh;
     }
    
 

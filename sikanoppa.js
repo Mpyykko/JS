@@ -218,6 +218,7 @@ let pistelista = [];
 
 let yhteispisteet = 0;
 
+
 function heitaNoppaa() {
     noppaPyorii();
     paivitaPelaajanNimi();
@@ -242,18 +243,27 @@ function heitaNoppaa() {
     noppienSumma += tulos;
 
    
-
+    
     // Näytä noppien summa
-    setTimeout(naytaSumma, 1000);
+
+    
+    setTimeout(naytaSumma, 900);
 
     if (noppienSumma > 1 && tulos === 1) {
         noppienSumma = 0;
+        
         noppienSummanaytto.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen! <br> Pisteet: ${noppienSumma}`);
+        
 
         // päivitä pelaajan vuoro
         nykyinenPelaajaIndeksi = (nykyinenPelaajaIndeksi + 1) % pelaajaLista.length;
         paivitaPelaajanNimi();
+
+       
     }
+
+    
+   
 }
 
 let keraa = document.getElementById('eiheita');
@@ -268,8 +278,7 @@ keraa.addEventListener('click', function() {
 //////////////////////////////////////////////////////////////////////////////////////
 
 function naytaSumma(){
-    noppienSummanaytto.innerHTML = (`Pisteet: ${noppienSumma}`);
-    
+    noppienSummanaytto.innerHTML = (`Pisteet: ${noppienSumma}`);  
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
