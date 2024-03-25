@@ -36,6 +36,29 @@
 
 }
 
+#noppien-summa{
+    color:rgb(25, 4, 143);
+    font-weight: bold;
+}
+
+#kukaPelaa-naytto{
+    color:rgb(25, 4, 143);
+    font-weight: bold;
+
+}
+
+#pelaajan-pisteet{
+    color:rgb(25, 4, 143);
+    font-weight: bold;
+
+}
+
+#pelaajanaytto{
+    color:rgb(25, 4, 143);
+    font-weight: bold;
+
+}
+
 
 
 
@@ -186,8 +209,8 @@
 
     .sikanoppa-kehys{
         width: 90%;
-        height:70vh;
-       
+        height:auto;
+        
         
     }
   
@@ -204,6 +227,7 @@
     .pelivalikko{
         width: 85%;
         height: auto;
+        margin-bottom: 20px;
       
 
     }
@@ -211,6 +235,7 @@
     .pelivalikko2{
         width: 85%;
         height: auto;
+        margin-bottom: 20px;
   
     }
 
