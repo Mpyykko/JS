@@ -279,7 +279,7 @@ function alaHeita(){
         pelaajaLista[nykyinenPelaajaIndeksi].pisteet += noppienSumma;
         yhteispisteet += noppienSumma;
 
-        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 20) {
+        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 100) {
             gameOver();
           
         }
