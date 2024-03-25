@@ -126,7 +126,7 @@ let onkoKaksiNoppaaValittu = false;
 function yksiNoppaaValittu() {
     if (!onkoKaksiNoppaaValittu) {
         if (!onkoYksiNoppaaValittu) {
-            yksiNoppa.style.backgroundColor = 'rgb(127, 25, 25)';
+            yksiNoppa.style.backgroundColor = 'rgb(13, 1, 85)';
             onkoYksiNoppaaValittu = true;
         } else {
             yksiNoppa.style.backgroundColor = '';
@@ -143,7 +143,7 @@ yksiNoppa.addEventListener('click', yksiNoppaaValittu);
 function kaksiNoppaaValittu() {
     if (!onkoYksiNoppaaValittu) {
         if (!onkoKaksiNoppaaValittu) {
-            kaksiNoppaa.style.backgroundColor = 'rgb(127, 25, 25)';
+            kaksiNoppaa.style.backgroundColor = 'rgb(13, 1, 85))';
             onkoKaksiNoppaaValittu = true;
         } else {
             kaksiNoppaa.style.backgroundColor = '';

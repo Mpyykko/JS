@@ -8,7 +8,7 @@
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(216, 138, 164);
+    background-color: rgb(40, 7, 158);
    
 }
 
@@ -68,7 +68,7 @@
     align-items: center;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: antiquewhite;
+    background-color:whitesmoke;
     margin-top: 25px;
     
 
@@ -84,7 +84,7 @@
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: antiquewhite;
+    background-color:whitesmoke;
     margin-top: 25px;
 
 }
@@ -95,7 +95,7 @@
     margin-bottom: 10px;
     width: 100px;
     height: 50px;
-    background-color:indianred;
+    background-color:rgb(25, 4, 143);
     color: white;
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
@@ -104,7 +104,7 @@
 }
 
 .pelivalintabuttonit:hover{
-    background-color:rgba(205, 92, 92, 0.792);
+    background-color:rgb(13, 1, 85);
 }
 
 .pelivalintabuttonit2{
@@ -113,7 +113,7 @@
     margin-bottom: 10px;
     width: 100px;
     height: 50px;
-    background-color:indianred;
+    background-color:rgb(25, 4, 143);
     color: white;
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
@@ -122,7 +122,7 @@
 }
 
 .pelivalintabuttonit2:hover{
-    background-color:rgba(205, 92, 92, 0.792);
+    background-color:rgb(13, 1, 85);
 }
 
 
@@ -133,7 +133,7 @@
     margin-bottom: 10px;
     width: 100px;
     height: 50px;
-    background-color:indianred;
+    background-color:rgb(25, 4, 143);
     color: white;
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
@@ -143,7 +143,7 @@
 }
 
 .seuraava-painike:hover{
-    background-color:rgba(205, 92, 92, 0.792);
+    background-color:rgb(13, 1, 85);
 }
 
 .pelaajat{
@@ -204,18 +204,14 @@
     .pelivalikko{
         width: 85%;
         height: auto;
-        min-height: 90%;
-       
-       
-    
+      
+
     }
     
     .pelivalikko2{
         width: 85%;
         height: auto;
-        min-height: 90%;
-            
-    
+  
     }
 
     .noppanaytto{
