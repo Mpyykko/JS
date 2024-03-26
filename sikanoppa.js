@@ -247,7 +247,7 @@ function heitaNoppaa() {
     // Näytä noppien summa
 
     
-    setTimeout(naytaSumma, 900);
+    setTimeout(naytaSumma,900);
 
     if (noppienSumma > 1 && tulos === 1) {
         noppienSumma = 0;
