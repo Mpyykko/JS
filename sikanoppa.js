@@ -11,6 +11,19 @@ function klik(){
     klik.play();
 }
 
+function nopanheitto(){
+    let audio = document.getElementById('nopat');
+    audio.play();
+}
+
+function ykkonen(){
+    let audio = document.getElementById('ykkonen');
+    audio.play();
+}
+
+
+
+
 
 
 
@@ -245,6 +258,7 @@ let yhteispisteet = 0;
 
 
 function heitaNoppaa() {
+    nopanheitto();
   
     noppaPyorii();
     paivitaPelaajanNimi();
@@ -276,6 +290,9 @@ function heitaNoppaa() {
     setTimeout(naytaSumma,900);
 
     if (noppienSumma > 1 && tulos === 1) {
+
+        ykkonen();
+
         noppienSumma = 0;
         
         noppienSummanaytto.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen! <br> Pisteet: ${noppienSumma}`);
@@ -317,7 +334,7 @@ function alaHeita(){
         pelaajaLista[nykyinenPelaajaIndeksi].pisteet += noppienSumma;
         yhteispisteet += noppienSumma;
 
-        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 10) {
+        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 100) {
             gameOver();
           
         }
