@@ -4,6 +4,14 @@ const pelaajatInput = document.getElementById('pelaajat');
 const pelaajainfo = document.getElementById('pelaajainfo');
 
 
+// ääniä
+
+function klik(){
+    let klik = document.getElementById('klik');
+    klik.play();
+}
+
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -63,6 +71,9 @@ function naytaButtoni() {
 
 // siirtymä valikosta toiseen
 function naytaToinenValikko() {
+
+    klik();
+
     // Piilota kotivalikko
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('noppanaytto').style.display = 'none';
@@ -72,6 +83,8 @@ function naytaToinenValikko() {
 //////////////////////////////////////////////////////////////////////////////////////
 
 function naytaPeliohjeet() {
+
+    klik();
     // Piilota kotivalikko
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('noppanaytto').style.display = 'none';
@@ -181,6 +194,7 @@ function paivitaSeuraavaButton() {
 
 // siirtymä kotivalikkoon
 function naytaKotivalikko() {
+    klik();
     
     // tyhjennetään mahdolliset syötteet
 
@@ -382,7 +396,6 @@ function noppaPyorii() {
   }
 
   //////////////////////////////////////////////////////////////////////////////////////
-
 
 
 
