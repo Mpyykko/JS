@@ -71,6 +71,15 @@ function naytaToinenValikko() {
 }
 //////////////////////////////////////////////////////////////////////////////////////
 
+function naytaPeliohjeet() {
+    // Piilota kotivalikko
+    document.getElementById('aloitusnaytto').style.display = 'none';
+    document.getElementById('noppanaytto').style.display = 'none';
+    document.getElementById('pelivalikko2').style.display = 'none';
+    // Näytä peliohje-valikko
+    document.getElementById('peliohjeet').style.display = 'block';
+}
+
 // 
 let nykyinenPelaajaIndeksi = 0;
 
@@ -143,7 +152,7 @@ yksiNoppa.addEventListener('click', yksiNoppaaValittu);
 function kaksiNoppaaValittu() {
     if (!onkoYksiNoppaaValittu) {
         if (!onkoKaksiNoppaaValittu) {
-            kaksiNoppaa.style.backgroundColor = 'rgb(13, 1, 85))';
+            kaksiNoppaa.style.backgroundColor = 'rgb(13, 1, 85)';
             onkoKaksiNoppaaValittu = true;
         } else {
             kaksiNoppaa.style.backgroundColor = '';
@@ -184,6 +193,8 @@ function naytaKotivalikko() {
     document.getElementById('pelivalikko2').style.display = 'none';
     // piilota nykyinen valikko
     document.getElementById('pelikentta').style.display = 'none';
+    // piilota ohjeet
+    document.getElementById('peliohjeet').style.display = 'none';
 
     // Näytä kotivalikko
     document.getElementById('aloitusnaytto').style.display = 'block';
@@ -220,6 +231,7 @@ let yhteispisteet = 0;
 
 
 function heitaNoppaa() {
+  
     noppaPyorii();
     paivitaPelaajanNimi();
 
@@ -262,16 +274,16 @@ function heitaNoppaa() {
        
     }
 
-    
-   
 }
+
+
 
 let keraa = document.getElementById('eiheita');
 keraa.addEventListener('click', function() {
     alaHeita();
 
     
-    
+
 });
 
 

@@ -105,7 +105,21 @@
                 <button id="kahdellanopalla" class="pelivalintabuttonit" >2 noppaa</button> <br>
 
                 <button id="seuraava" class="seuraava-painike" onclick="naytaToinenValikko()" disabled>Seuraava</button>
+                <button id="peliohjeet-button" class="pelivalintabuttonit" onclick="naytaPeliohjeet()" >Peliohjeet</button>
+                </div>
+
+                <div id="peliohjeet" class="peliohjeet" >
+                    <div>
+                        <h3>Peliohjeet yhdellä nopalla</h3>
         
+                        <p>Heitä noppaa. <br> Heiton jälkeen voit päättää haluatko kerätä pisteet vai jatkaa heittämistä. <br>
+                            Mikäli jatkat heittämistä, heittovuorosi kaikki nopat lasketaan yhteen. <br> <br> Jos heität ykkösen, et
+                            saa heittokierrokselta yhtään pistettä ja vuoro vaihtuu seuraavalle.
+                            </p>
+                        <p>Pelaaja joka saa ensimmäisenä 100 pistettä voittaa</p>
+                        <button class="pelivalintabuttonit2" id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button>
+                    </div>
+                    
                 </div>
                 
 
@@ -113,7 +127,8 @@
 
                     <button class="pelivalintabuttonit2" id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button> 
                     
-                    
+                   
+
                     <h4 class="pelitekstit" >Syötä pelaajien nimet </h4>
                     <h6 class="pelitekstit" >(2-4 pelaajaa)</h6>
                     <button class="pelivalintabuttonit2" id="aloitapeli-button" onclick="naytaPelikentta()">Aloita peli</button>

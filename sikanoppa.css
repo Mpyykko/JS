@@ -80,7 +80,7 @@
     
 }
 .tulosnaytto img{
-    width: 80%;
+    width: 60%;
     transition: transform 1s ease;
 }
 
@@ -134,8 +134,23 @@
     border-radius: 10px;
     background-color:whitesmoke;
     margin-top: 25px;
-
 }
+
+.peliohjeet{
+    display: none;
+    position: relative;
+    width: 85%;
+    height: auto;
+    min-height: 90%;
+    margin: 0 auto;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:rgb(204, 206, 211);
+    margin-top: 25px;
+}
+
+
 
 .pelivalintabuttonit{
     display: block;
