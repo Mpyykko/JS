@@ -144,16 +144,24 @@
 .peliohjeet{
     display: none;
     position: relative;
-    width: 85%;
+    width: 100%;
     height: auto;
     min-height: 90%;
     margin: 0 auto;
+    text-align: center;
     align-items: center;
     border: 2px solid black;
     border-radius: 10px;
     background-color:rgb(204, 206, 211);
     margin-top: 25px;
     margin-bottom: 25px;
+}
+
+#peliohjeteksti{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
 }
 
 
