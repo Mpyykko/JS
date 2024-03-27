@@ -22,7 +22,7 @@
 
 .noppanaytto{
     position: relative;
-    width: 25%;
+    width: 30%;
     height: 40%;
     display: none;
     border: 2px solid black;
@@ -69,27 +69,32 @@
 
 
 .tulosnaytto{
+  
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    
     
 }
+
+
 .tulosnaytto img{
-    width: 60%;
-    transition: transform 1s ease;
+  
+    width: 30%;
+    
+
 }
 
 @keyframes pyorahdys {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
+ 
     100% {
-      transform: translate(-50%, -50%) rotate(360deg);
+        transform: rotate(360deg);
     }
   }
 
@@ -189,6 +194,13 @@
     background-color:rgb(13, 1, 85);
 }
 
+#uusipeli{
+    margin-top: 25px;
+}
+#home{
+    margin-top: 25px;
+}
+
 
 
 .seuraava-painike{
@@ -285,13 +297,15 @@
     }
 
     .noppanaytto{
-        width: 70%;
-        height: 40vh;
+        width: 90%;
+        height: 50vh;
     }
-    .tulosnaytto img{
-        width: 40%;
-     
+
+    .noppanaytto img{
+        width: 80px;
     }
+
+   
    
 
 }
