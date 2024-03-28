@@ -130,7 +130,7 @@ function paivitaPelaajanNimi() {
 
 function naytaPelikentta() {
 
-    document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kuusi.png'>";
+    document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kuusi2.png'>";
 
     
 
@@ -267,17 +267,17 @@ function heitaNoppaa() {
     const tulos = nopat[indeksi];
 
     if (tulos === 1) {
-        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/yksi.png'>";
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/yksi2.png'>";
     } else if (tulos === 2) {
-        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kaksi.png'>";
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kaksi2.png'>";
     } else if (tulos === 3) {
-        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kolme.png'>";
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kolme2.png'>";
     } else if (tulos === 4) {
-        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/nelja.png'>";
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/nelja2.png'>";
     } else if (tulos === 5) {
-        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/viisi.png'>";
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/viisi2.png'>";
     } else {
-        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kuusi.png'>";
+        document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/kuusi2.png'>";
     }
 
     noppienSumma += tulos;
