@@ -87,8 +87,29 @@
 .tulosnaytto img{
   
     width: 30%;
+    animation: pyorahdys 1s ease;
     
+}
 
+.tulosnaytto2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 25%;
+    bottom: 0;
+}
+
+.tulosnaytto2 img {
+    
+    width: 25%;
+    margin: 10px;
+    animation: pyorahdys 1s ease;
+   
 }
 
 @keyframes pyorahdys {
