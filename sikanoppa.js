@@ -104,10 +104,31 @@ function naytaPeliohjeet() {
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('noppanaytto').style.display = 'none';
     document.getElementById('pelivalikko2').style.display = 'none';
+
+    document.getElementById('peliohjeet2').style.display = 'none';
     // Näytä peliohje-valikko
     document.getElementById('peliohjeet').style.display = 'block';
+    
 }
 
+//////////////////////////////////////////////////////////////////////////////////////
+
+function naytaPeliohjeet2() {
+
+    klik();
+    // Piilota kotivalikko
+    document.getElementById('aloitusnaytto').style.display = 'none';
+    document.getElementById('noppanaytto').style.display = 'none';
+    document.getElementById('pelivalikko2').style.display = 'none';
+    document.getElementById('peliohjeet').style.display = 'none';
+
+    
+    // Näytä peliohje2-valikko
+
+    document.getElementById('peliohjeet2').style.display = 'block';
+    
+    
+}
 // 
 let nykyinenPelaajaIndeksi = 0;
 

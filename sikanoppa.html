@@ -16,7 +16,6 @@
         body{
             background-image: url(sikanoppa-kuvat/sikatausta.png);
             background-size: cover;
-            touch-action: manipulation;
         }
     </style>
         
@@ -133,8 +132,27 @@
                         <p>Pelaaja joka saa ensimmäisenä 100 pistettä voittaa</p>
                     </div>
 
-                        <button class="pelivalintabuttonit2" id="home" onclick="naytaKotivalikko()" >Takaisin alkuun</button>
+                        <button class="pelivalintabuttonit2" id="home" onclick="naytaKotivalikko()" >Takaisin alkuun </button>
+
+                        <button class="pelivalintabuttonit2" id="peliohje2" onclick="naytaPeliohjeet2()" >2 nopan säännöt</button>
                     
+                </div>
+
+                <div id="peliohjeet2" class="peliohjeet2" >
+                    <div id="peliohjeteksti2" >
+                        <h3>Peliohjeet kahdella nopalla</h3>
+        
+                        <p>Heitä noppaa. <br> <br> Jos heität tuplat, saat tuplapisteet. <br> <br> Jos saat kaksi ykköstä, saat 25 pistettä. <br> <br>
+                            Jos heität vain toisella nopalla ykkösen, tai kolme kertaa peräkkäin tuplat, vuoro siirtyy seuraavalle pelaajalle etkä saa kierrokselta pisteitä. <br> <br>
+
+
+                            </p>
+                        <p>Pelaaja joka saa ensimmäisenä 100 pistettä voittaa.</p>
+                    </div>
+
+                        <button class="pelivalintabuttonit2" id="peliohje" onclick="naytaPeliohjeet()" >Takaisin</button>
+
+                        
                     
                 </div>
                 
