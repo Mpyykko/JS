@@ -19,8 +19,18 @@ function nopanheitto(){
 }
 
 function ykkonen(){
-    let audio = document.getElementById('ykkonen');
-    audio.play();
+    let ykkonen = document.getElementById('ykkonen');
+    ykkonen.play();
+}
+
+function voitto(){
+    let voitto = document.getElementById('voitto');
+    voitto.play();
+}
+
+function tuplanopat(){
+    let tuplis = document.getElementById('tuplanopat');
+    tuplis.play();
 }
 
 
@@ -90,6 +100,7 @@ function naytaToinenValikko() {
     klik();
 
     // Piilota kotivalikko
+   
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('noppanaytto').style.display = 'none';
     // Näytä toinen valikko
@@ -101,6 +112,7 @@ function naytaPeliohjeet() {
 
     klik();
     // Piilota kotivalikko
+ 
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('noppanaytto').style.display = 'none';
     document.getElementById('pelivalikko2').style.display = 'none';
@@ -117,6 +129,7 @@ function naytaPeliohjeet2() {
 
     klik();
     // Piilota kotivalikko
+  
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('noppanaytto').style.display = 'none';
     document.getElementById('pelivalikko2').style.display = 'none';
@@ -142,7 +155,7 @@ function paivitaPelaajanNimi() {
         
         // Tarkistetaan, onko pelaaja nykyinen pelaaja ja päivitetään vuorossa olevan pelaajan nimi
         if (indeksi === nykyinenPelaajaIndeksi) {
-            kukaPelaa.textContent = `Vuorossa: ${pelaaja.nimi}`;
+            kukaPelaa.innerHTML = `Vuorossa <br> ${pelaaja.nimi}`;
         }
     });
 
@@ -154,13 +167,14 @@ function paivitaPelaajanNimi() {
 function naytaPelikentta() {
 
     document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/possu1.png'>";
-
+    
     
 
    
     // Näytetään vuorossa oleva pelaaja
     paivitaPelaajanNimi();
     // Piilota muut valikot
+  
     document.getElementById('aloitusnaytto').style.display = 'none';
     document.getElementById('pelivalikko2').style.display = 'none';
     
@@ -244,6 +258,7 @@ function naytaKotivalikko() {
 
     // piilota nykyinen valikko
     document.getElementById('pelivalikko2').style.display = 'none';
+   
     // piilota nykyinen valikko
     document.getElementById('pelikentta').style.display = 'none';
     // piilota ohjeet
@@ -284,6 +299,7 @@ let yhteispisteet = 0;
 
 
 function heitaNoppaa() {
+    ilmoitus.innerHTML ='';
     nopanheitto();
   
     noppaPyorii();
@@ -317,11 +333,12 @@ function heitaNoppaa() {
 
     if (noppienSumma > 1 && tulos === 1) {
 
+        //ääni
         ykkonen();
 
         noppienSumma = 0;
         
-        noppienSummanaytto.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen! <br> Pisteet: ${noppienSumma}`);
+        ilmoitus.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen!`);
         
 
         // päivitä pelaajan vuoro
@@ -330,6 +347,8 @@ function heitaNoppaa() {
 
        
     }
+
+    
 
 }
 
@@ -348,7 +367,8 @@ keraa.addEventListener('click', function() {
 
 // kahden nopan heitto
 
-
+ // tuplaheitoille laskuri
+ let tuplalaskuri = 0;
 
 
 function heitaKahtaNoppaa() {
@@ -372,6 +392,8 @@ function heitaKahtaNoppaa() {
     let tulos1 = nopat[indeksi1];
     let tulos2 = nopat[indeksi2];
     let summa = tulos1 + tulos2;
+
+   
 
     
 
@@ -410,25 +432,51 @@ function heitaKahtaNoppaa() {
     document.getElementById('tulosnaytto2').appendChild(img1);
     document.getElementById('tulosnaytto2').appendChild(img2);
 
+
+    
     
     // tuplaykköset
     if(tulos1 === 1 && tulos2 === 1){
+        //ääni
+        tuplanopat();
         document.getElementById('voittajan-nimi').innerHTML='Tuplat!';
         summa +=25 - 2;
     }
     // tuplat
     else if(tulos1 === tulos2){
+        //ääni
+        tuplanopat();
         summa *=2;
         document.getElementById('voittajan-nimi').innerHTML='Tuplat!';
+        tuplalaskuri += 1;
     }
 
-    noppienSumma += summa;
     
-    paivitaPelaajanNimi();
+
+    noppienSumma += summa;
+
+    // jos tuplaheittoja on kolme perättäistä
 
     
+
+
+    // jos jompikumpi nopista on yksi
+    if(tulos1 === 1 && tulos2 !=1 || tulos2 === 1 && tulos1 !=1){
+        ykkonen();
+        nykyinenPelaajaIndeksi = (nykyinenPelaajaIndeksi + 1) % pelaajaLista.length;
+        
+        paivitaPelaajanNimi();
+        noppienSumma = 0;
+    }
+    
+    
+ 
+    
+    console.log(tuplalaskuri);
 
     setTimeout(naytaSumma,900);
+
+    
 
  
 
@@ -493,6 +541,8 @@ function alaHeita(){
 
 // peli päättyy toiminto
 function gameOver(){
+    voitto();
+
     document.getElementById('tulosnaytto2').style.display = 'none';
     document.getElementById('tulosnaytto').style.display = 'block';
     document.getElementById('tulosnaytto').innerHTML ='Voittaja on';
@@ -502,7 +552,7 @@ function gameOver(){
    
     noppienSummanaytto.innerHTML = '';
     
-    document.getElementById('kukaPelaa-naytto').innerHTML ='';
+    document.getElementById('kukaPelaa-naytto').style.display = 'none';
     document.getElementById('voittajan-nimi').innerHTML =`<span class='voittaja'> <br> ${pelaajaLista[nykyinenPelaajaIndeksi].nimi}! </span>`;
     document.getElementById('eiheita').disabled = true;
     document.getElementById('heita').disabled = true;
@@ -517,11 +567,12 @@ function gameOver(){
 
 // uuden  pelin aloitus
 function uusiPeli(){
-    document.getElementById('tulosnaytto2').style.display = 'block';
+    document.getElementById('kukaPelaa-naytto').style.display = 'inline-block';
+    document.getElementById('tulosnaytto2').style.display = 'flex';
     
-   
+    noppienSummanaytto.innerHTML = 'Pisteet: 0';
     yhteispisteet = 0;
-    noppienSummanaytto.innerHTML = '';
+  
     noppienSumma = 0;
 
     // tyhjennetään pelaajien pisteet
