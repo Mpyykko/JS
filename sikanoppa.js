@@ -546,7 +546,7 @@ function alaHeita(){
 // peli päättyy toiminto
 function gameOver(){
     voitto();
-
+   
     document.getElementById('tulosnaytto2').style.display = 'none';
     document.getElementById('tulosnaytto').style.display = 'flex';
     document.getElementById('tulosnaytto').innerHTML ='Voittaja on';
@@ -558,6 +558,9 @@ function gameOver(){
     
     document.getElementById('kukaPelaa-naytto').style.display = 'none';
     document.getElementById('noppanayton-valikko').style.display = 'none';
+
+    
+
     document.getElementById('voittajan-nimi').innerHTML =`<span class='voittaja'> <br> ${pelaajaLista[nykyinenPelaajaIndeksi].nimi}! </span>`;
     document.getElementById('eiheita').disabled = true;
     document.getElementById('heita').disabled = true;

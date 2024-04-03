@@ -40,6 +40,13 @@
     position: relative;
    
 }
+.voittokuva{
+    width: 70%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+}
 
 #kukaPelaa-naytto{
     position:absolute;
