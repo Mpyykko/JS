@@ -155,7 +155,7 @@ function paivitaPelaajanNimi() {
         
         // Tarkistetaan, onko pelaaja nykyinen pelaaja ja päivitetään vuorossa olevan pelaajan nimi
         if (indeksi === nykyinenPelaajaIndeksi) {
-            kukaPelaa.innerHTML = `Vuorossa <br> ${pelaaja.nimi}`;
+            kukaPelaa.innerHTML = `${pelaaja.nimi}`;
         }
     });
 
@@ -165,6 +165,7 @@ function paivitaPelaajanNimi() {
 //////////////////////////////////////////////////////////////////////////////////////
 
 function naytaPelikentta() {
+    klik();
 
     document.getElementById('tulosnaytto').innerHTML = "<img src='sikanoppa-kuvat/possu1.png'>";
     
@@ -377,6 +378,7 @@ function heitaKahtaNoppaa() {
 
    // tyhjennetään mahdollisen aiemman pelin voittaja
     document.getElementById('voittajan-nimi').innerHTML='';
+    ilmoitus.innerHTML ='';
 
     // tyhjennetään yhden nopan pelinäyttö
     document.getElementById('tulosnaytto').style.display = 'none';
@@ -463,7 +465,9 @@ function heitaKahtaNoppaa() {
     // jos jompikumpi nopista on yksi
     if(tulos1 === 1 && tulos2 !=1 || tulos2 === 1 && tulos1 !=1){
         ykkonen();
+        ilmoitus.innerHTML = (`${pelaajaLista[nykyinenPelaajaIndeksi].nimi} sai ykkösen!`);
         nykyinenPelaajaIndeksi = (nykyinenPelaajaIndeksi + 1) % pelaajaLista.length;
+        
         
         paivitaPelaajanNimi();
         noppienSumma = 0;
@@ -476,7 +480,7 @@ function heitaKahtaNoppaa() {
 
     setTimeout(naytaSumma,900);
 
-    
+
 
  
 
@@ -544,7 +548,7 @@ function gameOver(){
     voitto();
 
     document.getElementById('tulosnaytto2').style.display = 'none';
-    document.getElementById('tulosnaytto').style.display = 'block';
+    document.getElementById('tulosnaytto').style.display = 'flex';
     document.getElementById('tulosnaytto').innerHTML ='Voittaja on';
     
 
@@ -553,6 +557,7 @@ function gameOver(){
     noppienSummanaytto.innerHTML = '';
     
     document.getElementById('kukaPelaa-naytto').style.display = 'none';
+    document.getElementById('noppanayton-valikko').style.display = 'none';
     document.getElementById('voittajan-nimi').innerHTML =`<span class='voittaja'> <br> ${pelaajaLista[nykyinenPelaajaIndeksi].nimi}! </span>`;
     document.getElementById('eiheita').disabled = true;
     document.getElementById('heita').disabled = true;
@@ -567,6 +572,7 @@ function gameOver(){
 
 // uuden  pelin aloitus
 function uusiPeli(){
+    document.getElementById('noppanayton-valikko').style.display = 'block';
     document.getElementById('kukaPelaa-naytto').style.display = 'inline-block';
     document.getElementById('tulosnaytto2').style.display = 'flex';
     

@@ -33,21 +33,28 @@
     align-items: center;
     margin: 0 auto;
     margin-bottom: 10px;
-   
 
+}
+
+.noppanayton-valikko{
+    position: relative;
+   
 }
 
 #kukaPelaa-naytto{
     position:absolute;
-    top: 10%;
-    left: 0;
-    right: 0;
-    color:rgb(25, 4, 143);
+    top:7px;
+    left: 5%;
+
+    color:white;
     font-weight: bold;
 }
 
 #noppien-summa{
-    color:rgb(25, 4, 143);
+    position:absolute;
+    top: 7px;
+    right: 5%;
+    color:white;
     font-weight: bold;
 
 }
