@@ -75,7 +75,7 @@
     right: 0;
     color:rgb(25, 4, 143);
     font-weight: bold;
-    font-size:40px;
+    font-size:30px;
 }
 
 #noppien-summa{
@@ -276,8 +276,8 @@
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
     font-weight: bold;
-    font-size: large;
-    font-family: "Tilt Neon", sans-serif;
+    font-size: medium;
+    font-family: inherit;
   
 }
 
@@ -297,8 +297,8 @@
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
     font-weight: bold;
-    font-size: large;
-    font-family: "Tilt Neon", sans-serif;
+    font-size: medium;
+    font-family: inherit;
    
   
 }
@@ -335,9 +335,8 @@
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
     font-weight: bold;
-    font-size: large;
-    font-family: "Tilt Neon", sans-serif;
-
+    font-size: medium;
+    font-family: inherit;
 }
 
 .seuraava-painike:hover{
