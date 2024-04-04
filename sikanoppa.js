@@ -520,7 +520,7 @@ function alaHeita(){
         pelaajaLista[nykyinenPelaajaIndeksi].pisteet += noppienSumma;
         yhteispisteet += noppienSumma;
 
-        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 100) {
+        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 10) {
             gameOver();
           
         }
@@ -543,10 +543,16 @@ function alaHeita(){
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+
+let voittokuvaElementti = document.getElementById('voittokuva');
+const kuvaHTML = '<img src="sikanoppa-kuvat/kruunu.png" alt="Kruunu" class="voittokuva">';
+
 // peli päättyy toiminto
 function gameOver(){
     voitto();
-   
+
+    voittokuvaElementti.innerHTML = kuvaHTML;
+    
     document.getElementById('tulosnaytto2').style.display = 'none';
     document.getElementById('tulosnaytto').style.display = 'flex';
     document.getElementById('tulosnaytto').innerHTML ='Voittaja on';
@@ -575,6 +581,9 @@ function gameOver(){
 
 // uuden  pelin aloitus
 function uusiPeli(){
+
+    voittokuvaElementti.innerHTML = '';
+    
     document.getElementById('noppanayton-valikko').style.display = 'block';
     document.getElementById('kukaPelaa-naytto').style.display = 'inline-block';
     document.getElementById('tulosnaytto2').style.display = 'flex';
