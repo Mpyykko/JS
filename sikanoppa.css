@@ -46,6 +46,7 @@
     top: 20%;
     left: 0;
     right: 0;
+    display: block;
    
 }
 .voittokuva img{
@@ -69,18 +70,20 @@
 
 #kukaPelaa-naytto{
     position:absolute;
-    top:4%;
+    top: 8px;
     left: 5%;
     color:white;
     font-weight: bold;
+    font-size: larger;
 }
 
 #noppien-summa{
     position:absolute;
-    top: 4%;
+    top: 8px;
     right: 5%;
     color:white;
     font-weight: bold;
+    font-size: larger;
 
 }
 

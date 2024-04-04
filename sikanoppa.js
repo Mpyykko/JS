@@ -142,24 +142,35 @@ function naytaPeliohjeet2() {
     
     
 }
-// 
+// tähän pelaajien listaus ja päivitys kuka johtaa pisteissä
 let nykyinenPelaajaIndeksi = 0;
 
 let kukaPelaa = document.getElementById('kukaPelaa-naytto');
 
 function paivitaPelaajanNimi() {
-    let pelaajienNimetJaPisteet = '';
+    // luodaan uusi taulukko kopioimalla pelaajalista ja järjestetään se 
+    let jarjestettyPelaajaLista = [...pelaajaLista].sort(function(a, b) {
 
-    pelaajaLista.forEach(function(pelaaja, indeksi) {
-        pelaajienNimetJaPisteet += `${pelaaja.nimi}: ${pelaaja.pisteet}<br>`;
-        
-        // Tarkistetaan, onko pelaaja nykyinen pelaaja ja päivitetään vuorossa olevan pelaajan nimi
-        if (indeksi === nykyinenPelaajaIndeksi) {
-            kukaPelaa.innerHTML = `${pelaaja.nimi}`;
+        // ennen ekoja pisteitä ei järjestetä tulostaulukkoa
+        if (b.pisteet === 0 && a.pisteet === 0) {
+            return 0;
         }
+        // jos pelaajilla on tasapisteet vertaillaan nimiä
+        if (b.pisteet === a.pisteet) {
+            return a.nimi.localeCompare(b.nimi); // Vertaa nimiä aakkosjärjestyksessä
+        }
+        // muuten vertaillaan pisteitä
+        return b.pisteet - a.pisteet;
     });
 
+    let pelaajienNimetJaPisteet = jarjestettyPelaajaLista.map(pelaaja => `${pelaaja.nimi}: ${pelaaja.pisteet}`).join('<br>');
+
+    // päivitetään tulostaulukko kopiolistalta
     document.getElementById('pelaajan-pisteet').innerHTML = pelaajienNimetJaPisteet;
+
+    // vuorossa olevan pelaajan nimi ruudulle
+    
+    kukaPelaa.innerHTML = pelaajaLista[nykyinenPelaajaIndeksi].nimi;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -520,7 +531,7 @@ function alaHeita(){
         pelaajaLista[nykyinenPelaajaIndeksi].pisteet += noppienSumma;
         yhteispisteet += noppienSumma;
 
-        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 10) {
+        if (pelaajaLista[nykyinenPelaajaIndeksi].pisteet >= 20) {
             gameOver();
           
         }
