@@ -276,7 +276,6 @@
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
     font-weight: bold;
-    font-size: medium;
     font-family: inherit;
    
   
@@ -287,7 +286,7 @@
 }
 
 .pelivalintabuttonit2{
- 
+  
     margin: 0 auto;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -298,7 +297,6 @@
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
     font-weight: bold;
-    font-size: medium;
     font-family: inherit;
    
    
@@ -341,7 +339,6 @@
     border: 2px solid rgb(49, 49, 49);
     border-radius: 5px;
     font-weight: bold;
-    font-size: medium;
     font-family: inherit;
  
 }

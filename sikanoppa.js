@@ -389,7 +389,7 @@ keraa.addEventListener('click', function() {
 
  // tuplaheitoille laskuri
  let tuplalaskuri = 0;
- kolmeTuplaa = false;
+ 
 
 
 function heitaKahtaNoppaa() {
@@ -484,9 +484,9 @@ function heitaKahtaNoppaa() {
 
     // jos tuplaheittoja on kolme perättäistä
 
-    if(tuplalaskuri === 2){
+    if(tuplalaskuri === 3){
 
-        kolmeTuplaa = true;
+      
 
         // ääni
         ykkonen();
