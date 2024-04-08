@@ -344,7 +344,7 @@ function heitaNoppaa() {
 
     setTimeout(naytaSumma,900);
 
-    if (noppienSumma > 1 && tulos === 1) {
+    if (tulos === 1) {
 
        
 
