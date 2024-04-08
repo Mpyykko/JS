@@ -271,14 +271,13 @@
     margin-top: 10px;
     width: 100px;
     height: 50px;
-    background-color:rgb(25, 4, 143);
+    background-color:rgb(94, 68, 244);
     color: white;
-    border: 2px solid rgb(49, 49, 49);
-    border-radius: 5px;
+    border: 3px solid rgba(49, 49, 49, 0.436);
+    border-radius: 25px;
     font-weight: bold;
     font-family: inherit;
-   
-  
+
 }
 
 .pelivalintabuttonit:hover{
@@ -292,10 +291,10 @@
     margin-top: 10px;
     width: 100px;
     height: 50px;
-    background-color:rgb(25, 4, 143);
+    background-color:rgb(94, 68, 244);
     color: white;
-    border: 2px solid rgb(49, 49, 49);
-    border-radius: 5px;
+    border: 3px solid rgba(49, 49, 49, 0.436);
+    border-radius: 25px;
     font-weight: bold;
     font-family: inherit;
    
@@ -334,10 +333,10 @@
     margin-top: 10px;
     width: 100px;
     height: 50px;
-    background-color:rgb(25, 4, 143);
+    background-color:rgb(94, 68, 244);
     color: white;
-    border: 2px solid rgb(49, 49, 49);
-    border-radius: 5px;
+    border: 3px solid rgba(49, 49, 49, 0.436);
+    border-radius: 25px;
     font-weight: bold;
     font-family: inherit;
  
@@ -565,7 +564,6 @@
         margin: 0 auto;
 
     }
- 
 
 }
 

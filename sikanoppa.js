@@ -165,7 +165,7 @@ function paivitaPelaajanNimi() {
         }
         // jos pelaajilla on tasapisteet vertaillaan nimiä
         if (b.pisteet === a.pisteet) {
-            return a.nimi.localeCompare(b.nimi); // Vertaa nimiä aakkosjärjestyksessä
+            return a.nimi.localeCompare(b.nimi);
         }
         // muuten vertaillaan pisteitä
         return b.pisteet - a.pisteet;
@@ -264,16 +264,13 @@ function paivitaSeuraavaButton() {
 
 // siirtymä kotivalikkoon
 function naytaKotivalikko() {
-   
+    // ääni
     klik();
 
     // päivitetään sivu
+    // tähän ehkä vielä jokin muu tapa tyhjentää pelitiedot?
     location.reload();
   
-    
-    
-
-   
 
 
     // piilota nykyinen valikko
@@ -298,7 +295,6 @@ function naytaKotivalikko() {
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-
 // muuttujia
 const nopat = [1,2,3,4,5,6];
 let noppienSummanaytto = document.getElementById('noppien-summa');
@@ -310,8 +306,6 @@ let pistelista = [];
 
 
 
-
-
 // yhden nopan heitto
 
 
@@ -320,8 +314,9 @@ let yhteispisteet = 0;
 
 function heitaNoppaa() {
     ilmoitus.innerHTML ='';
+    // ääni
     nopanheitto();
-  
+    // animaatio
     noppaPyorii();
     paivitaPelaajanNimi();
 
@@ -344,14 +339,14 @@ function heitaNoppaa() {
 
     noppienSumma += tulos;
 
-   
-    
+
     // Näytä noppien summa
 
-    
     setTimeout(naytaSumma,900);
 
     if (noppienSumma > 1 && tulos === 1) {
+
+       
 
         //ääni
         ykkonen();
@@ -369,7 +364,6 @@ function heitaNoppaa() {
     }
 
     
-
 }
 
 
@@ -377,8 +371,6 @@ function heitaNoppaa() {
 let keraa = document.getElementById('eiheita');
 keraa.addEventListener('click', function() {
     alaHeita();
-
-    
 
 });
 
@@ -390,8 +382,6 @@ keraa.addEventListener('click', function() {
  // tuplaheitoille laskuri
  let tuplalaskuri = 0;
  
-
-
 function heitaKahtaNoppaa() {
     nopanheitto();
     
@@ -402,12 +392,7 @@ function heitaKahtaNoppaa() {
 
     // tyhjennetään yhden nopan pelinäyttö
     document.getElementById('tulosnaytto').style.display = 'none';
-    
 
-  
-
-    
-  
     // kahdelle nopalle indeksit ja arvot
     let indeksi1 = Math.floor(Math.random() * nopat.length);
     let indeksi2 = Math.floor(Math.random() * nopat.length);
@@ -415,9 +400,6 @@ function heitaKahtaNoppaa() {
     let tulos2 = nopat[indeksi2];
     let summa = tulos1 + tulos2;
 
-   
-
-    
 
     // noppa1 kuvat
     let img1 = document.createElement('img');
@@ -485,9 +467,6 @@ function heitaKahtaNoppaa() {
     // jos tuplaheittoja on kolme perättäistä
 
     if(tuplalaskuri === 3){
-
-      
-
         // ääni
         ykkonen();
         
@@ -498,14 +477,13 @@ function heitaKahtaNoppaa() {
         
         paivitaPelaajanNimi();
         noppienSumma = 0;
+        naytaSumma();
     }
 
     // nollataan tuplaskuri jos tulee muu kuin tupla
     if(tulos1 != tulos2 || tulos2 != tulos1){
         tuplalaskuri = 0;
     }
-
-    
 
 
     // jos jompikumpi nopista on yksi
@@ -518,31 +496,20 @@ function heitaKahtaNoppaa() {
         paivitaPelaajanNimi();
         noppienSumma = 0;
         tuplalaskuri = 0;
+        naytaSumma();
     }
     
-    
-    
-    
-    console.log(tuplalaskuri);
 
+    // ei näytetä pisteitä ennenkuin noppa on pysähtynyt
     setTimeout(naytaSumma,900);
-
-
-
- 
-
-     
- 
-
 
 
 }
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////
 
-// functio valitulle pelimuodolle'
+// funktio valitulle pelimuodolle
 
 function valitseHeitto(){{
         if (onkoYksiNoppaaValittu) {
@@ -590,9 +557,7 @@ function alaHeita(){
 }
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////
-
 
 let voittokuvaElementti = document.getElementById('voittokuva');
 const kuvaHTML = '<img src="sikanoppa-kuvat/kruunu.png" alt="Kruunu" class="voittokuva">';
@@ -675,7 +640,7 @@ function noppaPyorii() {
     }, 1000);
   }
 
-  //////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
   function noppaPyorii2() {
     let kuvat = document.querySelectorAll('#tulosnaytto2 img');
