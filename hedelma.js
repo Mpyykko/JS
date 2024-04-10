@@ -43,22 +43,141 @@ function pelikierros(){
 
 // rullien pyöriminen
 
-//const voittoKuviot = [1,2,3,4,5,6,7];
+
+const meloni = "<img src='pelikuvat/melon.png' class='rulla-symboli'>";
+const seiska = "<img src='pelikuvat/seiska.png' class='rulla-symboli'>";
+const bar = "<img src='pelikuvat/bar.png' class='rulla-symboli'>";
+const eselogo = "<img src='pelikuvat/ese.png' class='rulla-symboli'>";
+const lippu = "<img src='pelikuvat/omalippu.png' class='rulla-symboli'>";
+const play = "<img src='pelikuvat/play4.png' class='rulla-symboli'>";
+
+const voittoKuviot = [1,2,3,4,5,6];
 
 function rullatPyorii(){
-    const rullaSymbolit = document.querySelectorAll('.rulla-symboli');
+    rulla1();
+    rulla2();
+    rulla3();
+    rulla4();
+    console.log(rulla1(),rulla2(),rulla3(),rulla4());
+
+    // kolmen peräkkäisen kuvion voitto 
+    if(rulla1() === rulla2() && rulla2() === rulla3() ){
+        console.log('3 ekaa osui!!!');
+    }
     
-    rullaSymbolit.forEach(function(symbol, index) {
-        
-        setTimeout(function() {
-            symbol.style.animationPlayState = 'running';
-        }, index * 10);
 
 
-
-    });
-   
+    
+  
 }
+
+// ekan rullan kuvion arvonta
+function rulla1(){
+
+    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+    const tulos = voittoKuviot[indeksi];
+
+    if (tulos === 1) {
+        document.getElementById('rulla1').innerHTML = meloni;
+   
+    } else if (tulos === 2) {
+        document.getElementById('rulla1').innerHTML = seiska;
+    } else if (tulos === 3) {
+        document.getElementById('rulla1').innerHTML = bar;
+    } else if (tulos === 4) {
+        document.getElementById('rulla1').innerHTML = play;
+    } else if (tulos === 5) {
+        document.getElementById('rulla1').innerHTML = eselogo;
+    } else if (tulos === 6) {
+        document.getElementById('rulla1').innerHTML = lippu;
+    }
+  
+    return tulos;
+
+}
+ 
+
+   
+
+ 
+
+
+// tokan rullan kuvion arvonta
+function rulla2(){
+
+    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+    const tulos = voittoKuviot[indeksi];
+
+    if (tulos === 1) {
+        document.getElementById('rulla2').innerHTML = meloni;
+   
+    } else if (tulos === 2) {
+        document.getElementById('rulla2').innerHTML = seiska;
+    } else if (tulos === 3) {
+        document.getElementById('rulla2').innerHTML = bar;
+    } else if (tulos === 4) {
+        document.getElementById('rulla2').innerHTML = play;
+    } else if (tulos === 5) {
+        document.getElementById('rulla2').innerHTML = eselogo;
+    } else if (tulos === 6) {
+        document.getElementById('rulla2').innerHTML = lippu;
+    }
+  
+    return tulos;
+
+}
+// kolmannen rullan kuvion arvonta
+function rulla3(){
+
+    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+    const tulos = voittoKuviot[indeksi];
+
+    if (tulos === 1) {
+        document.getElementById('rulla3').innerHTML = meloni;
+   
+    } else if (tulos === 2) {
+        document.getElementById('rulla3').innerHTML = seiska;
+    } else if (tulos === 3) {
+        document.getElementById('rulla3').innerHTML = bar;
+    } else if (tulos === 4) {
+        document.getElementById('rulla3').innerHTML = play;
+    } else if (tulos === 5) {
+        document.getElementById('rulla3').innerHTML = eselogo;
+    } else if (tulos === 6) {
+        document.getElementById('rulla3').innerHTML = lippu;
+    }
+  
+    return tulos;
+
+}
+// neljännen rullan kuvion arvonta
+function rulla4(){
+
+    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+    const tulos = voittoKuviot[indeksi];
+
+    if (tulos === 1) {
+        document.getElementById('rulla4').innerHTML = meloni;
+   
+    } else if (tulos === 2) {
+        document.getElementById('rulla4').innerHTML = seiska;
+    } else if (tulos === 3) {
+        document.getElementById('rulla4').innerHTML = bar;
+    } else if (tulos === 4) {
+        document.getElementById('rulla4').innerHTML = play;
+    } else if (tulos === 5) {
+        document.getElementById('rulla4').innerHTML = eselogo;
+    } else if (tulos === 6) {
+        document.getElementById('rulla4').innerHTML = lippu;
+    }
+  
+    return tulos;
+}
+
+
+
+
+
 // saldon päivitys-funktio
 function naytaSaldo() {
     naytaUusisaldo.innerHTML = (`Saldo <br> ${saldo} €`);

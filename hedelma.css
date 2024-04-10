@@ -111,39 +111,17 @@
 
     .rulla-symboli {
     
-        width: 60%;
+        width: 70%;
         height: auto;
         position: absolute;
         margin: 0px auto;
         left: 0;
         right: 0;
-        animation: liikuYlhaaltaAlas 1s  linear 10s;
-        animation-play-state: paused;
-       
+        top: 50%;
+        transform: translateY(-50%);
+     
     }
-        @keyframes liikuYlhaaltaAlas {
-            0% {
-                top: -100px;
-            }
-            100% {
-                top: 100%;
-            }
-        }
-        .rulla-symboli:nth-child(1) {
-            animation-delay: 0s;
-         
-        }
-        
-        .rulla-symboli:nth-child(2) {
-            
-            animation-delay: 0.5s;
-           
-        }
-        
-        .rulla-symboli:nth-child(3) {
-            animation-delay: 0.7s;
-          
-        }
+      
 
     .lukitse-painikkeet{
         position: absolute;
