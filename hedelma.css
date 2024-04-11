@@ -243,7 +243,17 @@
         bottom: 0%;
     }
 
-    
+    .peli-ilmoitus{
+        position: absolute;
+        width: 100%;
+        top: 15%;
+        height: 50px;
+        margin: 0 auto;
+        color: white;
+        font-family: inherit;
+        font-weight: bold;
+        
+    }
 
     #saldo{
         position:absolute;

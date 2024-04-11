@@ -12,6 +12,9 @@ const naytaUusipanos = document.getElementById('panos');
 let voitto = 0;
 const naytaVoitto = document.getElementById('voitto');
 
+let voittoTeksti = document.getElementById('voittoTeksti');
+
+
 
 
 
@@ -44,60 +47,73 @@ function pelikierros(){
         if (rullienTulokset.every(val => val === 1)) {
             console.log('Neljä melonia!!!');
             voitto += panos *1000;
+            voittoTeksti.innerHTML = 'Neljä melonia!';
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 1)) {
             console.log('Kolme melonia!!!');
             voitto += panos *100;
+            voittoTeksti.innerHTML = 'Kolme melonia!';
         }
         
         // seiskat
         if (rullienTulokset.every(val => val === 2)) {
             console.log('Neljä seiskaa!!!');
             voitto += panos *1000;
+            voittoTeksti.innerHTML = 'Neljä seiskaa!';
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 2)) {
             console.log('Kolme seiskaa!!!');
             voitto += panos *100;
+            voittoTeksti.innerHTML = 'Kolme seiskaa!';
         }
 
         // barit
         if (rullienTulokset.every(val => val === 3)) {
             console.log('Neljä baria!!!');
             voitto += panos *1000;
+            voittoTeksti.innerHTML = 'Neljä baria!';
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 3)) {
             console.log('Kolme baria!!!');
             voitto += panos *100;
+            voittoTeksti.innerHTML = 'Kolme baria!';
+
         }
 
         // esedua
         if (rullienTulokset.every(val => val === 4)) {
             console.log('Neljä esedua!!!');
             voitto += panos *1000;
+            voittoTeksti.innerHTML = 'Neljä esedua!';
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 4)) {
             console.log('Kolme esedua!!!');
             voitto += panos *100;
+            voittoTeksti.innerHTML = 'Kolme esedua!';
         }
 
         // lippua
         if (rullienTulokset.every(val => val === 5)) {
             console.log('Neljä lippua!!!');
             voitto += panos *1000;
+            voittoTeksti.innerHTML = 'Neljä lippua!';
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 5)) {
             console.log('Kolme lippua!!!');
             voitto += panos *100;
+            voittoTeksti.innerHTML = 'Kolme lippua!';
         }
 
         // playta
         if (rullienTulokset.every(val => val === 6)) {
             console.log('Neljä playta!!!');
             voitto += panos *1000;
+            voittoTeksti.innerHTML = 'Neljä playta!';
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             console.log('Kolme playta!!!');
             voitto += panos *100;
+            voittoTeksti.innerHTML = 'Kolme playta!';
         }
 
         
@@ -116,6 +132,8 @@ function pelikierros(){
        
        
     }
+
+    voittoTeksti.innerHTML = '';
 
 
    rullienTulokset =[];
