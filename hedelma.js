@@ -133,7 +133,7 @@ function pelikierros(){
        
     }
 
-    voittoTeksti.innerHTML = '';
+   
 
 
    rullienTulokset =[];
@@ -179,6 +179,7 @@ const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,play];
 // pyöritysfunktio
 function rullatPyorii(){
     
+    voittoTeksti.innerHTML = '';
     voitto = 0;
 
     console.log(rulla1(),

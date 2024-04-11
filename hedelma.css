@@ -420,7 +420,7 @@
             .rulla{
                 top: 33%;
                 width: 17%;
-                height: 25%;
+                height: 22%;
             }
             .rulla-symboli{
                 width: 60%;
@@ -437,6 +437,39 @@
                 border: 2px solid grey;
                 border-radius: 5px;
                 top: 58%;
+            }
+
+            #panosAlas-painike{
+       
+     
+                position: absolute;
+                background-color: transparent;
+                background-image: url(pelikuvat/betdown.png);
+                background-size: 100% 100%;
+                opacity: 0.7;
+                bottom: 20%;
+                left: 25%;
+                width: 40px;
+                height: 40px;
+                border: none;
+              
+            }
+           
+        
+            #panosYlos-painike{
+            
+              
+                position: absolute;
+                background-color: transparent;
+                background-image: url(pelikuvat/betup.png);
+                background-size: 100% 100%;
+                opacity: 0.7;
+                bottom: 20%;
+                right: 25%;
+                width: 40px;
+                height: 40px;
+                border: none;
+              
             }
 
            
