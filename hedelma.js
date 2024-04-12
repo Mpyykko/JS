@@ -28,7 +28,22 @@ panosPienemmalle.addEventListener('click', vahennaPanosta);
 const panosSuuremmalle = document.getElementById('panosYlos-painike');
 panosSuuremmalle.addEventListener('click', suurennaPanosta);
 
+// iso voitto funktio
 
+const bigwin = document.getElementById('iso-voitto');
+
+// iso voitto objektiksi
+const isovoittokuva = {
+    html: "<img src='pelikuvat/isovoitto.png' class='iso-voitto'>",
+    arvo: 10
+};
+
+function isovoitto(){
+
+    bigwin.innerHTML = isovoittokuva.html;
+
+
+}
 
 
 
@@ -36,10 +51,11 @@ let rullienTulokset =[];
 
 // pääohjelma
 function pelikierros(){
+    
 
      // jos saldo ei riitä
      if(saldo < panos){
-        voittoTeksti.innerHTML = 'Ei tarpeeksi saldoa!';
+        voittoTeksti.innerHTML = 'Not enough money!';
     };
 
     
@@ -51,14 +67,12 @@ function pelikierros(){
 
         // melonit
         if (rullienTulokset.every(val => val === 1)) {
-            console.log('Neljä melonia!!!');
             voitto += panos *1000;
-            voittoTeksti.innerHTML = 'Neljä melonia!';
+            isovoitto();
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 1)) {
-            console.log('Kolme melonia!!!');
             voitto += panos *100;
-            voittoTeksti.innerHTML = 'Kolme melonia!';
+            isovoitto();
         }
 
        
@@ -66,85 +80,63 @@ function pelikierros(){
         
         // seiskat
         if (rullienTulokset.every(val => val === 2)) {
-            console.log('Neljä seiskaa!!!');
             voitto += panos *1000;
-            voittoTeksti.innerHTML = 'Neljä seiskaa!';
+            isovoitto();
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 2)) {
-            console.log('Kolme seiskaa!!!');
             voitto += panos *100;
-            voittoTeksti.innerHTML = 'Kolme seiskaa!';
+            isovoitto();
         }
 
         // barit
         if (rullienTulokset.every(val => val === 3)) {
-            console.log('Neljä baria!!!');
             voitto += panos *1000;
-            voittoTeksti.innerHTML = 'Neljä baria!';
+            isovoitto();
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 3)) {
-            console.log('Kolme baria!!!');
             voitto += panos *100;
-            voittoTeksti.innerHTML = 'Kolme baria!';
+            isovoitto();
 
         }
 
         // esedua
         if (rullienTulokset.every(val => val === 4)) {
-            console.log('Neljä esedua!!!');
             voitto += panos *1000;
-            voittoTeksti.innerHTML = 'Neljä esedua!';
+            isovoitto();
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 4)) {
-            console.log('Kolme esedua!!!');
             voitto += panos *100;
-            voittoTeksti.innerHTML = 'Kolme esedua!';
+            isovoitto();
         }
 
         // lippua
         if (rullienTulokset.every(val => val === 5)) {
-            console.log('Neljä lippua!!!');
             voitto += panos *1000;
-            voittoTeksti.innerHTML = 'Neljä lippua!';
+            isovoitto();
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 5)) {
-            console.log('Kolme lippua!!!');
             voitto += panos *100;
-            voittoTeksti.innerHTML = 'Kolme lippua!';
+            isovoitto();
         }
 
-        // playta
+        // tähteä
         if (rullienTulokset.every(val => val === 6)) {
-            console.log('Neljä playta!!!');
             voitto += panos *1000;
-            voittoTeksti.innerHTML = 'Neljä playta!';
+            isovoitto();
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
-            console.log('Kolme playta!!!');
             voitto += panos *100;
-            voittoTeksti.innerHTML = 'Kolme playta!';
+            isovoitto();
 
         }
 
-      
-
-       
-        
-
-
-       
+   
         console.log(rullienTulokset);
 
         saldo += voitto;
         naytaUusiVoitto();
         naytaSaldo();
-
-       
-
-
-        
-
-       
+ 
        
     }
 
@@ -182,18 +174,20 @@ const lippu = {
     html: "<img src='pelikuvat/omalippu.png' class='rulla-symboli'>",
     arvo: 5
 };
-const play = {
-    html: "<img src='pelikuvat/play4.png' class='rulla-symboli'>",
+const tahti = {
+    html: "<img src='pelikuvat/tahti.png' class='rulla-symboli'>",
     arvo: 6
 };
 
-const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,play];
+const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 
 
 
 // pyöritysfunktio
 function rullatPyorii(){
-    
+
+    bigwin.innerHTML = '';
+
     voittoTeksti.innerHTML = '';
     voitto = 0;
 
@@ -280,19 +274,19 @@ function rulla4(){
 
 // saldon päivitys-funktio
 function naytaSaldo() {
-    naytaUusisaldo.innerHTML = (`Saldo <br> ${saldo} €`);
+    naytaUusisaldo.innerHTML = (`Cash <br> ${saldo} €`);
 }
 
 // voitto päivitys-funktio
 function naytaUusiVoitto() {
-    naytaVoitto.innerHTML = (`Voitto <br> ${voitto} €`);
+    naytaVoitto.innerHTML = (`Win <br> ${voitto} €`);
 }
 
 // panoksen päivitys-funktio
 function vahennaPanosta() {
     if(panos >1){
     panos--;
-    naytaUusipanos.innerHTML = (`Panos <br> ${panos} €`);
+    naytaUusipanos.innerHTML = (`Bet <br> ${panos} €`);
     }
 }
 
@@ -300,7 +294,7 @@ function vahennaPanosta() {
 function suurennaPanosta() {
     if(panos <10 ){
     panos++;
-    naytaUusipanos.innerHTML = (`Panos <br> ${panos} €`);
+    naytaUusipanos.innerHTML = (`Bet <br> ${panos} €`);
     }
 }
 

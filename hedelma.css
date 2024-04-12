@@ -70,7 +70,7 @@
         margin: 20px auto;
         border: 2px solid black;
         height: 70vh;
-        background-image: url(pelikuvat/pelkkalippu.png);
+        background-image: url(pelikuvat/omalippu.png);
         background-size: 100% 100%;
         background-position: center;
         margin-top: 70px;
@@ -117,7 +117,7 @@
 
     .rulla-symboli {
     
-        width: 70%;
+        width: 80%;
         height: auto;
         position: absolute;
         margin: 0px auto;
@@ -227,7 +227,7 @@
         background-size: 100% 100%;
         opacity: 0.7;
         bottom: 20%;
-        right: 30%;
+        right: 35%;
         width: 40px;
         height: 40px;
         border: none;
@@ -258,9 +258,35 @@
         color: white;
         font-family: inherit;
         font-weight: bold;
+   
         
     }
 
+
+    .iso-voitto{
+        position: absolute;
+        width: 60%;
+        top: 14%;
+        height: 50px;
+        margin: 0 auto;
+        color: white;
+        font-family: inherit;
+        font-weight: bold;
+        animation: laajeneva 300ms ease-out forwards;
+      
+
+    }
+
+    @keyframes laajeneva {
+        from {
+            transform: scaleX(0);
+        }
+        to {
+            transform: scaleX(1);
+        }
+    }
+
+  
     #saldo{
         position:absolute;
         font-size: x-large;
@@ -314,7 +340,7 @@
             height: 25%;
         }
         .rulla-symboli{
-            width: 60%;
+            width: 80%;
             height: auto;
 
         }
@@ -353,7 +379,7 @@
                 height: 25%;
             }
             .rulla-symboli{
-                width: 50%;
+                width: 70%;
                 height: auto;
     
             }
@@ -497,7 +523,7 @@
                 height: 30px;
                 border: 2px solid grey;
                 border-radius: 5px;
-                top: 50%;
+                top: 54%;
             }
 
             #panosAlas-painike{
@@ -535,7 +561,7 @@
 
             #pelitiedot{
               
-                height: 7%;
+                height: 10%;
                 bottom: 0%;
             }
 
@@ -608,7 +634,7 @@
                 height: 22%;
             }
             .rulla-symboli{
-                width: 60%;
+                width: 70%;
                 height: auto;
     
             }
@@ -621,22 +647,19 @@
                 height: 30px;
                 border: 2px solid grey;
                 border-radius: 5px;
-                top: 50%;
+                top: 54%;
             }
 
             #panosAlas-painike{
        
      
-                position: absolute;
-                background-color: transparent;
-                background-image: url(pelikuvat/betdown.png);
-                background-size: 100% 100%;
-                opacity: 0.7;
+              
                 bottom: 20%;
-                left: 25%;
+                left: 20%;
                 width: 40px;
                 height: 40px;
                 border: none;
+              
               
             }
            
@@ -644,13 +667,8 @@
             #panosYlos-painike{
             
               
-                position: absolute;
-                background-color: transparent;
-                background-image: url(pelikuvat/betup.png);
-                background-size: 100% 100%;
-                opacity: 0.7;
                 bottom: 20%;
-                right: 25%;
+                right: 20%;
                 width: 40px;
                 height: 40px;
                 border: none;
@@ -661,7 +679,7 @@
 
             #pelitiedot{
               
-                height: 7%;
+                height: 10%;
                 bottom: 0%;
             }
 
