@@ -36,9 +36,15 @@ let rullienTulokset =[];
 
 // pääohjelma
 function pelikierros(){
-    
-    
 
+     // jos saldo ei riitä
+     if(saldo < panos){
+        voittoTeksti.innerHTML = 'Ei tarpeeksi saldoa!';
+    };
+
+    
+    
+    // jos saldo riittää
     if(saldo > 0 && panos <= saldo ){
         rullatPyorii();
         saldo = saldo - panos;
@@ -54,6 +60,9 @@ function pelikierros(){
             voitto += panos *100;
             voittoTeksti.innerHTML = 'Kolme melonia!';
         }
+
+       
+
         
         // seiskat
         if (rullienTulokset.every(val => val === 2)) {
@@ -114,8 +123,12 @@ function pelikierros(){
             console.log('Kolme playta!!!');
             voitto += panos *100;
             voittoTeksti.innerHTML = 'Kolme playta!';
+
         }
 
+      
+
+       
         
 
 
@@ -125,6 +138,8 @@ function pelikierros(){
         saldo += voitto;
         naytaUusiVoitto();
         naytaSaldo();
+
+       
 
 
         
