@@ -301,22 +301,7 @@ function suurennaPanosta() {
 
 // rullan lukitus
 
-document.getElementById('lukitse1').addEventListener('click', lukitus);
 
-
-function lukitus() {
-    const painike = document.getElementById('lukitse1');
-    let nykyinenKuva = painike.style.backgroundImage;
-
-    if (nykyinenKuva.includes('hold.png')) {
-        painike.style.backgroundImage = 'url(pelikuvat/holded.png)';
-    } else {
-        painike.style.backgroundImage = 'url(pelikuvat/hold.png)';
-    }
-}
-
-
-document.getElementById('lukitse1').addEventListener('click', lukitus);
 
 
 
