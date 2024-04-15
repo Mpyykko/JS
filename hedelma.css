@@ -166,33 +166,36 @@
 
 
    
+    .peli-painikkeet{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+        width: 100%;
+    }
 
+    .peli-painike {
+        display: inline-block;
+        margin-right: 10px;
+       
+      
+    }
    
 
     
-
-    
-    
-
-   
 
 
     #pelaa-painike{
-       
-        
-        position: absolute;
+
         background-size: 100% 100%;
         background-image: url(pelikuvat/play4.png);
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0.7;
-        bottom: 13%;
-        width: 13%;
-        padding-top: 13%;
+        width: 100px;
+        padding-top: 100px;
         border: none;
-        left: 40%;
-       
-        
+   
     }
     #pelaa-painike:hover{
         transform: scale(0.95);
@@ -202,13 +205,11 @@
     #panosAlas-painike{
        
      
-        position: absolute;
+  
         background-color: transparent;
         background-image: url(pelikuvat/betdown.png);
         background-size: 100% 100%;
         opacity: 0.7;
-        bottom: 20%;
-        left: 30%;
         width: 40px;
         height: 40px;
         border: none;
@@ -222,13 +223,13 @@
     #panosYlos-painike{
     
       
-        position: absolute;
+    
         background-color: transparent;
         background-image: url(pelikuvat/betup.png);
         background-size: 100% 100%;
         opacity: 0.7;
-        bottom: 20%;
-        right: 35%;
+      
+      
         width: 40px;
         height: 40px;
         border: none;
@@ -290,8 +291,8 @@
   
     #saldo{
         position:absolute;
-        font-size: x-large;
         font-weight: bold;
+        font-size: 13px;
         left: 1%;
         bottom: 0;
         color: whitesmoke;
@@ -299,18 +300,18 @@
 
     #panos{
         position:absolute;
-        font-size: x-large;
         font-weight: bold;
-        left: 44%;
+        font-size: 13px;
+        left: 48%;
         bottom: 0;
         color: whitesmoke;
     }
 
     #voitto{
         position:absolute;
-        font-size: x-large;
-        font-weight: bold;font-weight: bold;
-        left: 84%;
+        font-size: 13px;
+        font-weight: bold;
+        right: 1%;
         bottom: 0;
         color: whitesmoke;
     }
@@ -319,127 +320,7 @@
 
  
 
-    @media only screen and (min-width: 1801px) and (max-width:3000px) {
-       
-        .tippuvat {
-            width: 10%;
-        }
-        .pelikone-container{
-            height: 80vh;
-            width: 50%;
-        
-        }
-
-        .peli-otsikko{
-            position: relative;
-            width: 60%;
-            height: 10%;
-            top: -45px;
-           
-           
-        }
-
-        .rulla-container {
-            position: absolute;
-            width: 80%;
-            height: 30%;
-            top:200px;
-            left: 0;
-            right: 0;
-        }
-        
-        .rulla-symboli{
-            width: 80%;
-            height: auto;
-
-        }
-
-        #pelaa-painike{
-
-            width: 15%;
-            padding-top: 15%;
-            border: none;
-            left: 40%;  
-        }
-
-       
-
-        @media only screen and (min-width: 1101px) and (max-width:1800px) {
-   
-            .tippuvat {
-                width: 10%;
-            }
-            .pelikone-container{
-                height: 80vh;
-                width: 50%;
-            
-            }
     
-            .peli-otsikko{
-            position: relative;
-            width: 60%;
-            height: 10%;
-            top: -45px;
-           
-           
-        }
-
-        .rulla-container {
-             
-            position: absolute;
-            width: 80%;
-            height: 30%;
-            top:180px;
-            left: 0;
-            right: 0;
-        }
-           
-            .rulla-symboli{
-                width: 70%;
-                height: auto;
-    
-            }
-
-        
-        
-        
-            #saldo{
-                position:absolute;
-                font-size:medium;
-                font-weight: bold;
-                left: 1%;
-                color:white;
-               
-            }
-        
-            #panos{
-                position:absolute;
-                font-size: medium;
-                font-weight: bold;
-                left: 44%;
-                color:white;
-               
-            }
-        
-            #voitto{
-                position:absolute;
-                font-size: medium;
-                font-weight: bold;font-weight: bold;
-                right: 1%;
-                color:white;
-               
-            }
-
-            #pelaa-painike{
-
-                width: 15%;
-                padding-top: 15%;
-                border: none;
-                left: 40%;  
-            }
-    
-
-        }
         @media only screen and (min-width: 801px) and (max-width:1100px) {
    
             .peli-otsikko{
@@ -450,7 +331,7 @@
             }
         
             .pelikone-container{
-                height: 60vh;
+                height: 80vh;
                 width: 90%;
         
             }
@@ -466,47 +347,34 @@
             
             }
 
-            #panosAlas-painike{
-       
-     
-                opacity: 0.7;
-                bottom: 20%;
-                left: 25%;
-                width: 40px;
-                height: 40px;
-                border: none;
-              
-            }
-           
-        
-            #panosYlos-painike{
             
-              
-            
-                bottom: 20%;
-                right: 25%;
-                width: 40px;
-                height: 40px;
-                border: none;
-              
-            }
-
    
         
             #saldo{
                 position:absolute;
-                font-size:medium;
+              
                 font-weight: bold;
                 left: 1%;
                 color:white;
                
             }
-            #pelaa-painike{
+        
+            #panos{
+                position:absolute;
+              
+                font-weight: bold;
+                left: 44%;
+                color:white;
+              
+            }
+        
+            #voitto{
+                position:absolute;
 
-                width: 10%;
-                padding-top: 10%;
-                border: none;
-                left: 40%;  
+                font-weight: bold;
+                right: 1%;
+                color:white;
+             
             }
 
             
@@ -530,7 +398,7 @@
                 position: absolute;
                 width: 80%;
                 height: 30%;
-                top:230px;
+                top:250px;
                 left: 0;
                 right: 0;
             
@@ -555,56 +423,13 @@
     
             }
 
-           
-
-            #panosAlas-painike{
-       
-     
-                position: absolute;
-                background-color: transparent;
-                background-image: url(pelikuvat/betdown.png);
-                background-size: 100% 100%;
-                opacity: 0.7;
-                bottom: 20%;
-                left: 25%;
-                width: 40px;
-                height: 40px;
-                border: none;
-              
-            }
-           
-        
-            #panosYlos-painike{
-            
-              
-                position: absolute;
-                background-color: transparent;
-                background-image: url(pelikuvat/betup.png);
-                background-size: 100% 100%;
-                opacity: 0.7;
-                bottom: 20%;
-                right: 25%;
-                width: 40px;
-                height: 40px;
-                border: none;
-              
-            }
-
-            #pelitiedot{
-              
-                height: 10%;
-                bottom: 0%;
-            }
-
-           
-        
-        
          
-            
+           
+       
         
             #saldo{
                 position:absolute;
-                font-size:medium;
+            
                 font-weight: bold;
                 left: 1%;
                 color:white;
@@ -613,7 +438,7 @@
         
             #panos{
                 position:absolute;
-                font-size: medium;
+            
                 font-weight: bold;
                 left: 44%;
                 color:white;
@@ -622,22 +447,13 @@
         
             #voitto{
                 position:absolute;
-                font-size: medium;
+          
                 font-weight: bold;
                 right: 1%;
                 color:white;
              
             }
 
-            #pelaa-painike{
-
-                width: 20%;
-                padding-top: 20%;
-                border: none;
-                left: 40%;
-                bottom: 17%;
-            }
-    
 
         }
 
@@ -657,7 +473,7 @@
                 position: absolute;
                 width: 80%;
                 height: 30%;
-                top:230px;
+                top:200px;
                 left: 0;
                 right: 0;
              
@@ -684,33 +500,6 @@
 
       
 
-            #panosAlas-painike{
-       
-     
-              
-                bottom: 20%;
-                left: 20%;
-                width: 40px;
-                height: 40px;
-                border: none;
-              
-              
-            }
-           
-        
-            #panosYlos-painike{
-            
-              
-                bottom: 20%;
-                right: 20%;
-                width: 40px;
-                height: 40px;
-                border: none;
-                margin-left: 100px;
-             
-              
-            }
-
             #pelitiedot{
               
                 height: 10%;
@@ -725,7 +514,7 @@
         
             #saldo{
                 position:absolute;
-                font-size:medium;
+            
                 font-weight: bold;
                 left: 1%;
                 color:white;
@@ -734,7 +523,7 @@
         
             #panos{
                 position:absolute;
-                font-size: medium;
+           
                 font-weight: bold;
                 left: 44%;
                 color:white;
@@ -743,21 +532,14 @@
         
             #voitto{
                 position:absolute;
-                font-size: medium;
+          
                 font-weight: bold;
                 right: 1%;
                 color:white;
              
             }
 
-            #pelaa-painike{
-
-                width: 25%;
-                padding-top: 25%;
-                border: none;
-                left: 37%;
-                bottom: 17%;
-            }
+          
 
           
 
@@ -766,4 +548,4 @@
        
        
         
-        }
+        
