@@ -49,8 +49,22 @@ function isovoitto(){
 
 let rullienTulokset =[];
 
+
+
+
+
+
+
 // pääohjelma
 function pelikierros(){
+
+    // tyhejennetään edellisen kierroksen kuviot
+    document.getElementById('rulla1').innerHTML = '';
+    document.getElementById('rulla2').innerHTML = '';
+    document.getElementById('rulla3').innerHTML = '';
+    document.getElementById('rulla4').innerHTML = '';
+
+
     
 
      // jos saldo ei riitä
@@ -68,11 +82,12 @@ function pelikierros(){
         // melonit
         if (rullienTulokset.every(val => val === 1)) {
             voitto += panos *1000;
-            isovoitto();
+            setTimeout(isovoitto,1000);
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 1)) {
             voitto += panos *100;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+            
         }
 
        
@@ -81,52 +96,58 @@ function pelikierros(){
         // seiskat
         if (rullienTulokset.every(val => val === 2)) {
             voitto += panos *1000;
-            isovoitto();
+            setTimeout(isovoitto,1000);
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 2)) {
             voitto += panos *100;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+            
         }
 
         // barit
         if (rullienTulokset.every(val => val === 3)) {
             voitto += panos *1000;
-            isovoitto();
+            setTimeout(isovoitto,1000);
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 3)) {
             voitto += panos *100;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+           
 
         }
 
         // esedua
         if (rullienTulokset.every(val => val === 4)) {
             voitto += panos *1000;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 4)) {
             voitto += panos *100;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+         
         }
 
         // lippua
         if (rullienTulokset.every(val => val === 5)) {
             voitto += panos *1000;
-            isovoitto();
+            setTimeout(isovoitto,1000);
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 5)) {
             voitto += panos *100;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+          
         }
 
         // tähteä
         if (rullienTulokset.every(val => val === 6)) {
             voitto += panos *1000;
-            isovoitto();
+            setTimeout(isovoitto,1000);
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             voitto += panos *100;
-            isovoitto();
+            setTimeout(isovoitto,1000);
+          
 
         }
 
@@ -181,6 +202,8 @@ const tahti = {
 
 const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 
+// ajastettu pyöriminen
+
 
 
 // pyöritysfunktio
@@ -191,19 +214,48 @@ function rullatPyorii(){
     voittoTeksti.innerHTML = '';
     voitto = 0;
 
-    console.log(rulla1(),
-    rulla2(),
-    rulla3(),
-    rulla4())
+    // ajastetaan rullat pyörimään vuorotellen
+   
+
+    rulla1();
+    rulla2();
+    rulla3();
+    rulla4();
+    
+  
  
 }
 
+// animaatioon neljä randomia kuvaa
 
+let valitutKuvat = [];
+function valitseKuvat() {
+    
+    for (let i = 0; i < 4; i++) {
+        let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+        valitutKuvat.push(voittoKuviot[indeksi]);
+    }
+   
+    return valitutKuvat;
+}
+
+// animointi noille 4 kuvalle
+
+
+ // lisätään animointi rullille
+    
+ function animoiRulla(elementinNimi, animaatio) {
+    const element = document.getElementById(elementinNimi);
+ 
+    
+    element.classList.add(animaatio);
+
+ }
 
 
 // ekan rullan kuvion arvonta
 function rulla1(){
-
+    
 
     let indeksi = Math.floor(Math.random() * voittoKuviot.length);
     const arvottuKuvio = voittoKuviot[indeksi];
@@ -211,10 +263,11 @@ function rulla1(){
     const element = document.getElementById('rulla1');
     element.innerHTML = arvottuKuvio.html;
 
+    animoiRulla('rulla1', 'liukuu');
+
+ 
     // lisätään arvottujen kuvioiden arvot listalle jossa niitä voidaan käsitellä
     rullienTulokset.push(arvottuKuvio.arvo);
-
-    return arvottuKuvio.arvo;
 
 }
  
@@ -231,7 +284,11 @@ function rulla2(){
 
     rullienTulokset.push(arvottuKuvio.arvo);
 
-    return arvottuKuvio.arvo;
+    animoiRulla('rulla2', 'liukuu');
+
+    
+
+  
   
 
 }
@@ -243,10 +300,14 @@ function rulla3(){
     const arvottuKuvio = voittoKuviot[indeksi];
 
     document.getElementById('rulla3').innerHTML = arvottuKuvio.html;
+    
+    animoiRulla('rulla3', 'liukuu');
+
 
     rullienTulokset.push(arvottuKuvio.arvo);
 
-    return arvottuKuvio.arvo;
+
+    
   
 
 }
@@ -259,11 +320,11 @@ function rulla4(){
 
     document.getElementById('rulla4').innerHTML = arvottuKuvio.html;
 
+    animoiRulla('rulla4', 'liukuu');
+
     rullienTulokset.push(arvottuKuvio.arvo);
 
-    return arvottuKuvio.arvo;
-  
-  
+ 
 
 }
 

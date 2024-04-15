@@ -106,9 +106,44 @@
         top: 0;
         overflow: hidden;
         flex: 1;
-        
-   
+    
     }
+
+    
+
+    @keyframes liukuuAlas {
+        from {
+            transform: translateY(-300%);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(50);
+            opacity: 1;
+        }
+    }
+
+  
+    .liukuu img{
+        animation: liukuuAlas 1s ease forwards;
+    }
+
+
+    .kuva {
+        
+        animation: liukuuAlas2 1s ease forwards;
+    }
+
+    @keyframes liukuuAlas2 {
+        from {
+            transform: translateY(-200%);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(00);
+            opacity: 1;
+        }
+    }
+ 
 
 
 
@@ -132,11 +167,7 @@
 
    
 
-    .peli-painike {
-        
-        float: left;
-    }
-
+   
 
     
 
@@ -288,7 +319,7 @@
 
  
 
-    @media only screen and (max-width: 2000px) {
+    @media only screen and (min-width: 1801px) and (max-width:3000px) {
        
         .tippuvat {
             width: 10%;
@@ -300,11 +331,23 @@
         }
 
         .peli-otsikko{
-        position: relative;
-        width: 60%;
-    
-    }
-      
+            position: relative;
+            width: 60%;
+            height: 10%;
+            top: -45px;
+           
+           
+        }
+
+        .rulla-container {
+            position: absolute;
+            width: 80%;
+            height: 30%;
+            top:200px;
+            left: 0;
+            right: 0;
+        }
+        
         .rulla-symboli{
             width: 80%;
             height: auto;
@@ -321,7 +364,7 @@
 
        
 
-        @media only screen and (max-width: 1500px) {
+        @media only screen and (min-width: 1101px) and (max-width:1800px) {
    
             .tippuvat {
                 width: 10%;
@@ -335,9 +378,20 @@
             .peli-otsikko{
             position: relative;
             width: 60%;
-            height: 20vh;
+            height: 10%;
+            top: -45px;
            
            
+        }
+
+        .rulla-container {
+             
+            position: absolute;
+            width: 80%;
+            height: 30%;
+            top:180px;
+            left: 0;
+            right: 0;
         }
            
             .rulla-symboli{
@@ -388,10 +442,27 @@
         }
         @media only screen and (min-width: 801px) and (max-width:1100px) {
    
+            .peli-otsikko{
+                position: relative;
+                width: 70%;
+                height: 100px;
+                top: -40px;
+            }
         
             .pelikone-container{
                 height: 60vh;
                 width: 90%;
+        
+            }
+
+            .rulla-container {
+             
+                position: absolute;
+                width: 80%;
+                height: 30%;
+                top:180px;
+                left: 0;
+                right: 0;
             
             }
 
@@ -456,9 +527,12 @@
             }
 
             .rulla-container {
-             
+                position: absolute;
                 width: 80%;
                 height: 30%;
+                top:230px;
+                left: 0;
+                right: 0;
             
             }
 
@@ -468,12 +542,12 @@
     
     
             .peli-otsikko{
-            position: relative;
-            width: 80%;
-            height: 20vh;
-            top: -12%;
-           
-        }
+                position: relative;
+                width: 60%;
+                height: 100px;
+                top: -40px;
+               
+            }
            
             .rulla-symboli{
                 width: 60%;
@@ -576,12 +650,17 @@
                 height: 70vh;
                 width: 90%;
             
+            
             }
 
             .rulla-container {
-             
+                position: absolute;
                 width: 80%;
                 height: 30%;
+                top:230px;
+                left: 0;
+                right: 0;
+             
             
             }
 
@@ -591,9 +670,9 @@
     
             .peli-otsikko{
             position: relative;
-            width: 80%;
-            height: 20vh;
-            top: -12%;
+            width: 60%;
+            height: 150px;
+            top: -50px;
            
         }
            
