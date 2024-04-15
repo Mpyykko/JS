@@ -152,7 +152,7 @@ function pelikierros(){
         }
 
    
-        console.log(rullienTulokset);
+        //console.log(rullienTulokset);
 
         saldo += voitto;
         naytaUusiVoitto();
@@ -242,6 +242,8 @@ function valitseKuvat() {
 // animointi noille 4 kuvalle
 
 
+
+
  // lisätään animointi rullille
     
  function animoiRulla(elementinNimi, animaatio) {
@@ -264,7 +266,6 @@ function rulla1(){
     element.innerHTML = arvottuKuvio.html;
 
     animoiRulla('rulla1', 'liukuu');
-
  
     // lisätään arvottujen kuvioiden arvot listalle jossa niitä voidaan käsitellä
     rullienTulokset.push(arvottuKuvio.arvo);
@@ -360,7 +361,6 @@ function suurennaPanosta() {
 }
 
 
-// rullan lukitus
 
 
 

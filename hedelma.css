@@ -87,19 +87,20 @@
 
   
     .rulla-container {
-        position: relative;
+        position: absolute;
         display: flex;
-        gap: 10px;
+        gap: 3px;
         justify-content: space-between;
         width: 60%;
         height: 30%;
         margin: 0 auto;
+        left: 0;
+        right: 0;
     }
 
     .rulla{
         position: relative;
         background-color: rgb(243, 245, 245, 0.8);
-       
         height: 100%;
         border: 2px solid black;
         border-radius: 4px;
@@ -109,6 +110,40 @@
     
     }
 
+    .lukitse{
+        position: relative;
+        background-color: rgb(243, 245, 245, 0.8);
+        height: 10%;
+        border: 2px solid black;
+        border-radius: 4px;
+        flex: 1;
+    
+    }
+
+    .peliohjeet{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 90%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: floralwhite;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    #peliohjeteksti{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+
+   
     
 
     @keyframes liukuuAlas {
@@ -130,7 +165,7 @@
 
     .kuva {
         
-        animation: liukuuAlas2 1s ease forwards;
+        animation: liukuuAlas2 2s ease forwards;
     }
 
     @keyframes liukuuAlas2 {
@@ -247,7 +282,7 @@
         width: 100%;
         max-width: 100%;
         background-color: rgba(0, 0, 0, 0.571);
-        height: 10%;
+        height: 40px;
         bottom: 0%;
     }
 
@@ -267,10 +302,12 @@
 
     .iso-voitto{
         position: absolute;
-        width: 60%;
-        top: 14%;
-        height: 50px;
+        width: 70%;
+        top: 5%;
+        height: 100px;
         margin: 0 auto;
+        left: 0;
+        right: 0;
         color: white;
         font-family: inherit;
         font-weight: bold;
@@ -347,6 +384,12 @@
             
             }
 
+            .peli-painikkeet{
+             
+                bottom: 100px;
+             
+            }
+
             
    
         
@@ -416,11 +459,21 @@
                 top: -40px;
                
             }
+
+            .iso-voitto{
+                top:15%;
+            }
            
             .rulla-symboli{
                 width: 60%;
                 height: auto;
     
+            }
+
+            .peli-painikkeet{
+             
+                bottom: 100px;
+             
             }
 
          
@@ -481,8 +534,14 @@
             }
 
             .rulla{
+              
                 height: 80%;
+              
+              
             }
+            
+           
+            
     
             .peli-otsikko{
             position: relative;
@@ -491,6 +550,11 @@
             top: -50px;
            
         }
+
+        .iso-voitto{
+            top:10%;
+        }
+       
            
             .rulla-symboli{
                 width: 70%;
@@ -498,25 +562,20 @@
     
             }
 
-      
-
-            #pelitiedot{
-              
-                height: 10%;
-                bottom: 0%;
+            .peli-painikkeet{
+             
+                bottom: 100px;
+             
             }
 
-           
-        
-        
-         
-            
+      
+
         
             #saldo{
                 position:absolute;
             
                 font-weight: bold;
-                left: 1%;
+                left: 0;
                 color:white;
                
             }
@@ -534,7 +593,7 @@
                 position:absolute;
           
                 font-weight: bold;
-                right: 1%;
+                right: 0;
                 color:white;
              
             }
