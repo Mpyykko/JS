@@ -87,7 +87,8 @@
     .peliohjeet{
         position:absolute;
         width: 70%;
-        height: 90%;
+        height: auto;
+        min-height: 90%;
         margin: 0 auto;
         border-radius: 5px;
         left: 0;
@@ -105,9 +106,16 @@
 
     .kuvasailio{
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
        
       
+    }
+
+    .kuvaparit{
+        display: flex;
+        flex-direction:row;
+        margin-bottom: 50px;
+       
     }
     .kuvat{
         margin: 0 auto;
@@ -508,12 +516,13 @@
             }
 
             .rulla-container {
-             
+                position: absolute;
                 width: 70%;
                 height: 30%;
                 top: 20%;
                 left: 0;
                 right: 0;
+                top: 30%;
             
             }
 
@@ -578,9 +587,14 @@
             }
             .kuvat{
                 margin: 0 auto;
-                width: 30%;
+                width: 40%;
               
             }
+
+            .peliohjeet{
+                width: 90%;
+            }
+
 
 
         }
@@ -598,11 +612,12 @@
             }
 
             .rulla-container {
-           
+                position: absolute;
                 width: 80%;
                 top: 20%;
                 left: 0;
                 right: 0;
+                top: 30%;
              
             
             }
@@ -674,8 +689,11 @@
 
             .kuvat{
                 margin: 0 auto;
-                width: 30%;
+                width: 40%;
               
+            }
+            .peliohjeet{
+                width: 90%;
             }
 
           
