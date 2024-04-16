@@ -84,12 +84,12 @@ function pelikierros(){
         // melonit 4
         if (rullienTulokset.every(val => val === 1)) {
             voitto += panos *10;
-            setTimeout(isovoitto,1000);
+           
         }
         // melonit 3
         else if (rullienTulokset.slice(0, 3).every(val => val === 1)) {
             voitto += panos *5;
-            setTimeout(isovoitto,1000);
+           
             
         }
 
@@ -99,22 +99,22 @@ function pelikierros(){
         // seiskat
         if (rullienTulokset.every(val => val === 2)) {
             voitto += panos *100;
-            setTimeout(isovoitto,1000);
+           
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 2)) {
             voitto += panos *50;
-            setTimeout(isovoitto,1000);
+           
             
         }
 
         // barit
         if (rullienTulokset.every(val => val === 3)) {
             voitto += panos *75;
-            setTimeout(isovoitto,1000);
+           
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 3)) {
             voitto += panos *40;
-            setTimeout(isovoitto,1000);
+          
            
 
         }
@@ -122,34 +122,34 @@ function pelikierros(){
         // esedua
         if (rullienTulokset.every(val => val === 4)) {
             voitto += panos *50;
-            setTimeout(isovoitto,1000);
+            
 
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 4)) {
             voitto += panos *25;
-            setTimeout(isovoitto,1000);
+           
          
         }
 
         // lippua
         if (rullienTulokset.every(val => val === 5)) {
             voitto += panos *50;
-            setTimeout(isovoitto,1000);
+           
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 5)) {
             voitto += panos *25;
-            setTimeout(isovoitto,1000);
+           
           
         }
 
         // tähteä
         if (rullienTulokset.every(val => val === 6)) {
             voitto += panos *10;
-            setTimeout(isovoitto,1000);
+            
         }
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             voitto += panos *5;
-            setTimeout(isovoitto,1000);
+           
           
 
         }
@@ -157,6 +157,12 @@ function pelikierros(){
    
         //console.log(rullienTulokset);
 
+        // yli 10 x panos iso voitto
+        if( voitto > panos* 10){
+            setTimeout(isovoitto,1000);
+            voittoTeksti.innerHTML = (`You won ${voitto} !`);
+
+        }
         saldo += voitto;
         naytaUusiVoitto();
         naytaSaldo();
