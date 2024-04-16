@@ -219,6 +219,7 @@ function rullatPyorii(){
     // ajastetaan rullat pyörimään vuorotellen
    
 
+   
     rulla1();
     rulla2();
     rulla3();
@@ -338,7 +339,7 @@ function rulla4(){
 
 // saldon päivitys-funktio
 function naytaSaldo() {
-    naytaUusisaldo.innerHTML = (`Cash <br> ${saldo} €`);
+    naytaUusisaldo.innerHTML = (`Coins <br> ${saldo} €`);
 }
 
 // voitto päivitys-funktio
@@ -362,6 +363,122 @@ function suurennaPanosta() {
     }
 }
 
-// Ohjesivu
+// lukitse-nappien aktivointi
+
+// lukittu rulla 1
+let onLukittu1 = false;
+
+
+const lukitseNappi1 = document.getElementById('lukitse1');
+
+
+lukitseNappi1.addEventListener('click', function() {
+    if (!onLukittu1) {
+        // jos ei painettu
+        lukitseNappi1.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        onLukittu1 = true;
+    } else {
+        // jos painettu, lukossa
+        lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        onLukittu1 = false;
+    }
+});
+
+///////////////////////////////////////////////////////////////////////////
+// lukittu rulla 2
+let onLukittu2 = false;
+
+
+const lukitseNappi2 = document.getElementById('lukitse2');
+
+
+lukitseNappi2.addEventListener('click', function() {
+    if (!onLukittu2) {
+        // jos ei painettu
+        lukitseNappi2.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        onLukittu2 = true;
+    } else {
+        // jos painettu, lukossa
+        lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        onLukittu2 = false;
+    }
+});
+
+///////////////////////////////////////////////////////////////////////////
+
+// lukittu rulla 3
+let onLukittu3 = false;
+
+
+const lukitseNappi3 = document.getElementById('lukitse3');
+
+
+lukitseNappi3.addEventListener('click', function() {
+    if (!onLukittu3) {
+        // jos ei painettu
+        lukitseNappi3.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        onLukittu3 = true;
+    } else {
+        // jos painettu, lukossa
+        lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        onLukittu3 = false;
+    }
+});
+
+///////////////////////////////////////////////////////////////////////////
+
+// lukittu rulla 4
+let onLukittu4 = false;
+
+
+const lukitseNappi4 = document.getElementById('lukitse4');
+
+
+lukitseNappi4.addEventListener('click', function() {
+    if (!onLukittu4) {
+        // jos ei painettu
+        lukitseNappi4.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        onLukittu4 = true;
+    } else {
+        // jos painettu, lukossa
+        lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        onLukittu4 = false;
+    }
+});
+
+///////////////////////////////////////////////////////////////////////////
+
+// voittotaulukko
+
+function naytaVoitot() {
+
+  
+    // pelivalikko piiloon
+ 
+  
+    document.getElementById('peli-painikkeet').style.display = 'none';
+   
+
+    // näytetään voitot
+    document.getElementById('peliohjeet').style.display = 'block';
+    
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+
+function suljeVoitot() {
+
+  
+    // toisin päin
+ 
+  
+    document.getElementById('peli-painikkeet').style.display = 'block';
+   
+
+    
+    document.getElementById('peliohjeet').style.display = 'none';
+    
+}
 
 

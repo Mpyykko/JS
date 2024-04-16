@@ -44,7 +44,8 @@
       
         
         <img src="pelikuvat/bar.png" width=10% class="tippuvat" alt="bar">
-        <img src="pelikuvat/kirsikka.png" width=5% class="tippuvat" alt="kirsikka">
+        <img src="pelikuvat/uusilippu.png" width=10% class="tippuvat" alt="lippu">
+        
         <img src="pelikuvat/melon.png" width=10% class="tippuvat" alt="meloni">
         <img src="pelikuvat/seiska.png" width=10% class="tippuvat" alt="seiska">
         <img src="pelikuvat/bar.png" width=5% class="tippuvat" alt="bar">
@@ -53,10 +54,21 @@
         
         
         <div class="pelikone-container" id="pelikone-container">
-        
-            <div class="peliohje" id="peliohje">
+            
+            <div class="peliohjeet" id="peliohjeet">
+                    <div class="kuvasailio">
+                        <img src="pelikuvat/wins.png" class="kuvat" width="200" alt="Voitto-otsikko">
+                        <img src="pelikuvat/seiskat.png" class="kuvat"alt="seiskat">
+                        <img src="pelikuvat/melonit.png" class="kuvat"alt="melonit">
+                        
+                    </div>
+                    <div class="takaisin" id="takaisin" onclick="suljeVoitot()"></div>
+
                 
             </div>
+            
+        <div class="pelikehys">
+            
 
             <div id="voittoTeksti" class="peli-ilmoitus"> </div>
             
@@ -67,7 +79,7 @@
             <img  class="peli-otsikko" width="100%" src="pelikuvat/otsikko1.png" alt="">
            
             <div id="pelitiedot" >
-            <span  id="saldo">Cash <br> 100 €</span>
+            <span  id="saldo">Coins <br> 100 €</span>
             
             <span id="panos">Bet <br> 1 €</span>
             <span id="voitto">Win <br> 0 </span>
@@ -75,8 +87,16 @@
 
             
           
+            <div id="peliohje" class="ohjeet" onclick="naytaVoitot()" ></div>
+            <div class="rulla-container" id="rulla-container">
+                <div class="lukitse-napit">
+                <button id="lukitse1" class="lukitse" ></button>
+                <button id="lukitse2" class="lukitse" ></button>
+                <button id="lukitse3" class="lukitse" ></button>
+                <button id="lukitse4" class="lukitse" ></button>
 
-            <div class="rulla-container">
+                
+                </div>
                 
 
             <div id="rulla1" class="rulla">
@@ -95,12 +115,12 @@
               
             </div>
 
-        
+            
 
     </div>
-        
+    
 
-        <div class="peli-painikkeet">
+        <div class="peli-painikkeet" id="peli-painikkeet">
             <div class="peli-painike" id="panosAlas-painike" ></div>
             <div  class="peli-painike" id="pelaa-painike" ></div>
             <div class="peli-painike" id="panosYlos-painike" ></div>
@@ -108,8 +128,7 @@
 
         </div>
 
-        
-            
+    </div>
         
             
         

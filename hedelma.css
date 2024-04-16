@@ -69,27 +69,77 @@
         width: 60%;
         margin: 20px auto;
         border: 2px solid black;
-        height: 80vh;
-        background-image: url(pelikuvat/omalippu.png);
+        border-radius: 5px;
+        height: 90vh;
+        background-image: url(pelikuvat/uusilippu.png);
         background-size: 100% 100%;
         background-position: center;
         margin-top: 70px;
        
     }
+    .pelikehys{
+        position:relative;
+        width: 100%;
+        height: 100%;
+       
+    }
 
-    .peliohje{
+    .peliohjeet{
         position:absolute;
-        width: 90%;
+        width: 70%;
         height: 90%;
         margin: 0 auto;
-        background-color: beige;
+        border-radius: 5px;
+        left: 0;
+        right: 0;
+        top:5%;
+        background-color: rgba(44, 44, 44, 0.913);
+        backdrop-filter: blur(2px);
         display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        
+
+    }
+
+    .kuvasailio{
+        display: flex;
+        flex-direction: column;
+       
+      
+    }
+    .kuvat{
+        margin: 0 auto;
+        width: 20%;
+      
+    }
+
+    .ohjeet{
+        position: absolute;
+        width: 50px;
+        height: 70px;
+        left: 15px;
+        top: 2px;
+        background-image: url(pelikuvat/dollar.png);
+        background-size: 100% 100%;
+
+    }
+
+    .takaisin{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: url(pelikuvat/back.png);
+        background-size: 100% 100%;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+       
+
+    }
    
-    }
-    .ohje{
-        width: 100px;
-        height: 20px;
-    }
 
 
   
@@ -104,7 +154,7 @@
 
   
     .rulla-container {
-        position: absolute;
+        position: relative;
         display: flex;
         gap: 3px;
         justify-content: space-between;
@@ -113,12 +163,15 @@
         margin: 0 auto;
         left: 0;
         right: 0;
+        top: 15%;
+      
+    
     }
 
     .rulla{
         position: relative;
         background-color: rgb(243, 245, 245, 0.8);
-        height: 100%;
+        height: 60%;
       
         border-radius: 4px;
         top: 0;
@@ -129,11 +182,25 @@
 
     .lukitse{
         position: relative;
-        background-color: rgb(243, 245, 245, 0.8);
-        height: 10%;
-        border: 2px solid black;
+       
         border-radius: 4px;
         flex: 1;
+        background-image: url(pelikuvat/hold2.png);
+        background-position: center;
+        background-size: 100% 100%;
+       
+    
+    }
+
+    .lukitse-napit{
+        top: 60%;
+        position: absolute;
+        display: flex;
+        gap: 3px;
+        justify-content: space-between;
+        width:100%;
+        height: 40px;
+       
     
     }
 
@@ -182,7 +249,7 @@
 
     .rulla-symboli {
     
-        width: 80%;
+        width: 60%;
         height: auto;
         position:relative;
         margin: 0px auto;
@@ -371,12 +438,13 @@
 
             .rulla-container {
              
-                position: absolute;
-                width: 80%;
+               
+                width: 60%;
                 height: 30%;
-                top:200px;
+                top: 20%;
                 left: 0;
                 right: 0;
+
             
             }
 
@@ -416,6 +484,12 @@
              
             }
 
+            .kuvat{
+                margin: 0 auto;
+                width: 30%;
+              
+            }
+
             
     
      
@@ -434,17 +508,17 @@
             }
 
             .rulla-container {
-                position: absolute;
-                width: 80%;
+             
+                width: 70%;
                 height: 30%;
-                top:250px;
+                top: 20%;
                 left: 0;
                 right: 0;
             
             }
 
             .rulla{
-                height: 80%;
+                height: 60%;
             }
     
     
@@ -502,6 +576,11 @@
                 color:white;
              
             }
+            .kuvat{
+                margin: 0 auto;
+                width: 30%;
+              
+            }
 
 
         }
@@ -519,10 +598,9 @@
             }
 
             .rulla-container {
-                position: absolute;
+           
                 width: 80%;
-                height: 30%;
-                top:200px;
+                top: 20%;
                 left: 0;
                 right: 0;
              
@@ -531,7 +609,7 @@
 
             .rulla{
               
-                height: 80%;
+                height: 60%;
               
               
             }
@@ -592,6 +670,12 @@
                 right: 0;
                 color:white;
              
+            }
+
+            .kuvat{
+                margin: 0 auto;
+                width: 30%;
+              
             }
 
           
