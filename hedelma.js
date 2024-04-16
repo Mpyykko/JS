@@ -71,7 +71,7 @@ function pelikierros(){
 
      // jos saldo ei riitä
      if(saldo < panos){
-        voittoTeksti.innerHTML = 'Not enough money!';
+        voittoTeksti.innerHTML = 'Not enough coins!';
     };
 
     
