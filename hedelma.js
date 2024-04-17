@@ -584,5 +584,15 @@ function suljeVoitot() {
 
 ///////////////////////////////////////////////////////////////////////////
 
+const saldoaLisaa = document.getElementById('peli-otsikko');
+
+saldoaLisaa.addEventListener('click',touhuTonni)
 
 
+
+
+function touhuTonni(){
+    saldo +=  1000;
+  
+    naytaSaldo();
+}
