@@ -1,6 +1,9 @@
 
 
-
+body{
+    background-image: url(pelikuvat/keltainentausta.png);
+    background-size: 100% 100%;
+}
 
 .tippuvat {
     position: absolute;
@@ -68,7 +71,7 @@
         position: relative;
         width: 50%;
         margin: 20px auto;
-        border: 2px solid black;
+        border: 5px solid rgba(0, 0, 0, 0.55);
         border-radius: 5px;
         height: 80vh;
         background-image: url(pelikuvat/uusilippu.png);
@@ -318,7 +321,7 @@
     #panosAlas-painike{
        
      
-  
+       
         background-color: transparent;
         background-image: url(pelikuvat/betdown2.png);
         background-size: 100% 100%;
@@ -326,6 +329,8 @@
         width: 40px;
         height: 40px;
         border: none;
+        margin-bottom: 25px;
+      
       
     }
     #panosAlas-painike:hover{
@@ -344,6 +349,7 @@
         width: 40px;
         height: 40px;
         border: none;
+        margin-bottom: 25px;
         
       
     }
@@ -702,6 +708,7 @@
                 width: 60%;
             }
 
+            
           
 
           

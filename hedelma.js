@@ -84,7 +84,7 @@ function pelikierros(){
 
      // jos saldo ei riitä
      if(saldo < panos){
-        voittoTeksti.innerHTML = 'Not enough coins!';
+        voittoTeksti.innerHTML = 'Not enough money!';
     };
 
     
@@ -391,7 +391,7 @@ function rulla4(){
 
 // saldon päivitys-funktio
 function naytaSaldo() {
-    naytaUusisaldo.innerHTML = (`Coins <br> ${saldo} €`);
+    naytaUusisaldo.innerHTML = (`Balance <br> ${saldo} €`);
 }
 
 // voitto päivitys-funktio
