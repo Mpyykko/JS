@@ -66,11 +66,11 @@
   
     .pelikone-container {
         position: relative;
-        width: 60%;
+        width: 50%;
         margin: 20px auto;
         border: 2px solid black;
         border-radius: 5px;
-        height: 90vh;
+        height: 80vh;
         background-image: url(pelikuvat/uusilippu.png);
         background-size: 100% 100%;
         background-position: center;
@@ -88,20 +88,27 @@
         position:absolute;
         width: 70%;
         height: auto;
-        min-height: 90%;
+       
         max-height: 100%;
+        box-sizing: border-box;
         margin: 0 auto;
         border-radius: 5px;
         left: 0;
         right: 0;
-        background-color: rgba(44, 44, 44, 0.913);
+        background-color: rgba(0, 0, 0, 0.932);
         backdrop-filter: blur(2px);
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 999;
         
+        overflow-y: auto;
+        
 
+    }
+
+    #peliohjeet::-webkit-scrollbar {
+        display: none; 
     }
 
     .kuvasailio{
@@ -113,16 +120,12 @@
       
     }
 
-    .kuvaparit{
-        display: flex;
-        flex-direction:row;
-        margin-bottom: 40px;
-       
-    }
+   
     .kuvat{
         margin: 0 auto;
-        width: 20%;
-        max-height: 100%;
+        width: 30%;
+        margin-bottom: 20px;
+        margin-top: 40px;
       
       
     }
@@ -132,14 +135,14 @@
         width: 40px;
         height: 60px;
         left: 15px;
-        top: 2px;
+        top: 5px;
         background-image: url(pelikuvat/dollar.png);
         background-size: 100% 100%;
 
     }
 
     .takaisin{
-        position:absolute;
+        position:relative;
         width: 50px;
         height: 50px;
         background-image: url(pelikuvat/back.png);
@@ -148,6 +151,7 @@
         left: 0;
         right: 0;
         margin: 0 auto;
+        margin-top: 50px;
        
        
 
@@ -195,7 +199,7 @@
 
     .lukitse{
         position: relative;
-       
+        border: none;
         border-radius: 4px;
         flex: 1;
         background-image: url(pelikuvat/hold2.png);
@@ -597,6 +601,10 @@
                 
             }
 
+            .kuvat{
+                width: 40%;
+            }
+
 
 
         }
@@ -692,6 +700,10 @@
           
             .peliohjeet{
                 width: 100%;
+            }
+
+            .kuvat{
+                width: 70%;
             }
 
           
