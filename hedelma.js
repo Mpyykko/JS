@@ -548,7 +548,7 @@ function naytaVoitot() {
     // pelivalikko piiloon
  
   
-    document.getElementById('peli-painikkeet').style.display = 'none';
+  
    
    
 
