@@ -96,7 +96,7 @@
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.732);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(4px);
         display: none;
         justify-content: center;
         align-items: center;
@@ -173,7 +173,7 @@
         margin: 0 auto;
         left: 0;
         right: 0;
-        top: 25%;
+        top: 20%;
       
     
     }
@@ -280,7 +280,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 60px;
+        bottom: 10%;
         width: 100%;
         
         
@@ -300,10 +300,10 @@
     #pelaa-painike{
 
         background-size: 100% 100%;
-        background-image: url(pelikuvat/play4.png);
+        background-image: url(pelikuvat/play5.png);
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.4;
+        opacity: 0.7;
         width: 100px;
         padding-top: 100px;
         border: none;
@@ -320,9 +320,9 @@
      
   
         background-color: transparent;
-        background-image: url(pelikuvat/betdown.png);
+        background-image: url(pelikuvat/betdown2.png);
         background-size: 100% 100%;
-        opacity: 0.4;
+        opacity: 0.7;
         width: 40px;
         height: 40px;
         border: none;
@@ -338,9 +338,9 @@
       
     
         background-color: transparent;
-        background-image: url(pelikuvat/betup.png);
+        background-image: url(pelikuvat/betup2.png);
         background-size: 100% 100%;
-        opacity: 0.4;
+        opacity: 0.7;
         width: 40px;
         height: 40px;
         border: none;
@@ -368,7 +368,7 @@
         top: 22%;
         height: 50px;
         margin: 0 auto;
-        color: white;
+       
         font-family: inherit;
         font-weight: bold;
    

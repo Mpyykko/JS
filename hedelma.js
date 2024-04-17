@@ -77,11 +77,7 @@ function pelikierros(){
     
 
 
-    // tyhejennetään edellisen kierroksen kuviot
-    document.getElementById('rulla1').innerHTML = '';
-    document.getElementById('rulla2').innerHTML = '';
-    document.getElementById('rulla3').innerHTML = '';
-    document.getElementById('rulla4').innerHTML = '';
+  
 
 
     
@@ -95,6 +91,12 @@ function pelikierros(){
     
     // jos saldo riittää
     if(saldo > 0 && panos <= saldo ){
+
+          // tyhjennetään edellisen kierroksen kuviot
+        document.getElementById('rulla1').innerHTML = '';
+        document.getElementById('rulla2').innerHTML = '';
+        document.getElementById('rulla3').innerHTML = '';
+        document.getElementById('rulla4').innerHTML = '';
 
         
 
@@ -256,6 +258,8 @@ const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 // pyöritysfunktio
 function rullatPyorii(){
 
+    
+
    
 
 
@@ -273,9 +277,9 @@ function rullatPyorii(){
     rulla3();
     rulla4();
     
-  
+    }
  
-}
+
 
 // animaatioon neljä randomia kuvaa
 
@@ -548,7 +552,7 @@ function naytaVoitot() {
     // pelivalikko piiloon
  
   
-  
+    document.getElementById('peli-painikkeet').style.display = 'none';
    
    
 
