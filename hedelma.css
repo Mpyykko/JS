@@ -86,25 +86,23 @@
 
     .peliohjeet{
         position:absolute;
-        width: 70%;
+        width: 50%;
         height: auto;
-       
-        max-height: 100%;
+        max-height: 85%;
         box-sizing: border-box;
         margin: 0 auto;
         border-radius: 5px;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.932);
+        background-color: rgba(0, 0, 0, 0.732);
         backdrop-filter: blur(2px);
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 999;
-        
+        top: 5%;
         overflow-y: auto;
-        
-
+   
     }
 
     #peliohjeet::-webkit-scrollbar {
@@ -123,17 +121,24 @@
    
     .kuvat{
         margin: 0 auto;
-        width: 30%;
+        width: 50%;
         margin-bottom: 20px;
         margin-top: 40px;
       
+    }
+
+    .back{
+        width: 10%;
+        margin: 50px auto;
+      
+       
       
     }
 
     .ohjeet{
         position: absolute;
-        width: 40px;
-        height: 60px;
+        width: 30px;
+        height: 50px;
         left: 15px;
         top: 5px;
         background-image: url(pelikuvat/dollar.png);
@@ -141,26 +146,13 @@
 
     }
 
-    .takaisin{
-        position:relative;
-        width: 50px;
-        height: 50px;
-        background-image: url(pelikuvat/back.png);
-        background-size: 100% 100%;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        margin-top: 50px;
-       
-       
-
-    }
+   
    
 
 
   
     .peli-otsikko{
+        margin: 0 auto;
         position:relative;
         width: 50%;
         top: -12%;
@@ -216,7 +208,7 @@
         gap: 3px;
         justify-content: space-between;
         width:100%;
-        height: 30px;
+        height: 25px;
        
     
     }
@@ -287,6 +279,8 @@
         right: 0;
         bottom: 50px;
         width: 100%;
+        
+        
     }
 
     .peli-painike {
@@ -306,10 +300,11 @@
         background-image: url(pelikuvat/play4.png);
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.7;
+        opacity: 0.4;
         width: 100px;
         padding-top: 100px;
         border: none;
+     
    
     }
     #pelaa-painike:hover{
@@ -324,7 +319,7 @@
         background-color: transparent;
         background-image: url(pelikuvat/betdown.png);
         background-size: 100% 100%;
-        opacity: 0.7;
+        opacity: 0.4;
         width: 40px;
         height: 40px;
         border: none;
@@ -342,9 +337,7 @@
         background-color: transparent;
         background-image: url(pelikuvat/betup.png);
         background-size: 100% 100%;
-        opacity: 0.7;
-      
-      
+        opacity: 0.4;
         width: 40px;
         height: 40px;
         border: none;
@@ -597,7 +590,7 @@
           
 
             .peliohjeet{
-                width: 100%;
+                width: 80%;
                 
             }
 
@@ -699,11 +692,11 @@
 
           
             .peliohjeet{
-                width: 100%;
+                width: 80%;
             }
 
             .kuvat{
-                width: 70%;
+                width: 60%;
             }
 
           

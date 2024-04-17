@@ -550,9 +550,11 @@ function naytaVoitot() {
   
     document.getElementById('peli-painikkeet').style.display = 'none';
    
+   
 
     // näytetään voitot
     document.getElementById('peliohjeet').style.display = 'block';
+    document.getElementById('peliohjeet').scrollTop = 0;
     
 }
 
@@ -567,10 +569,16 @@ function suljeVoitot() {
   
     document.getElementById('peli-painikkeet').style.display = 'block';
    
+    
+   
 
     
     document.getElementById('peliohjeet').style.display = 'none';
     
 }
+
+
+///////////////////////////////////////////////////////////////////////////
+
 
 
