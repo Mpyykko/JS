@@ -169,7 +169,7 @@ body{
     .rulla-container {
         position: relative;
         display: flex;
-        gap: 3px;
+        gap: 20px;
         justify-content: space-between;
         width: 60%;
         height: 20%;
@@ -187,6 +187,9 @@ body{
         height: 60%;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
+        border-top: 2px solid rgba(0, 0, 0, 0.7);
+        border-left:2px solid rgba(0, 0, 0, 0.7);
+        border-right:2px solid rgba(0, 0, 0, 0.7);
         top: 0;
         overflow: hidden;
         flex: 1;
@@ -214,6 +217,9 @@ body{
         background-image: url(pelikuvat/hold2.png);
         background-position: center;
         background-size: 100% 100%;
+        border-left:2px solid rgba(0, 0, 0, 0.7);
+        border-right:2px solid rgba(0, 0, 0, 0.7);
+       
        
     
     }
@@ -222,7 +228,7 @@ body{
         top: 60%;
         position: absolute;
         display: flex;
-        gap: 3px;
+        gap: 20px;
         justify-content: space-between;
         width:100%;
         height: 25px;
@@ -412,14 +418,13 @@ body{
             }
 
             .rulla-container {
-             
-               
-                width: 60%;
-                height: 30%;
+                position: absolute;
+                width: 70%;
+                height: 15%;
                 top: 20%;
                 left: 0;
                 right: 0;
-
+                top: 40%;
             
             }
 
@@ -560,7 +565,7 @@ body{
             }
 
             .kuvat{
-                width: 40%;
+                width: 30%;
             }
 
 
@@ -587,6 +592,7 @@ body{
                 right: 0;
                 top: 40%;
                 height: 15%;
+                gap: 10px;
              
             
             }
@@ -594,9 +600,13 @@ body{
             .rulla{
               
                 height: 60%;
-              
-              
+                
             }
+            .lukitse-napit{
+               
+                gap: 10px;
+            }
+        
             
            
             
@@ -616,7 +626,7 @@ body{
            
             .rulla-symboli{
                 width: 60%;
-                height: auto;
+                
     
             }
 
@@ -662,7 +672,7 @@ body{
             }
 
             .kuvat{
-                width: 60%;
+                width: 40%;
             }
 
             
