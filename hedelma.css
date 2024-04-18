@@ -69,11 +69,11 @@ body{
   
     .pelikone-container {
         position: relative;
-        width: 50%;
+        width: 40%;
         margin: 20px auto;
         border: 5px solid rgba(0, 0, 0, 0.55);
         border-radius: 5px;
-        height: 80vh;
+        height: 60vh;
         background-image: url(pelikuvat/uusilippu.png);
        
         background-size: 100% 100%;
@@ -341,7 +341,7 @@ body{
     .peli-ilmoitus{
         position: absolute;
         width: 100%;
-        top: 22%;
+        top: 60%;
         height: 50px;
         margin: 0 auto;
        
@@ -398,7 +398,14 @@ body{
     }
 
 
+    @media only screen and (min-width: 1101px) and (max-width:1300px){
+        .pelikone-container{
+            height: 80vh;
+            width: 50%;
+    
+        }
 
+    }
  
 
     
@@ -482,7 +489,7 @@ body{
                 width: 20%;
             }
             .pelikone-container{
-                height: 70vh;
+                height: 60vh;
                 width: 90%;
             
             }
@@ -528,12 +535,9 @@ body{
             }
 
          
-           
-       
         
             #saldo{
                 position:absolute;
-            
                 font-weight: bold;
                 left: 1%;
                 color:white;
@@ -568,6 +572,8 @@ body{
                 width: 30%;
             }
 
+           
+
 
 
         }
@@ -578,9 +584,8 @@ body{
                 width: 20%;
             }
             .pelikone-container{
-                height: 70vh;
+                height: 60vh;
                 width: 90%;
-            
             
             }
 
@@ -594,7 +599,6 @@ body{
                 height: 15%;
                 gap: 10px;
              
-            
             }
 
             .rulla{
@@ -675,6 +679,7 @@ body{
                 width: 40%;
             }
 
+          
             
           
 
