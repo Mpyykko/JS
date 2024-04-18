@@ -258,8 +258,11 @@ body{
     }
    
 
-    
-
+    .panoslukittu {
+        pointer-events: none;
+        opacity: 0.1;
+    }
+   
 
     #pelaa-painike{
 
@@ -508,7 +511,7 @@ body{
             }
            
             .rulla-symboli{
-                width: 60%;
+                width: 50%;
                 height: auto;
     
             }
@@ -611,7 +614,7 @@ body{
        
            
             .rulla-symboli{
-                width: 70%;
+                width: 60%;
                 height: auto;
     
             }
