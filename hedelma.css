@@ -187,12 +187,23 @@ body{
         height: 60%;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-        
         top: 0;
         overflow: hidden;
         flex: 1;
     
     }
+
+    .rulla-symboli {
+    
+        width: 50%;
+        height: auto;
+        position:relative;
+        margin: 0px auto;
+        top: 50%;
+        transform: translateY(-50%);
+     
+    }
+
 
     .lukitse{
         position: relative;
@@ -221,59 +232,9 @@ body{
 
    
 
-   
-    
-
-    @keyframes liukuuAlas {
-        from {
-            transform: translateY(-300%);
-            opacity: 1;
-        }
-        to {
-            transform: translateY(50);
-            opacity: 1;
-        }
-    }
-
-  
-    .liukuu img{
-        animation: liukuuAlas 1s ease forwards;
-    }
-
-
-    .kuva {
-        
-        animation: liukuuAlas2 2s ease forwards;
-    }
-
-    @keyframes liukuuAlas2 {
-        from {
-            transform: translateY(-200%);
-            opacity: 1;
-        }
-        to {
-            transform: translateY(00);
-            opacity: 1;
-        }
-    }
  
 
-
-
- 
-
-    .rulla-symboli {
     
-        width: 60%;
-        height: auto;
-        position:relative;
-        margin: 0px auto;
-      
-        top: 50%;
-        transform: translateY(-50%);
-     
-    }
-
 
    
 
@@ -398,14 +359,6 @@ body{
 
     }
 
-    @keyframes laajeneva {
-        from {
-            transform: scaleX(0);
-        }
-        to {
-            transform: scaleX(1);
-        }
-    }
 
   
     #saldo{

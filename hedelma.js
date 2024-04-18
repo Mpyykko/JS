@@ -92,6 +92,8 @@ function pelikierros(){
     // jos saldo riittää
     if(saldo > 0 && panos <= saldo ){
 
+       
+
           // tyhjennetään edellisen kierroksen kuviot
         document.getElementById('rulla1').innerHTML = '';
         document.getElementById('rulla2').innerHTML = '';
@@ -103,97 +105,104 @@ function pelikierros(){
         rullatPyorii();
         saldo = saldo - panos;
 
-        // melonit 4
+        // 4 melonia
         if (rullienTulokset.every(val => val === 1)) {
             voitto += panos *10;
-            
+       
            
         }
-        // melonit 3
+        // 3 melonia
         else if (rullienTulokset.slice(0, 3).every(val => val === 1)) {
             voitto += panos *5;
-           
-            
-           
+          
+        
             
         }
 
        
 
         
-        // seiskat
+        // 4 seiskaa
         if (rullienTulokset.every(val => val === 2)) {
             voitto += panos *100;
+           
           
            
-        }
+        }  // 3 seiskaa
         else if (rullienTulokset.slice(0, 3).every(val => val === 2)) {
             voitto += panos *50;
+         
            
            
             
         }
 
-        // barit
+        // 4 baria
         if (rullienTulokset.every(val => val === 3)) {
             voitto += panos *75;
+          
            
            
-        }
+        }  // 3 baria
         else if (rullienTulokset.slice(0, 3).every(val => val === 3)) {
             voitto += panos *40;
+        
             
           
            
 
         }
 
-        // esedua
+        // 4 esedua
         if (rullienTulokset.every(val => val === 4)) {
             voitto += panos *50;
+          
             
             
 
-        }
+        } // 3 esedua
         else if (rullienTulokset.slice(0, 3).every(val => val === 4)) {
             voitto += panos *25;
+          
            
            
          
         }
 
-        // lippua
+        // 4lippua
         if (rullienTulokset.every(val => val === 5)) {
             voitto += panos *50;
+            
            
            
-        }
+        } // 3lippua
         else if (rullienTulokset.slice(0, 3).every(val => val === 5)) {
             voitto += panos *25;
+       
            
            
           
         }
 
-        // tähteä
+        // 4 tähteä
         if (rullienTulokset.every(val => val === 6)) {
             voitto += panos *10;
+          
             
             
-        }
+        } // 3 tähteä
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             voitto += panos *5;
-           
-           
           
+    
 
         }
 
    
         console.log(rullienTulokset);
 
-        // yli 10 x panos on iso voitto
-        if( voitto > panos* 10){
+        // 10 tai yli x panos on iso voitto
+        if( voitto >= panos * 10){
             setTimeout(isovoitto,1000);
             voittoTeksti.innerHTML = (`You won ${voitto} !`);
 
@@ -217,8 +226,9 @@ function pelikierros(){
 
     
 }
-
 // pääohjelma loppuu
+
+
 
 
 // rullien pyöriminen
@@ -281,106 +291,147 @@ function rullatPyorii(){
  
 
 
-// animaatioon neljä randomia kuvaa
 
-let valitutKuvat = [];
-function valitseKuvat() {
-    
-    for (let i = 0; i < 4; i++) {
-        let indeksi = Math.floor(Math.random() * voittoKuviot.length);
-        valitutKuvat.push(voittoKuviot[indeksi]);
-    }
-   
-    return valitutKuvat;
-}
 
-// animointi noille 4 kuvalle
 
 
 
 
  // lisätään animointi rullille
-    
- function animoiRulla(elementinNimi, animaatio) {
-    const element = document.getElementById(elementinNimi);
- 
-    
-    element.classList.add(animaatio);
 
- }
+
 
 
 // ekan rullan kuvion arvonta
 function rulla1(){
-    
+    let arvotutKuviot = [];
 
-    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
-    const arvottuKuvio = voittoKuviot[indeksi];
+    // 5 randomia kuvaa animaatioon
+    for (let i = 0; i < 5; i++) {
+        let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+        arvotutKuviot.push(voittoKuviot[indeksi]);
+    }
 
+    // lisätään viimeksi arvottu kuva voittokuvioksi
+    rullienTulokset.push(arvotutKuviot[4].arvo);
+
+    let kuvaIndex = 0;
     const element = document.getElementById('rulla1');
-    element.innerHTML = arvottuKuvio.html;
 
-    animoiRulla('rulla1', 'liukuu');
- 
-    // lisätään arvottujen kuvioiden arvot listalle jossa niitä voidaan käsitellä
-    rullienTulokset.push(arvottuKuvio.arvo);
+    function vaihdaKuva() {
+        element.innerHTML = arvotutKuviot[kuvaIndex].html;
+        kuvaIndex++;
+
+        // kun kaikki kuvat on näytetty, lopetetaan interval
+        if (kuvaIndex >= arvotutKuviot.length) {
+            clearInterval(rulla1pyorii);
+        }
+    }
+
+    vaihdaKuva();
+
+    let rulla1pyorii = setInterval(vaihdaKuva, 300);
+
 
 }
- 
+
+
 
 
 // tokan rullan kuvion arvonta
 function rulla2(){
-   
+    let arvotutKuviot = [];
 
-    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
-    const arvottuKuvio = voittoKuviot[indeksi];
+    // 5 randomia kuvaa animaatioon
+    for (let i = 0; i < 5; i++) {
+        let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+        arvotutKuviot.push(voittoKuviot[indeksi]);
+    }
 
-    document.getElementById('rulla2').innerHTML = arvottuKuvio.html;
+    // lisätään viimeksi arvottu kuva voittokuvioksi
+    rullienTulokset.push(arvotutKuviot[4].arvo);
 
-    rullienTulokset.push(arvottuKuvio.arvo);
+    let kuvaIndex = 0;
+    const element = document.getElementById('rulla2');
 
-    animoiRulla('rulla2', 'liukuu');
+    function vaihdaKuva() {
+        element.innerHTML = arvotutKuviot[kuvaIndex].html;
+        kuvaIndex++;
 
-    
+        // kun kaikki kuvat on näytetty, lopetetaan interval
+        if (kuvaIndex >= arvotutKuviot.length) {
+            clearInterval(rullaPyorii);
+        }
+    }
 
-  
-  
+    vaihdaKuva();
+
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
+
 
 }
 // kolmannen rullan kuvion arvonta
 function rulla3(){
-   
+    let arvotutKuviot = [];
 
-    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
-    const arvottuKuvio = voittoKuviot[indeksi];
+    // 5 randomia kuvaa animaatioon
+    for (let i = 0; i < 5; i++) {
+        let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+        arvotutKuviot.push(voittoKuviot[indeksi]);
+    }
 
-    document.getElementById('rulla3').innerHTML = arvottuKuvio.html;
-    
-    animoiRulla('rulla3', 'liukuu');
+    // lisätään viimeksi arvottu kuva voittokuvioksi
+    rullienTulokset.push(arvotutKuviot[4].arvo);
 
+    let kuvaIndex = 0;
+    const element = document.getElementById('rulla3');
 
-    rullienTulokset.push(arvottuKuvio.arvo);
+    function vaihdaKuva() {
+        element.innerHTML = arvotutKuviot[kuvaIndex].html;
+        kuvaIndex++;
 
+        // kun kaikki kuvat on näytetty, lopetetaan interval
+        if (kuvaIndex >= arvotutKuviot.length) {
+            clearInterval(rullaPyorii);
+        }
+    }
 
-    
-  
+    vaihdaKuva();
+
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
+
 
 }
 // neljännen rullan kuvion arvonta
 function rulla4(){
-   
+    let arvotutKuviot = [];
 
-    let indeksi = Math.floor(Math.random() * voittoKuviot.length);
-    const arvottuKuvio = voittoKuviot[indeksi];
+    // 5 randomia kuvaa animaatioon
+    for (let i = 0; i < 5; i++) {
+        let indeksi = Math.floor(Math.random() * voittoKuviot.length);
+        arvotutKuviot.push(voittoKuviot[indeksi]);
+    }
 
-    document.getElementById('rulla4').innerHTML = arvottuKuvio.html;
+    // lisätään viimeksi arvottu kuva voittokuvioksi
+    rullienTulokset.push(arvotutKuviot[4].arvo);
 
-    animoiRulla('rulla4', 'liukuu');
+    let kuvaIndex = 0;
+    const element = document.getElementById('rulla4');
 
-    rullienTulokset.push(arvottuKuvio.arvo);
+    function vaihdaKuva() {
+        element.innerHTML = arvotutKuviot[kuvaIndex].html;
+        kuvaIndex++;
 
- 
+        // kun kaikki kuvat on näytetty, lopetetaan interval
+        if (kuvaIndex >= arvotutKuviot.length) {
+            clearInterval(rullaPyorii);
+        }
+    }
+
+    vaihdaKuva();
+
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
+
 
 }
 
