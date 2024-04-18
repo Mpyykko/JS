@@ -172,7 +172,7 @@ body{
         gap: 3px;
         justify-content: space-between;
         width: 60%;
-        height: 30%;
+        height: 20%;
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -485,7 +485,7 @@ body{
             .rulla-container {
                 position: absolute;
                 width: 70%;
-                height: 30%;
+                height: 15%;
                 top: 20%;
                 left: 0;
                 right: 0;
@@ -586,6 +586,7 @@ body{
                 left: 0;
                 right: 0;
                 top: 40%;
+                height: 15%;
              
             
             }
