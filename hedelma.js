@@ -273,13 +273,20 @@ function rullaYksi(){
 
         // kun kaikki kuvat on näytetty, lopetetaan interval
         if (kuvaIndex >= arvotutKuviot.length) {
+         
             clearInterval(rullaPyorii);
         }
+        
+
     }
 
     vaihdaKuva();
+    
 
-    let rullaPyorii = setInterval(vaihdaKuva, 800);
+
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
+
+    
 }
 
 
@@ -312,7 +319,7 @@ function rullaKaksi(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 800);
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
 
 
 }
@@ -345,7 +352,7 @@ function rullaKolme(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 800);
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
 
 
 }
@@ -378,7 +385,7 @@ function rullaNelja(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 800);
+    let rullaPyorii = setInterval(vaihdaKuva, 300);
 
 
 }
