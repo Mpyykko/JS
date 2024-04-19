@@ -250,7 +250,7 @@ function rullaYksi(){
    
     
     // 5 randomia kuvaa animaatioon
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
     }
@@ -259,7 +259,7 @@ function rullaYksi(){
 
     // lisätään viimeksi arvottu kuva voittokuvioksi
   
-    rullienTulokset.push(arvotutKuviot[4].arvo);
+    rullienTulokset.push(arvotutKuviot[9].arvo);
       
 
     let kuvaIndex = 0;
@@ -267,6 +267,8 @@ function rullaYksi(){
 
     function vaihdaKuva() {
         rulla1.innerHTML = arvotutKuviot[kuvaIndex].html;
+
+   
         kuvaIndex++;
 
         // kun kaikki kuvat on näytetty, lopetetaan interval
@@ -277,7 +279,7 @@ function rullaYksi(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 300);
+    let rullaPyorii = setInterval(vaihdaKuva, 800);
 }
 
 
@@ -287,13 +289,13 @@ function rullaKaksi(){
     let arvotutKuviot = [];
 
     // 5 randomia kuvaa animaatioon
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
     }
 
     // lisätään viimeksi arvottu kuva voittokuvioksi
-    rullienTulokset.push(arvotutKuviot[4].arvo);
+    rullienTulokset.push(arvotutKuviot[9].arvo);
 
     let kuvaIndex = 0;
 
@@ -310,7 +312,7 @@ function rullaKaksi(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 300);
+    let rullaPyorii = setInterval(vaihdaKuva, 800);
 
 
 }
@@ -320,13 +322,13 @@ function rullaKolme(){
     let arvotutKuviot = [];
 
     // 5 randomia kuvaa animaatioon
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
     }
 
     // lisätään viimeksi arvottu kuva voittokuvioksi
-    rullienTulokset.push(arvotutKuviot[4].arvo);
+    rullienTulokset.push(arvotutKuviot[9].arvo);
 
     let kuvaIndex = 0;
    
@@ -343,7 +345,7 @@ function rullaKolme(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 300);
+    let rullaPyorii = setInterval(vaihdaKuva, 800);
 
 
 }
@@ -353,13 +355,13 @@ function rullaNelja(){
     let arvotutKuviot = [];
 
     // 5 randomia kuvaa animaatioon
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
     }
 
     // lisätään viimeksi arvottu kuva voittokuvioksi
-    rullienTulokset.push(arvotutKuviot[4].arvo);
+    rullienTulokset.push(arvotutKuviot[9].arvo);
 
     let kuvaIndex = 0;
    
@@ -376,7 +378,7 @@ function rullaNelja(){
 
     vaihdaKuva();
 
-    let rullaPyorii = setInterval(vaihdaKuva, 300);
+    let rullaPyorii = setInterval(vaihdaKuva, 800);
 
 
 }

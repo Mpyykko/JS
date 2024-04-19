@@ -196,6 +196,8 @@ body{
     
     }
 
+    
+
     .rulla-symboli {
     
         width: 50%;
@@ -203,9 +205,38 @@ body{
         position:relative;
         margin: 0px auto;
         top: 50%;
-        transform: translateY(-50%);
+        animation: liukuuAlas 400ms ease forwards;
      
     }
+
+    @keyframes liukuuAlas {
+        from {
+            transform: translateY(-50px);
+            opacity: 0.3;
+        }
+        to {
+            transform: translateY(+50px);
+            opacity: 1;
+        }
+    }
+
+    
+    
+
+
+
+    @keyframes liukuuAlas2 {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+   
 
 
     .lukitse{
@@ -396,6 +427,8 @@ body{
         bottom: 0;
         color: whitesmoke;
     }
+
+  
 
 
     @media only screen and (min-width: 1101px) and (max-width:1300px){
