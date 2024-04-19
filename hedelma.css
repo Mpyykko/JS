@@ -199,7 +199,7 @@ body{
     .rulla-symboli {
     
         width: 60%;
-        height: auto;
+        height: 20px;
         position:relative;
         margin: 0px auto;
         top: 50%;
@@ -245,13 +245,17 @@ body{
 
     @keyframes liukuuAlas2 {
         from {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
+            transform: translateY(-200%);
             opacity: 1;
         }
+        to {
+            transform: translateY(-5px);
+            opacity: 1;
+        }
+    }
+
+    .liukuu2{
+        animation: liukuuAlas 300ms ease-in forwards;
     }
 
    
@@ -468,25 +472,25 @@ body{
             }
         
             .pelikone-container{
-                height: 80vh;
-                width: 90%;
+                height: 90vh;
+                width: 70%;
         
             }
 
             .rulla-container {
                 position: absolute;
                 width: 70%;
-                height: 15%;
-                top: 20%;
-                left: 0;
-                right: 0;
-                top: 40%;
+                height: 30%;
+                top: 30%;
+              
+             
+              
             
             }
 
             .peli-painikkeet{
              
-                bottom: 100px;
+                bottom: 40px;
              
             }
 
@@ -538,8 +542,8 @@ body{
                 width: 20%;
             }
             .pelikone-container{
-                height: 60vh;
-                width: 90%;
+                height: 80vh;
+                width: 60%;
             
             }
 
@@ -633,7 +637,7 @@ body{
                 width: 20%;
             }
             .pelikone-container{
-                height: 60vh;
+                height: 70vh;
                 width: 90%;
             
             }
