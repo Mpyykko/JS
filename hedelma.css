@@ -675,11 +675,10 @@ body{
             .rulla-container {
                 position: absolute;
                 width: 90%;
-                top: 20%;
                 left: 0;
                 right: 0;
                 top: 40%;
-                height: 25%;
+                height: 22%;
                 gap: 10px;
              
             }
@@ -713,11 +712,14 @@ body{
            
             .rulla-symboli{
                 width: 80%;
+                height: 40%;
+                
 
           
             }
             .rulla-symboli2{
                 width: 80%;
+                
                 
             }
 
