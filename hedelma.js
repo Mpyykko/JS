@@ -144,6 +144,7 @@ function pelikierros(){
         } // 3 tähteä
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             voitto += panos *5;
+            voittoTeksti.innerHTML = (`You won ${voitto} €`);
         }
 
         // ettei lukituksia peräkkäin

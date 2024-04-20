@@ -469,6 +469,12 @@ body{
             width: 50%;
     
         }
+        .peli-otsikko{
+            position: relative;
+            width: 50%;
+            height: 100px;
+            top: -40px;
+        }
 
     }
  
@@ -478,7 +484,7 @@ body{
    
             .peli-otsikko{
                 position: relative;
-                width: 70%;
+                width: 50%;
                 height: 100px;
                 top: -40px;
             }
@@ -493,7 +499,7 @@ body{
                 position: absolute;
                 width: 70%;
                 height: 30%;
-                top: 30%;
+                top: 15%;
               
              
               
@@ -554,7 +560,7 @@ body{
                 width: 20%;
             }
             .pelikone-container{
-                height: 80vh;
+                height: 90vh;
                 width: 60%;
             
             }
@@ -563,10 +569,10 @@ body{
                 position: absolute;
                 width: 70%;
                 height: 15%;
-                top: 20%;
+                top: 30%;
                 left: 0;
                 right: 0;
-                top: 40%;
+            
             
             }
 
@@ -687,7 +693,7 @@ body{
             .peli-otsikko{
             position: relative;
             width: 60%;
-            height: 150px;
+            height: 100px;
             top: -50px;
            
             }
@@ -699,10 +705,12 @@ body{
            
             .rulla-symboli{
                 width: 80%;
+
           
             }
             .rulla-symboli2{
                 width: 80%;
+                
             }
 
             .peli-painikkeet{
