@@ -157,8 +157,8 @@ function pelikierros(){
       
         // 10 tai yli x panos on iso voitto
         if( voitto >= panos * 10){
-            setTimeout(isovoitto,1000);
-            voittoTeksti.innerHTML = (`You won ${voitto} !`);
+            setTimeout(isovoitto,5000);
+           
 
         }
 
@@ -168,6 +168,7 @@ function pelikierros(){
  
         
     }
+    setTimeout('lukotAuki()','5500')
 
 
    rullienTulokset =[];
@@ -206,11 +207,14 @@ const tahti = {
 
 const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 
-// ajastettu pyöriminen
+
 
 
 // pyöritysfunktio
-function rullatPyorii(){
+
+function rullatPyorii()
+{
+    
 
 
     bigwin.innerHTML = '';
@@ -218,9 +222,7 @@ function rullatPyorii(){
     voittoTeksti.innerHTML = '';
     voitto = 0;
 
-    // ajastetaan rullat pyörimään vuorotellen
-   
-   
+  
         rullaYksi();
 
         rullaKaksi();
@@ -229,8 +231,9 @@ function rullatPyorii(){
    
         rullaNelja();
  
-        setTimeout('lukotAuki()','1300');
-
+       
+     
+          
       
     }
  
@@ -265,7 +268,7 @@ function rullaYksi(){
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla1');
     
-    // 5 randomia kuvaa animaatioon
+    // 8 randomia kuvaa animaatioon
     for (let i = 0; i <8; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
@@ -296,7 +299,7 @@ function rullaKaksi(){
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla2');
     
-    // 5 randomia kuvaa animaatioon
+    // 8 randomia kuvaa animaatioon
     for (let i = 0; i < 8; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
@@ -327,7 +330,7 @@ function rullaKolme(){
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla3');
     
-    // 5 randomia kuvaa animaatioon
+    // 8 randomia kuvaa animaatioon
     for (let i = 0; i < 8; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
@@ -357,7 +360,7 @@ function rullaNelja(){
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla4');
     
-    // 5 randomia kuvaa animaatioon
+    // 8 randomia kuvaa animaatioon
     for (let i = 0; i < 8; i++) {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
