@@ -177,9 +177,11 @@ body{
         left: 0;
         right: 0;
         top: 20%;
-      
+        
     
     }
+
+    
 
     .rulla{
         position: relative;
@@ -191,6 +193,7 @@ body{
         top: 0;
         overflow: hidden;
         flex: 1;
+   
     
     }
 
@@ -198,8 +201,8 @@ body{
 
     .rulla-symboli {
     
-        width: 60%;
-        height: 20px;
+        width: 70%;
+        height: 25px;
         position:relative;
         margin: 0px auto;
         top: 50%;
@@ -240,7 +243,16 @@ body{
     
     
     
-
+    .rulla-symboli2 {
+    
+        width: 70%;
+        height: 25px;
+        position:relative;
+        margin: 0px auto;
+        top: 50%;
+        animation: liukuuAlas2 700ms ease-in forwards;
+     
+    }
 
 
     @keyframes liukuuAlas2 {
@@ -577,7 +589,11 @@ body{
            
             .rulla-symboli{
                 width: 50%;
-                height: auto;
+    
+            }
+
+            .rulla-symboli2{
+                width: 50%;
     
             }
 
@@ -634,7 +650,7 @@ body{
         @media only screen and (min-width: 100px) and (max-width:499px) {
    
             .tippuvat {
-                width: 20%;
+                width: 15%;
             }
             .pelikone-container{
                 height: 70vh;
@@ -674,17 +690,18 @@ body{
             height: 150px;
             top: -50px;
            
-        }
+            }
 
-        .iso-voitto{
+            .iso-voitto{
             top:15%;
-        }
+            }
        
            
             .rulla-symboli{
                 width: 60%;
-                
-    
+            }
+            .rulla-symboli2{
+                width: 60%;
             }
 
             .peli-painikkeet{
@@ -693,9 +710,7 @@ body{
              
             }
 
-      
-
-        
+   
             #saldo{
                 position:absolute;
             
@@ -732,11 +747,7 @@ body{
                 width: 40%;
             }
 
-          
-            
-          
 
-          
 
         }
 
