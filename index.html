@@ -16,7 +16,11 @@
 
 <body>
     <header>
-        <nav class="navigointivalikko" >
+
+      
+        
+        <nav class="navigointivalikko" id="navigointivalikko">
+      
             <ul>
                 <li><a href=index.html>Etusivu</a></li>
                 <li><a href=kaverilista.html>Kaverilista 1</a></li>
@@ -28,11 +32,16 @@
                 <li><a href=hedelma.html>Hedelmäpeli</a></li>
             </ul>
         </nav>
-
-        <p class="otsikko">Näille sivuille teen JavaScript-projektit</p>
-    </header>
    
 
+    <div id="mobiilivalikko" class="mobiilivalikko">
+        <div id="valikkokuva2" class="valikkokuva2"></div>
+    </div>
+
+    <p class="otsikko">Näille sivuille teen JavaScript-projektit</p>
+</header>
+   
+    
     <main>
         <section>
             <img id="himmennys" src="images/js3.png" alt="js" width="500"> 
@@ -42,6 +51,7 @@
     </main>
 
     <script src="index.js"></script>
+    <script src="script.js"></script>
 
     <footer>
         <div class="footer"> 

@@ -192,11 +192,11 @@ color: rgb(109, 159, 220);
 }
 
 .valikkokuva2 {
-    position:fixed;
+    position:absolute;
     top: 5px;
     right: 10px;
     height: 40px;
-    width: 70px;
+    width: 40px;
     background-image: url(images/burgerwhite.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -217,7 +217,7 @@ color: rgb(109, 159, 220);
 @media only screen and (max-width: 800px){
     .mobiilivalikko {
         display: block;
-        background-color: rgba(0, 0, 0, 0.732);
+        background-color: rgba(0, 0, 0, 0.85);
         backdrop-filter: blur(4px);
         position: relative;
         
@@ -227,15 +227,15 @@ color: rgb(109, 159, 220);
     .navigointivalikko {
       
         position: absolute;
+        display: none;
         top: 50px;
-       
         float: none;
         height: auto;
         width: 100%;
         text-align: left;
         clear: both;
         padding: 0;
-        background-color: rgba(0, 0, 0, 0.732);
+        background-color: rgba(0, 0, 0, 0.85);
         backdrop-filter: blur(4px);
         z-index: 999;
  
