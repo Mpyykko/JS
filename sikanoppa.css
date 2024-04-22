@@ -388,7 +388,7 @@
 @media only screen and (min-width: 100px) and (max-width:700px) {
 
     #logo{
-        width: 80%;
+        width: 60%;
     }
 
     .sikanoppa-kehys{
@@ -449,7 +449,7 @@
 @media only screen and (min-width: 701px) and (max-width:1000px) {
 
     #logo{
-        width: 80%;
+        width: 60%;
     }
 
     .sikanoppa-kehys{
@@ -510,7 +510,7 @@
 @media only screen and (min-width: 1001px) and (max-width: 1500px) {
 
     #logo{
-        width: 70%;
+        width: 60%;
     }
 
     .sikanoppa-kehys{

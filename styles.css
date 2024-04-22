@@ -193,10 +193,10 @@ color: rgb(109, 159, 220);
 
 .valikkokuva2 {
     position:fixed;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 10px;
     height: 40px;
-    width: 100px;
+    width: 70px;
     background-image: url(images/burgerwhite.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -228,7 +228,7 @@ color: rgb(109, 159, 220);
       
         position: absolute;
         top: 50px;
-        display: none;
+       
         float: none;
         height: auto;
         width: 100%;
