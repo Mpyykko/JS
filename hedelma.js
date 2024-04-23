@@ -58,18 +58,23 @@ function isovoitto(){
 
 let rullienTulokset =[];
 
+// kopio rullientulokset-listasta
+let rullienTulokset2 = [...rullienTulokset];
+
+
+let pelikierrosKaynnissa = false;
+
 // pääohjelma
 function pelikierros(){
-
+    pelikierrosKaynnissa = true;
     kierrokset += 1;
 
-    if(lukitukset <1){
+   
+
+    if(lukitukset <1 || voitto < 1){
         lukitseKaytossa();
     }
-    else{
-        lukitseEikaytossa();
-    }
-
+    
 
     console.log(lukitukset);
 
@@ -82,10 +87,34 @@ function pelikierros(){
 
     // jos saldo riittää
     if(saldo > 0 && panos <= saldo ){
-
-        rullatPyorii();
         saldo = saldo - panos;
 
+        // jos mitään ei lukittu, pelataan ensimmäinen pelikierros
+        if (!onLukittu1 && !onLukittu2 && !onLukittu3 && !onLukittu4) {
+            ekaPelikierros();
+            rullienTulokset2 = [...rullienTulokset];
+
+        }
+        
+        
+        // jos ei voittoa, ja joku rulla on lukittu, pelataan toinen kierros
+        if(voitto < 1){
+            if (onLukittu1 || onLukittu2 || onLukittu3 || onLukittu4) {
+                tokaPelikierros();
+              
+ 
+            }
+            
+
+           
+       
+       
+     }  
+
+
+      // voitot jos ei lukita
+
+      if (!onLukittu1 && !onLukittu2 && !onLukittu3 && !onLukittu4){
         // 4 melonia
         if (rullienTulokset.every(val => val === 1)) {
             voitto += panos *10;
@@ -144,8 +173,83 @@ function pelikierros(){
         } // 3 tähteä
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             voitto += panos *5;
-            voittoTeksti.innerHTML = (`You won ${voitto} €`);
+          
         }
+
+        }
+
+        ///////////////////////////////////////////////////////////
+        
+
+        // voitot valitaan kopiolistalta jos lukitaan joku
+
+        else{
+            // 4 melonia
+            if (rullienTulokset2.every(val => val === 1)) {
+                voitto += panos *10;
+    
+            }
+            // 3 melonia
+            else if (rullienTulokset2.slice(0, 3).every(val => val === 1)) {
+                voitto += panos *5;
+     
+            }
+    
+            // 4 seiskaa
+            if (rullienTulokset2.every(val => val === 2)) {
+                voitto += panos *100;
+    
+            }  // 3 seiskaa
+            else if (rullienTulokset2.slice(0, 3).every(val => val === 2)) {
+                voitto += panos *50;
+    
+            }
+    
+            // 4 baria
+            if (rullienTulokset2.every(val => val === 3)) {
+                voitto += panos *75;
+    
+            }  // 3 baria
+            else if (rullienTulokset2.slice(0, 3).every(val => val === 3)) {
+                voitto += panos *40;
+      
+            }
+    
+            // 4 esedua
+            if (rullienTulokset2.every(val => val === 4)) {
+                voitto += panos *50;
+    
+            } // 3 esedua
+            else if (rullienTulokset2.slice(0, 3).every(val => val === 4)) {
+                voitto += panos *25;
+    
+            }
+    
+            // 4lippua
+            if (rullienTulokset2.every(val => val === 5)) {
+                voitto += panos *50;
+     
+            } // 3lippua
+            else if (rullienTulokset2.slice(0, 3).every(val => val === 5)) {
+                voitto += panos *25;
+    
+            }
+    
+            // 4 tähteä
+            if (rullienTulokset2.every(val => val === 6)) {
+                voitto += panos *10;
+    
+            } // 3 tähteä
+            else if (rullienTulokset2.slice(0, 3).every(val => val === 6)) {
+                voitto += panos *5;
+              
+            }
+    
+            }
+
+       
+
+        ///////////////////////////////////////////////////////////
 
         // ettei lukituksia peräkkäin
         if(lukitukset > 0){
@@ -164,21 +268,26 @@ function pelikierros(){
         }
 
         saldo += voitto;
-        naytaUusiVoitto();
-        naytaSaldo();
+       
+       
  
+        rullienTulokset = [];
         
+
     }
+    setTimeout('naytaUusiVoitto()','5500')
+    setTimeout('naytaSaldo()','5500')
     setTimeout('lukotAuki()','5500')
 
-
-   rullienTulokset =[];
-
+    pelikierrosKaynnissa = false;
+    
  
 }
 // pääohjelma loppuu
 
-// rullien pyöriminen
+
+
+
 
 // voittosymbolit objekteiksi
 const meloni = {
@@ -208,37 +317,74 @@ const tahti = {
 
 const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 
+function ekaPelikierros(){
+  
+    rullatPyorii();
+   
+
+}
+
+function tokaPelikierros(){
+  
+
+    console.log('toinen kierros');
+    
+    // jos lukitaan,asetetaan uusi kuvio kopiolistalle oikeaan indeksiin
+    if (!onLukittu1) {
+        let uusiArvo = rullaYksi();
+        rullienTulokset2[0] = uusiArvo;
+    }
+    if (!onLukittu2) {
+        let uusiArvo = rullaKaksi();
+        rullienTulokset2[1] = uusiArvo;
+    
+    }
+    if (!onLukittu3) {
+        let uusiArvo = rullaKolme();
+        rullienTulokset2[2] = uusiArvo;
+        
+    }
+    if (!onLukittu4) {
+        let uusiArvo = rullaNelja();
+        rullienTulokset2[3] = uusiArvo;
+        
+    }
+
+    console.log('kopiolista', rullienTulokset2);
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
 
 
 
 // pyöritysfunktio
-
 function rullatPyorii()
 {
-    
-
 
     bigwin.innerHTML = '';
 
     voittoTeksti.innerHTML = '';
     voitto = 0;
 
+    rullaYksi();
+    rullaKaksi();
+    rullaKolme();
+    rullaNelja();
   
-        rullaYksi();
-
-        rullaKaksi();
- 
-        rullaKolme();
-   
-        rullaNelja();
- 
-       
-     
-          
-      
     }
- 
 
+ 
+  
 
 
 // animointi rullille¨
@@ -277,10 +423,8 @@ function rullaYksi(){
 
    
     // lisätään viimeksi arvottu kuva voittokuvioksi
-  
+
     rullienTulokset.push(arvotutKuviot[7].arvo);
-      
-   
     
 
     let rullaPyorii = setInterval(function() {
@@ -290,7 +434,7 @@ function rullaYksi(){
         }
     }, 250);
 
-
+return arvotutKuviot[7].arvo
 }
 
 
@@ -321,9 +465,11 @@ function rullaKaksi(){
         }
     }, 350);
 
-
+    return arvotutKuviot[7].arvo
 
 }
+
+
 // kolmannen rullan kuvion arvonta
 function rullaKolme(){
     // 
@@ -352,12 +498,14 @@ function rullaKolme(){
         }
     }, 450);
 
+    return arvotutKuviot[7].arvo
+
 
 
 }
 // neljännen rullan kuvion arvonta
 function rullaNelja(){
-    let arvotutKuviot = [];  // Tähän generoidaan kuvat rullalle
+    let arvotutKuviot = [];
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla4');
     
@@ -381,6 +529,8 @@ function rullaNelja(){
             clearInterval(rullaPyorii);
         }
     }, 550);
+
+    return arvotutKuviot[7].arvo
 
 
 
@@ -426,7 +576,7 @@ lukitseNappi1.addEventListener('click', function() {
         lukitseNappi1.style.backgroundImage = "url('pelikuvat/holded2.png')";
         onLukittu1 = true;
         lukitukset =1;
-        lukitsePanos();
+       
 
     } else {
         
@@ -434,7 +584,7 @@ lukitseNappi1.addEventListener('click', function() {
         lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold2.png')";
         onLukittu1 = false;
         lukitukset = 0;
-        vapautaPanos();
+        
         
        
     }
@@ -452,13 +602,13 @@ lukitseNappi2.addEventListener('click', function() {
         lukitseNappi2.style.backgroundImage = "url('pelikuvat/holded2.png')";
         onLukittu2 = true;
         lukitukset =1;
-        lukitsePanos();
+      
     } else {
         // jos ei painettu
         lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold2.png')";
         onLukittu2 = false;
         lukitukset = 0;
-        vapautaPanos();
+     
       
        
     }
@@ -476,13 +626,13 @@ lukitseNappi3.addEventListener('click', function() {
         lukitseNappi3.style.backgroundImage = "url('pelikuvat/holded2.png')";
         onLukittu3 = true;
         lukitukset =1;
-        lukitsePanos();
+     
     } else {
         // jos ei painettu
         lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold2.png')";
         onLukittu3 = false;
         lukitukset = 0;
-        vapautaPanos();
+      
         
     }
 });
@@ -502,14 +652,14 @@ lukitseNappi4.addEventListener('click', function() {
         lukitseNappi4.style.backgroundImage = "url('pelikuvat/holded2.png')";
         onLukittu4 = true;
         lukitukset =1;
-        lukitsePanos();
+   
     } else {
         
         // jos ei painettu
         lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold2.png')";
         onLukittu4 = false;
         lukitukset = 0;
-        vapautaPanos();
+   
         
     }
 });
@@ -601,10 +751,7 @@ function suljeVoitot() {
   
     document.getElementById('peli-painikkeet').style.display = 'block';
    
-    
-   
 
-    
     document.getElementById('peliohjeet').style.display = 'none';
     
 }

@@ -5,6 +5,7 @@ valikkokuva2.addEventListener('click', avaaMobiilivalikko);
 
 
 function avaaMobiilivalikko() {
+    navigointivalikko.classList.toggle('open');
     
    
     if (navigointivalikko.style.display === 'block') {

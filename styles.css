@@ -217,7 +217,7 @@ color: rgb(109, 159, 220);
 @media only screen and (max-width: 800px){
     .mobiilivalikko {
         display: block;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.93);
         backdrop-filter: blur(4px);
         position: relative;
         
@@ -235,10 +235,16 @@ color: rgb(109, 159, 220);
         text-align: left;
         clear: both;
         padding: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.93);
         backdrop-filter: blur(4px);
         z-index: 999;
+        transition: max-height 2s ease;
+        overflow: hidden;
+        
  
+    }
+    .navigointivalikko.open {
+        max-height: 70%;
     }
 
   
