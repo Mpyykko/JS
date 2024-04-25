@@ -212,7 +212,7 @@ body{
         position:relative;
         margin: 0px auto;
         top: 10px;
-        animation: liukuuAlas 100ms ease-in forwards;
+        animation: liukuuAlas 300ms ease-in forwards;
         
      
     }
@@ -224,7 +224,7 @@ body{
        
         
         100% {
-            transform: translateY(110px);
+            transform: translateY(120px);
          
         }
     }
