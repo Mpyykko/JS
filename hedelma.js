@@ -53,7 +53,6 @@ function isovoitto(){
 
     bigwin.innerHTML = isovoittokuva.html;
 
-
 }
 
 let rullienTulokset =[];
@@ -264,23 +263,23 @@ function pelikierros(){
         if( voitto >= panos * 10){
             setTimeout(isovoitto,5000);
            
-
         }
 
         saldo += voitto;
-       
-       
+  
  
         rullienTulokset = [];
         
 
     }
-    setTimeout('naytaUusiVoitto()','5500')
-    setTimeout('naytaSaldo()','5500')
-    setTimeout('lukotAuki()','5500')
+
+    naytaUusiVoitto();
+    naytaSaldo();
+    setTimeout('lukotAuki()',5500)
 
     pelikierrosKaynnissa = false;
-    
+
+
  
 }
 // pääohjelma loppuu
@@ -359,7 +358,6 @@ function tokaPelikierros(){
 
 
 
- 
 
 
 
@@ -368,8 +366,12 @@ function tokaPelikierros(){
 
 
 // pyöritysfunktio
-function rullatPyorii()
-{
+
+let rullatPyorimassa = false;
+
+function rullatPyorii(){
+
+    rullatPyorimassa = true;
 
     bigwin.innerHTML = '';
 
@@ -380,6 +382,9 @@ function rullatPyorii()
     rullaKaksi();
     rullaKolme();
     rullaNelja();
+
+    rullatPyorimassa = false;
+
   
     }
 
@@ -432,7 +437,7 @@ function rullaYksi(){
         if (kuvaIndex >= arvotutKuviot.length) {
             clearInterval(rullaPyorii);
         }
-    }, 250);
+    }, 150);
 
 return arvotutKuviot[7].arvo
 }
@@ -463,7 +468,7 @@ function rullaKaksi(){
         if (kuvaIndex >= arvotutKuviot.length) {
             clearInterval(rullaPyorii);
         }
-    }, 350);
+    }, 200);
 
     return arvotutKuviot[7].arvo
 
@@ -496,7 +501,7 @@ function rullaKolme(){
         if (kuvaIndex >= arvotutKuviot.length) {
             clearInterval(rullaPyorii);
         }
-    }, 450);
+    }, 250);
 
     return arvotutKuviot[7].arvo
 
@@ -528,13 +533,14 @@ function rullaNelja(){
         if (kuvaIndex >= arvotutKuviot.length) {
             clearInterval(rullaPyorii);
         }
-    }, 550);
+    }, 300);
 
     return arvotutKuviot[7].arvo
 
 
 
 }
+
 
 
 
@@ -685,6 +691,8 @@ function lukitseKaytossa(){
 
 }
 
+
+
 // panokset ei käytössä jos lukitus
 function lukitsePanos(){
     panosPienemmalle.classList.add('panoslukittu');
@@ -705,6 +713,7 @@ function vapautaPanos(){
 ///////////////////////////////////////////////////////////////////////////
 
 
+
 // lukitusten vapautus
 
 function lukotAuki(){
@@ -721,6 +730,8 @@ function lukotAuki(){
     lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold2.png')";
     onLukittu4 = false;
 }
+
+
 
 // voittotaulukko
 

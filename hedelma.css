@@ -75,6 +75,7 @@ body{
         border-radius: 5px;
         height: 60vh;
         background-image: url(pelikuvat/uusilippu.png);
+      
        
         background-size: 100% 100%;
         background-position: center;
@@ -185,15 +186,20 @@ body{
 
     .rulla{
         position: relative;
-        background-color: rgb(243, 245, 245, 0.8);
+        background-image: url(pelikuvat/rullakehys.png);
+        background-size: 100% 100%;
         height: 60%;
+        border-left: 4px solid rgb(207, 207, 207);
         border-top-left-radius: 4px;
+        border-right:4px solid rgb(0, 21, 0);
         border-top-right-radius: 4px;
+        border-top:5px solid rgba(1, 53, 1, 0.461);
         border: none;
         top: 0;
         overflow: hidden;
         flex: 1;
-   
+        box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
+       
     
     }
 
@@ -201,43 +207,25 @@ body{
 
     .rulla-symboli {
     
-        width: 70%;
-        height: 35px;
+        width: 60%;
+        height: 50%;
         position:relative;
         margin: 0px auto;
-        top: 50%;
-        animation: liukuuAlas 300ms ease-in forwards;
+        top: 10px;
+        animation: liukuuAlas 100ms ease-in forwards;
+        
      
     }
 
     @keyframes liukuuAlas {
         0% {
-            transform: translateY(-100px);
-            opacity: 0.4;
+            transform: translateY(-60px);
         }
-        10% {
-            transform: translateY(-40px);
-            opacity: 1;
-        }
-        30% {
-            transform: translateY(-20px);
-            opacity: 1;
-        }
-        50% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        70% {
-            transform: translateY(20px);
-            opacity: 1;
-        }
-        90% {
-            transform: translateY(40px);
-            opacity: 0.2;
-        }
+       
+        
         100% {
-            transform: translateY(100px);
-            opacity: 0;
+            transform: translateY(110px);
+         
         }
     }
     
@@ -245,8 +233,8 @@ body{
     
     .rulla-symboli2 {
     
-        width: 70%;
-        height: 35px;
+        width: 60%;
+        height: 50%;
         position:relative;
         margin: 0px auto;
         top: 40%;
@@ -267,7 +255,7 @@ body{
     }
 
     .liukuu2{
-        animation: liukuuAlas 300ms ease-in forwards;
+        animation: liukuuAlas 500ms ease-in forwards;
     }
 
    
@@ -275,16 +263,16 @@ body{
 
     .lukitse{
         position: relative;
-        border: none;
+     
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         flex: 1;
         background-image: url(pelikuvat/hold2.png);
         background-position: center;
         background-size: 100% 100%;
-       
-       
-    
+        border: none;
+        border-radius: 3px;
+  
     }
 
     .lukitse-napit{
@@ -295,7 +283,6 @@ body{
         justify-content: space-between;
         width:100%;
         height: 25px;
-       
     
     }
 
@@ -426,7 +413,8 @@ body{
         color: white;
         font-family: inherit;
         font-weight: bold;
-        animation: laajeneva 700ms ease-out forwards;
+        animation: laajeneva 2s ease-out forwards;
+        z-index: 998;
       
 
     }
@@ -603,11 +591,13 @@ body{
            
             .rulla-symboli{
                 width: 50%;
+                height: 50%;
     
             }
 
             .rulla-symboli2{
                 width: 50%;
+                height: 50%;
     
             }
 
@@ -711,14 +701,14 @@ body{
        
            
             .rulla-symboli{
-                width: 80%;
+                width: 60%;
                 height: 40%;
                 
 
           
             }
             .rulla-symboli2{
-                width: 80%;
+                width: 60%;
                 height: 40%;
               
                 
