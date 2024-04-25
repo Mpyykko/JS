@@ -69,9 +69,10 @@ async function pelikierros() {
 
    
     lukitsePanos();
+  
     
    
-    if (pelikierrosKaynnissa) {
+    if (pelikierrosKaynnissa){
        
         lukitsePanos();
         return;
@@ -85,6 +86,8 @@ async function pelikierros() {
         lukitseKaytossa();
     }
 
+   
+
   
     // jos saldo ei riitä
     if (saldo < panos) {
@@ -95,9 +98,14 @@ async function pelikierros() {
     if (saldo > 0 && panos <= saldo) {
         kierrokset += 1;
         saldo = saldo - panos;
-        console.log('Pelikierros alkaa')
-  
         naytaSaldo();
+        console.log('Pelikierros alkaa')
+
+        if(voitto > 0){
+            lukitseEikaytossa();
+        }
+  
+        
         
         
 
@@ -112,8 +120,9 @@ async function pelikierros() {
         // jos ei voittoa ja joku rulla on lukittu, pelataan toinen kierros
         if (voitto < 1) {
             if (onLukittu1 || onLukittu2 || onLukittu3 || onLukittu4) {
-                lukitseEikaytossa();
+               
                 lukitsePanos();
+                
                 await tokaPelikierros();
                 lukotAuki();
                 vapautaPanos();
@@ -146,6 +155,13 @@ async function pelikierros() {
     }
 
     naytaUusiVoitto();
+    naytaSaldo();
+
+    if(voitto > 0){
+        lukitseEikaytossa();
+    }
+    
+    
     
    
     pelikierrosKaynnissa = false;
