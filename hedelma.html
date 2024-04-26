@@ -40,7 +40,9 @@
 </header>
 
 
+
     <main>
+
         
  
         <img src="pelikuvat/bar.png" width=10% class="tippuvat" alt="bar">
@@ -50,7 +52,12 @@
         <img src="pelikuvat/bar.png" width=5% class="tippuvat" alt="bar">
         <img src="pelikuvat/seiska.png" width=10% class="tippuvat" alt="seiska">
 
-        
+        <div id="saldo-modaali" class="modaali hidden">
+            <div class="modaali-sisalto">
+                <span class="sulje" onclick="suljeModaali()">&times;</span>
+                <p>Not enough balance!</p>
+            </div>
+        </div>
         
         <div class="pelikone-container" id="pelikone-container">
             
@@ -83,17 +90,8 @@
                         <img src="pelikuvat/back.png" class="back"  onclick="suljeVoitot()" >
 
                         
-
-                       
-                        
-                    
-                   
-                       
                     </div>
-                    
-                    
-
-                
+              
             </div>
             
         <div class="pelikehys">
@@ -103,8 +101,7 @@
             
             <div id="iso-voitto" class="iso-voitto"> </div>
 
-            
-
+        
             <img  class="peli-otsikko" id="peli-otsikko" width="100%" src="pelikuvat/otsikko2.png" alt="logo" >
            
             <div id="pelitiedot" >
@@ -114,8 +111,7 @@
             <span id="voitto">Win <br> 0 € </span>
             </div>
 
-            
-          
+
             <div id="peliohje" class="ohjeet" onclick="naytaVoitot()" ></div>
             <div class="rulla-container" id="rulla-container">
                 <div class="lukitse-napit">
@@ -143,8 +139,7 @@
             <div id="rulla4" class="rulla">
               
             </div>
-
-            
+       
 
     </div>
     

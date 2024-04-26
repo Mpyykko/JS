@@ -64,35 +64,42 @@ let lukitukset = 0;
 let kierrokset = 0;
 
 
+// modaali jos saldo ei riitä
+function naytaModaali() {
+    document.getElementById('saldo-modaali').style.display = 'block';
+   
+}
+
+function suljeModaali() {
+    document.getElementById('saldo-modaali').style.display = 'none';
+   
+}
+
 // pääohjelma
 async function pelikierros() {
+   
 
-   
     lukitsePanos();
-  
-    
-   
+
     if (pelikierrosKaynnissa){
        
         lukitsePanos();
         return;
     }
 
-  
-  
     pelikierrosKaynnissa = true;
   
     if (lukitukset < 1 || voitto < 1) {
         lukitseKaytossa();
+      
     }
 
-   
-
-  
     // jos saldo ei riitä
     if (saldo < panos) {
-        voittoTeksti.innerHTML = 'Not enough balance!';
+            naytaModaali();
+            return;
     }
+ 
 
     // jos saldo riittää
     if (saldo > 0 && panos <= saldo) {
@@ -105,15 +112,11 @@ async function pelikierros() {
             lukitseEikaytossa();
         }
   
-        
-        
-        
-
+ 
         // jos mitään ei lukittu, pelataan ensimmäinen pelikierros
         if (!onLukittu1 && !onLukittu2 && !onLukittu3 && !onLukittu4) {
             await ekaPelikierros();
             rullienTulokset2 = [...rullienTulokset];
-           
            
         }
 
@@ -131,7 +134,6 @@ async function pelikierros() {
             }
          
      }  
-
 
 
         // ettei lukituksia peräkkäin
@@ -160,20 +162,18 @@ async function pelikierros() {
     if(voitto > 0){
         lukitseEikaytossa();
     }
-    
-    
-    
-   
+
     pelikierrosKaynnissa = false;
     
     console.log('pelikierros ohi');
     console.log('lukitukset:', lukitukset);
     console.log('pelikierrokset:', kierrokset);
-   
-    
 }
 
+
+
 // pääohjelma loppuu
+
 
 
 // voittosymbolit objekteiksi
