@@ -215,7 +215,7 @@ body{
         height: 50%;
         position:relative;
         margin: 0px auto;
-        top: 40%;
+        top: 35%;
         animation: liukuuAlas2 700ms ease-in forwards;
      
     }
@@ -227,7 +227,7 @@ body{
             opacity: 1;
         }
         to {
-            transform: translateY(-5px);
+            transform: translateY(0px);
             opacity: 1;
         }
     }
