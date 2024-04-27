@@ -78,8 +78,11 @@ function suljeModaali() {
 // pääohjelma
 async function pelikierros() {
     
+    
+    
     voittoVilkkupois();
     console.log('Pelikierros alkaa');
+  
     if (pelikierrosKaynnissa) {
         
         return;

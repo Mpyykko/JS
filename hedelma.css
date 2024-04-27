@@ -183,6 +183,7 @@ body{
        
     }
 
+
     
     .rulla-symboli {
     
@@ -365,6 +366,15 @@ body{
         font-weight: bold;
    
     }
+    @keyframes laajeneva {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 70%;
+        }
+    }
+
 
 
     .iso-voitto{
@@ -379,11 +389,11 @@ body{
         font-family: inherit;
         font-weight: bold;
         animation: laajeneva 2s ease-out forwards;
-        z-index: 998;
-      
+        z-index: 500;
 
     }
 
+   
 
   
     #saldo{
@@ -465,12 +475,12 @@ body{
           opacity: 1;
         }
         50% {
-          opacity: 0;
+          opacity: 0.1;
         }
       }
       
       .vilkku {
-        animation: vilkutus 500ms linear infinite;
+        animation: vilkutus 800ms linear infinite;
       }
   
 
@@ -662,6 +672,7 @@ body{
 
             .peliohjeet{
                 width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
                 
             }
 
@@ -776,6 +787,7 @@ body{
           
             .peliohjeet{
                 width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
             }
 
             .kuvat{
