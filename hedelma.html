@@ -32,7 +32,8 @@
                 <li><a href=hedelma.html>Hedelmäpeli</a></li>
             </ul>
         </nav>
-   
+
+       
 
     <div id="mobiilivalikko" class="mobiilivalikko">
         <div id="valikkokuva2" class="valikkokuva2"></div>
@@ -52,12 +53,7 @@
         
         
 
-        <div id="saldo-modaali" class="modaali hidden">
-            <div class="modaali-sisalto">
-                <span class="sulje" onclick="suljeModaali()">&times;</span>
-                <p>Not enough balance!</p>
-            </div>
-        </div>
+        
         
         <div class="pelikone-container" id="pelikone-container">
             
@@ -87,7 +83,7 @@
 
                         <img src="pelikuvat/tahdet.png" class="kuvat"alt="tahdet">
 
-                        <img src="pelikuvat/back.png" class="back"  onclick="suljeVoitot()" >
+                        <h6 style="color: white;">Click anywhere to close</h6>
 
                         <h6 style="color: rgba(220, 220, 220, 0.249);"> Graphics made by PowerPoint <br> Sounds Freesound<br>  &copy; Mikko Pyykkönen 2024 </h6>
 
@@ -101,13 +97,13 @@
 
             <div id="voittoTeksti" class="peli-ilmoitus"> </div>
             
-            <div id="iso-voitto" class="iso-voitto"> </div>
+            <div id="iso-voitto" class="iso-voitto"> <h5> Logosta musat päälle</h5> </div>
 
         
             <img  class="peli-otsikko" id="peli-otsikko" width="100%" src="pelikuvat/otsikko2.png" alt="logo" >
            
             <div id="pelitiedot" >
-            <span  id="saldo">Balance <br> 100 €</span>
+            <span  id="saldo">Balance <br> 50 €</span>
             
             <span id="panos">Bet <br> 1 €</span>
             <span id="voitto">Win <br> 0 € </span>
@@ -115,7 +111,14 @@
 
 
             <div id="peliohje" class="ohjeet" onclick="naytaVoitot()" ></div>
+        
             <div class="rulla-container" id="rulla-container">
+                <div id="saldo-modaali" class="modaali hidden">
+                    <div class="modaali-sisalto">
+                        <span class="sulje" onclick="suljeModaali()">&times;</span>
+                        <p>Not enough balance!</p>
+                    </div>
+                </div>
                 <div class="lukitse-napit">
                 <button id="lukitse1" class="lukitse" ></button>
                 <button id="lukitse2" class="lukitse" ></button>

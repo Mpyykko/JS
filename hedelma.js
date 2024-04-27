@@ -1,11 +1,54 @@
-// äänikomennot
+// äänet
+function isoVoittoaani() {
+    const audio = new Audio('sounds/rahakilisee.mp3');
+    audio.play();
+}
+
+function pelaaAani() {
+    const audio = new Audio('sounds/cash.mp3');
+    audio.play();
+}
+
+function klikki() {
+    const audio = new Audio('sounds/klik1.wav');
+    audio.play();
+}
+
+function panosAani1() {
+    const audio = new Audio('sounds/panos1.wav');
+    audio.play();
+}
+
+const aanetPaalle = document.getElementById('peli-otsikko');
+aanetPaalle.addEventListener('click', taustaMusa);
+
+let musiikkiSoi = false;
+let audio;
+
+function taustaMusa() {
+  
+    
+    if (musiikkiSoi) {
+        audio.pause();
+        musiikkiSoi = false;
+      
+    } else {
+        bigwin.innerHTML = '';
+        audio = new Audio('sounds/tausta.mp3');
+        audio.loop = true;
+        audio.play();
+        musiikkiSoi = true;
+    }
+}
+
+
 
 // pelaa-painike
 const pelaa = document.getElementById('pelaa-painike');
 pelaa.addEventListener('click', pelikierros);
 
 // muuttujat saldolle, panokselle ja voitoille
-let saldo = 100;
+let saldo = 50;
 const naytaUusisaldo = document.getElementById('saldo');
 let panos = 1;
 const naytaUusipanos = document.getElementById('panos');
@@ -50,6 +93,8 @@ const isovoittokuva = {
 function isovoitto(){
 
     bigwin.innerHTML = isovoittokuva.html;
+    isoVoittoaani();
+    
 
 }
 
@@ -77,13 +122,19 @@ function suljeModaali() {
 
 // pääohjelma
 async function pelikierros() {
+
+    bigwin.innerHTML = '';
+   
+    pelaaAani();
     
     
+    vapautaPanos();
     
     voittoVilkkupois();
     console.log('Pelikierros alkaa');
   
     if (pelikierrosKaynnissa) {
+        lukitsePanos();
         
         return;
     }
@@ -106,7 +157,7 @@ async function pelikierros() {
 
     if (!onLukittu1 && !onLukittu2 && !onLukittu3 && !onLukittu4) {
         await ekaPelikierros();
-        
+        vapautaPanos();
         rullienTulokset2 = [...rullienTulokset];
         pelattuKierros = true;
     }
@@ -115,7 +166,7 @@ async function pelikierros() {
         lukitseEikaytossa();
         await tokaPelikierros();
         kierrokset = 0;
-        
+        vapautaPanos();
         lukotAuki();
         pelattuKierros = true;
      
@@ -150,13 +201,7 @@ async function pelikierros() {
         lukitseEikaytossa();
         kierrokset = 0;
     }
-    if(kierrokset > 1){
-        vapautaPanos();
-    }
-
    
-    
-
  
 
     pelikierrosKaynnissa = false;
@@ -563,6 +608,7 @@ function vahennaPanosta() {
 
 // panoksen päivitys-funktio
 function suurennaPanosta() {
+    panosAani1();
     if(panos <10 ){
     panos++;
     naytaUusipanos.innerHTML = (`Bet <br> ${panos} €`);
@@ -577,12 +623,14 @@ let onLukittu1 = false;
 
 lukitseNappi1.addEventListener('click', function() {
     if (!onLukittu1) {
+        klikki();
         // jos painettu, lukossa
         lukitseNappi1.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu1 = true;
         lukitukset =1;
        
     } else {
+        klikki();
         
         // jos ei painettu
         lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold3.png')";
@@ -600,12 +648,14 @@ let onLukittu2 = false;
 
 lukitseNappi2.addEventListener('click', function() {
     if (!onLukittu2) {
+        klikki();
         // jos painettu, lukossa
         lukitseNappi2.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu2 = true;
         lukitukset =1;
       
     } else {
+        klikki();
         // jos ei painettu
         lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold3.png')";
         onLukittu2 = false;
@@ -624,12 +674,14 @@ let onLukittu3 = false;
 
 lukitseNappi3.addEventListener('click', function() {
     if (!onLukittu3) {
+        klikki();
         // jos painettu, lukossa
         lukitseNappi3.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu3 = true;
         lukitukset =1;
      
     } else {
+        klikki();
         // jos ei painettu
         lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold3.png')";
         onLukittu3 = false;
@@ -650,12 +702,14 @@ let onLukittu4 = false;
 
 lukitseNappi4.addEventListener('click', function() {
     if (!onLukittu4) {
+        klikki();
         // jos painettu, lukossa
         lukitseNappi4.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu4 = true;
         lukitukset =1;
    
     } else {
+        klikki();
         
         // jos ei painettu
         lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold3.png')";
@@ -732,8 +786,8 @@ async function lukotAuki(){
 // voittotaulukko
 
 function naytaVoitot() {
-
   
+
     // pelivalikko piiloon
  
   
@@ -765,19 +819,6 @@ function suljeVoitot() {
 
 
 ///////////////////////////////////////////////////////////////////////////
-
-const saldoaLisaa = document.getElementById('peli-otsikko');
-
-saldoaLisaa.addEventListener('click',touhuTonni)
-
-
-
-
-function touhuTonni(){
-    saldo +=  1000;
-  
-    naytaSaldo();
-}
 
 
 function voittoVilkku() {
