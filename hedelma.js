@@ -114,6 +114,7 @@ async function pelikierros() {
     if (voitto < 1 && (onLukittu1 || onLukittu2 || onLukittu3 || onLukittu4)) {
         lukitseEikaytossa();
         await tokaPelikierros();
+        kierrokset = 0;
         
         lukotAuki();
         pelattuKierros = true;
@@ -129,7 +130,7 @@ async function pelikierros() {
 
     if (pelattuKierros && kierrokset >= 2) {
         lukotAuki();
-        vapautaPanos();
+        
         kierrokset = 0;
       
     }
@@ -148,6 +149,9 @@ async function pelikierros() {
     if (voitto > 0) {
         lukitseEikaytossa();
         kierrokset = 0;
+    }
+    if(kierrokset > 1){
+        vapautaPanos();
     }
 
    
@@ -574,14 +578,14 @@ let onLukittu1 = false;
 lukitseNappi1.addEventListener('click', function() {
     if (!onLukittu1) {
         // jos painettu, lukossa
-        lukitseNappi1.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        lukitseNappi1.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu1 = true;
         lukitukset =1;
        
     } else {
         
         // jos ei painettu
-        lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold3.png')";
         onLukittu1 = false;
         lukitukset = 0;
     
@@ -597,13 +601,13 @@ let onLukittu2 = false;
 lukitseNappi2.addEventListener('click', function() {
     if (!onLukittu2) {
         // jos painettu, lukossa
-        lukitseNappi2.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        lukitseNappi2.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu2 = true;
         lukitukset =1;
       
     } else {
         // jos ei painettu
-        lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold3.png')";
         onLukittu2 = false;
         lukitukset = 0;
      
@@ -621,13 +625,13 @@ let onLukittu3 = false;
 lukitseNappi3.addEventListener('click', function() {
     if (!onLukittu3) {
         // jos painettu, lukossa
-        lukitseNappi3.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        lukitseNappi3.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu3 = true;
         lukitukset =1;
      
     } else {
         // jos ei painettu
-        lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold3.png')";
         onLukittu3 = false;
         lukitukset = 0;
       
@@ -647,14 +651,14 @@ let onLukittu4 = false;
 lukitseNappi4.addEventListener('click', function() {
     if (!onLukittu4) {
         // jos painettu, lukossa
-        lukitseNappi4.style.backgroundImage = "url('pelikuvat/holded2.png')";
+        lukitseNappi4.style.backgroundImage = "url('pelikuvat/holded3.png')";
         onLukittu4 = true;
         lukitukset =1;
    
     } else {
         
         // jos ei painettu
-        lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold2.png')";
+        lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold3.png')";
         onLukittu4 = false;
         lukitukset = 0;
    
@@ -710,16 +714,16 @@ function vapautaPanos(){
 
 async function lukotAuki(){
 
-    lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold2.png')";
+    lukitseNappi1.style.backgroundImage = "url('pelikuvat/hold3.png')";
     onLukittu1 = false;
 
-    lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold2.png')";
+    lukitseNappi2.style.backgroundImage = "url('pelikuvat/hold3.png')";
     onLukittu2 = false;
 
-    lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold2.png')";
+    lukitseNappi3.style.backgroundImage = "url('pelikuvat/hold3.png')";
     onLukittu3 = false;
 
-    lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold2.png')";
+    lukitseNappi4.style.backgroundImage = "url('pelikuvat/hold3.png')";
     onLukittu4 = false;
 }
 
@@ -798,7 +802,7 @@ function voittoVilkku() {
 function voittoVilkku2() {
     const ensimmaisetNelja = rullienTulokset2.slice(0, 4);
 
-    // jos neljä ekaa samat
+    // jos neljä ekaa samat lukituksen jälkeen
     if (ensimmaisetNelja.every((val, i) => val === ensimmaisetNelja[0])) {
        
         const kaikkiRullat = document.querySelectorAll('.rulla');
@@ -806,7 +810,7 @@ function voittoVilkku2() {
             rulla.classList.add('vilkku');
         });
     } else if (ensimmaisetNelja.slice(0, 3).every((val, i) => val === ensimmaisetNelja[0])) {
-        // jos kolme ekaa samat
+        // jos kolme ekaa samat lukituksen jälkeen
         for (let i = 1; i <= 3; i++) {
             const rulla = document.getElementById(`rulla${i}`);
             rulla.classList.add('vilkku');
