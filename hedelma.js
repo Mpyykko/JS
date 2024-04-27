@@ -77,98 +77,88 @@ function suljeModaali() {
 
 // pääohjelma
 async function pelikierros() {
-   
-
-    lukitsePanos();
-
-    if (pelikierrosKaynnissa){
-       
-        lukitsePanos();
+    
+    voittoVilkkupois();
+    console.log('Pelikierros alkaa');
+    if (pelikierrosKaynnissa) {
+        
         return;
     }
 
-    pelikierrosKaynnissa = true;
-  
-    if (lukitukset < 1 || voitto < 1) {
-        lukitseKaytossa();
-      
-    }
-
-    // jos saldo ei riitä
     if (saldo < panos) {
-            naytaModaali();
-            return;
+        naytaModaali();
+        vapautaPanos();
+        return;
     }
- 
 
-    // jos saldo riittää
-    if (saldo > 0 && panos <= saldo) {
-        kierrokset += 1;
-        saldo = saldo - panos;
-        naytaSaldo();
-        console.log('Pelikierros alkaa')
+    lukitsePanos();
+    pelikierrosKaynnissa = true;
+    kierrokset += 1;
+    saldo -= panos;
 
-        if(voitto > 0){
-            lukitseEikaytossa();
-        }
-  
- 
-        // jos mitään ei lukittu, pelataan ensimmäinen pelikierros
-        if (!onLukittu1 && !onLukittu2 && !onLukittu3 && !onLukittu4) {
-            await ekaPelikierros();
-            rullienTulokset2 = [...rullienTulokset];
-           
-        }
+    naytaSaldo();
+    
 
-        // jos ei voittoa ja joku rulla on lukittu, pelataan toinen kierros
-        if (voitto < 1) {
-            if (onLukittu1 || onLukittu2 || onLukittu3 || onLukittu4) {
-               
-                lukitsePanos();
-                
-                await tokaPelikierros();
-                lukotAuki();
-                vapautaPanos();
-                kierrokset = 0;
+    let pelattuKierros = false;
 
-            }
-         
-     }  
-
-
-        // ettei lukituksia peräkkäin
-        if(lukitukset > 0){
-            lukitseEikaytossa();
-            lukitukset -= 1;
-            
-        }
-
-        console.log(rullienTulokset);
-      
-        // 10 tai yli x panos on iso voitto
-        if( voitto >= panos * 10){
-            isovoitto();
-           
-        }
-
-        saldo += voitto;
-        rullienTulokset = [];
+    if (!onLukittu1 && !onLukittu2 && !onLukittu3 && !onLukittu4) {
+        await ekaPelikierros();
         
+        rullienTulokset2 = [...rullienTulokset];
+        pelattuKierros = true;
     }
 
+    if (voitto < 1 && (onLukittu1 || onLukittu2 || onLukittu3 || onLukittu4)) {
+        lukitseEikaytossa();
+        await tokaPelikierros();
+        
+        lukotAuki();
+        pelattuKierros = true;
+     
+    }
+
+    if (lukitukset > 0) {
+        lukitseEikaytossa();
+        lukitukset -= 1;
+        vapautaPanos();
+
+    }
+
+    if (pelattuKierros && kierrokset >= 2) {
+        lukotAuki();
+        vapautaPanos();
+        kierrokset = 0;
+      
+    }
+
+    console.log(rullienTulokset);
+
+    if (voitto >= panos * 10) {
+        isovoitto();
+    }
+
+    saldo += voitto;
+    rullienTulokset = [];
     naytaUusiVoitto();
     naytaSaldo();
 
-    if(voitto > 0){
+    if (voitto > 0) {
         lukitseEikaytossa();
+        kierrokset = 0;
     }
 
-    pelikierrosKaynnissa = false;
+   
     
+
+ 
+
+    pelikierrosKaynnissa = false;
+
     console.log('pelikierros ohi');
     console.log('lukitukset:', lukitukset);
     console.log('pelikierrokset:', kierrokset);
 }
+
 
 
 
@@ -215,65 +205,82 @@ async function ekaPelikierros(){
         // 4 melonia
         if (rullienTulokset.every(val => val === 1)) {
             voitto += panos *10;
+      
 
         }
         // 3 melonia
         else if (rullienTulokset.slice(0, 3).every(val => val === 1)) {
             voitto += panos *5;
- 
+     
         }
+       
+      
 
         // 4 seiskaa
         if (rullienTulokset.every(val => val === 2)) {
             voitto += panos *100;
+         
 
         }  // 3 seiskaa
         else if (rullienTulokset.slice(0, 3).every(val => val === 2)) {
             voitto += panos *50;
+        
 
         }
+      
 
         // 4 baria
         if (rullienTulokset.every(val => val === 3)) {
             voitto += panos *75;
+        
 
         }  // 3 baria
         else if (rullienTulokset.slice(0, 3).every(val => val === 3)) {
             voitto += panos *40;
-  
+         
         }
-
+      
         // 4 esedua
         if (rullienTulokset.every(val => val === 4)) {
             voitto += panos *50;
+           
 
         } // 3 esedua
         else if (rullienTulokset.slice(0, 3).every(val => val === 4)) {
             voitto += panos *25;
+           
 
         }
+       
 
         // 4lippua
         if (rullienTulokset.every(val => val === 5)) {
             voitto += panos *50;
+            
  
         } // 3lippua
         else if (rullienTulokset.slice(0, 3).every(val => val === 5)) {
             voitto += panos *25;
+            
 
         }
+       
 
         // 4 tähteä
         if (rullienTulokset.every(val => val === 6)) {
             voitto += panos *10;
+           
 
         } // 3 tähteä
         else if (rullienTulokset.slice(0, 3).every(val => val === 6)) {
             voitto += panos *5;
+        
           
         }
+      
 
         }
+        voittoVilkku();
    
 }
 
@@ -366,6 +373,8 @@ async function tokaPelikierros() {
       
     }
     console.log('kopiolista toisen kierroksen jälkeen', rullienTulokset2);
+    voittoVilkku2();
+    vapautaPanos();
 
     
 }
@@ -750,9 +759,9 @@ function suljeVoitot() {
 
 ///////////////////////////////////////////////////////////////////////////
 
-const saldoaLisaa = document.getElementById('peli-otsikko');
+//const saldoaLisaa = document.getElementById('peli-otsikko');
 
-saldoaLisaa.addEventListener('click',touhuTonni)
+//saldoaLisaa.addEventListener('click',touhuTonni)
 
 
 
@@ -761,4 +770,51 @@ function touhuTonni(){
     saldo +=  1000;
   
     naytaSaldo();
+}
+
+
+function voittoVilkku() {
+    const ensimmaisetNelja = rullienTulokset.slice(0, 4);
+
+    // jos neljä ekaa samat
+    if (ensimmaisetNelja.every((val, i) => val === ensimmaisetNelja[0])) {
+       
+        const kaikkiRullat = document.querySelectorAll('.rulla');
+        kaikkiRullat.forEach(rulla => {
+            rulla.classList.add('vilkku');
+        });
+    } else if (ensimmaisetNelja.slice(0, 3).every((val, i) => val === ensimmaisetNelja[0])) {
+        // jos kolme ekaa samat
+        for (let i = 1; i <= 3; i++) {
+            const rulla = document.getElementById(`rulla${i}`);
+            rulla.classList.add('vilkku');
+        }
+    }
+}
+
+function voittoVilkku2() {
+    const ensimmaisetNelja = rullienTulokset2.slice(0, 4);
+
+    // jos neljä ekaa samat
+    if (ensimmaisetNelja.every((val, i) => val === ensimmaisetNelja[0])) {
+       
+        const kaikkiRullat = document.querySelectorAll('.rulla');
+        kaikkiRullat.forEach(rulla => {
+            rulla.classList.add('vilkku');
+        });
+    } else if (ensimmaisetNelja.slice(0, 3).every((val, i) => val === ensimmaisetNelja[0])) {
+        // jos kolme ekaa samat
+        for (let i = 1; i <= 3; i++) {
+            const rulla = document.getElementById(`rulla${i}`);
+            rulla.classList.add('vilkku');
+        }
+    }
+}
+
+
+function voittoVilkkupois() {
+    const rullat = document.querySelectorAll('.rulla');
+    rullat.forEach(rulla => {
+        rulla.classList.remove('vilkku');
+    });
 }

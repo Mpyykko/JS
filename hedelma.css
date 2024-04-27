@@ -75,8 +75,6 @@ body{
         border-radius: 5px;
         height: 60vh;
         background-image: url(pelikuvat/uusilippu.png);
-      
-       
         background-size: 100% 100%;
         background-position: center;
         margin-top: 50px;
@@ -91,9 +89,9 @@ body{
 
     .peliohjeet{
         position:absolute;
-        width: 50%;
+        width: 70%;
         height: auto;
-        max-height: 85%;
+        max-height: 100%;
         box-sizing: border-box;
         margin: 0 auto;
         border-radius: 5px;
@@ -104,8 +102,8 @@ body{
         display: none;
         justify-content: center;
         align-items: center;
-        z-index: 999;
-        top: 5%;
+        z-index: 997;
+        top: 0;
         overflow-y: auto;
    
     }
@@ -118,12 +116,8 @@ body{
         display: flex;
         flex-direction:column;
         max-height: 100%;
-        
-       
-      
     }
 
-   
     .kuvat{
         margin: 0 auto;
         width: 50%;
@@ -135,9 +129,6 @@ body{
     .back{
         width: 10%;
         margin: 50px auto;
-      
-       
-      
     }
 
     .ohjeet{
@@ -151,21 +142,13 @@ body{
 
     }
 
-   
-   
-
-
-  
     .peli-otsikko{
         margin: 0 auto;
         position:relative;
         width: 50%;
-        top: -12%;
-       
+        top: -12%;  
     }
    
-    
-
   
     .rulla-container {
         position: relative;
@@ -181,8 +164,6 @@ body{
         
     
     }
-
-    
 
     .rulla{
         position: relative;
@@ -200,11 +181,9 @@ body{
         flex: 1;
         box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
        
-    
     }
 
     
-
     .rulla-symboli {
     
         width: 60%;
@@ -230,9 +209,7 @@ body{
     }
     
     
-    
     .rulla-symboli2 {
-    
         width: 60%;
         height: 50%;
         position:relative;
@@ -258,12 +235,9 @@ body{
         animation: liukuuAlas 500ms ease-in forwards;
     }
 
-   
-
 
     .lukitse{
         position: relative;
-     
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         flex: 1;
@@ -287,13 +261,6 @@ body{
     }
 
    
-
- 
-
-    
-
-   
-
 
    
     .peli-painikkeet{
@@ -391,7 +358,7 @@ body{
     .peli-ilmoitus{
         position: absolute;
         width: 100%;
-        top: 60%;
+        top: 20%;
         height: 50px;
         margin: 0 auto;
         font-family: inherit;
@@ -463,7 +430,7 @@ body{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 2px solid #888;
+        border: 2px solid black;
         border-radius: 5px;
         background-color: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(4px);
@@ -491,6 +458,20 @@ body{
         text-decoration: none;
         cursor: pointer;
     }
+
+
+    @keyframes vilkutus {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      
+      .vilkku {
+        animation: vilkutus 500ms linear infinite;
+      }
   
 
 
@@ -680,12 +661,12 @@ body{
           
 
             .peliohjeet{
-                width: 81%;
+                width: 100%;
                 
             }
 
             .kuvat{
-                width: 30%;
+                width: 40%;
             }
 
            
@@ -794,7 +775,7 @@ body{
 
           
             .peliohjeet{
-                width: 81%;
+                width: 100%;
             }
 
             .kuvat{
