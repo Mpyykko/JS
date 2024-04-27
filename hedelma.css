@@ -380,7 +380,7 @@ body{
     .iso-voitto{
         position: absolute;
         width: 70%;
-        top: 5%;
+        top: 7%;
         height: 100px;
         margin: 0 auto;
         left: 0;
@@ -481,6 +481,11 @@ body{
       
       .vilkku {
         animation: vilkutus 1000ms linear infinite;
+        width: 60%;
+        height: 50%;
+        position:relative;
+        margin: 0px auto;
+        top: 35%;
       }
   
 

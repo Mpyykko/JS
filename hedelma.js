@@ -766,9 +766,9 @@ function suljeVoitot() {
 
 ///////////////////////////////////////////////////////////////////////////
 
-//const saldoaLisaa = document.getElementById('peli-otsikko');
+const saldoaLisaa = document.getElementById('peli-otsikko');
 
-//saldoaLisaa.addEventListener('click',touhuTonni)
+saldoaLisaa.addEventListener('click',touhuTonni)
 
 
 
@@ -783,40 +783,56 @@ function touhuTonni(){
 function voittoVilkku() {
     const ensimmaisetNelja = rullienTulokset.slice(0, 4);
 
-    // jos neljä ekaa samat
+    // jos neljä ekaa samaa
     if (ensimmaisetNelja.every((val, i) => val === ensimmaisetNelja[0])) {
-       
         const kaikkiRullat = document.querySelectorAll('.rulla');
-        kaikkiRullat.forEach(rulla => {
-            rulla.classList.add('vilkku');
+        kaikkiRullat.forEach((rulla) => {
+            const kuva = rulla.querySelector('img');
+            if (kuva) {
+                
+                kuva.classList.add('vilkku');
+            }
         });
     } else if (ensimmaisetNelja.slice(0, 3).every((val, i) => val === ensimmaisetNelja[0])) {
-        // jos kolme ekaa samat
+        // jos kolme ekaa samaa
         for (let i = 1; i <= 3; i++) {
             const rulla = document.getElementById(`rulla${i}`);
-            rulla.classList.add('vilkku');
+            const kuva = rulla.querySelector('img');
+            if (kuva) {
+              
+                kuva.classList.add('vilkku');
+            }
         }
     }
 }
+
 
 function voittoVilkku2() {
     const ensimmaisetNelja = rullienTulokset2.slice(0, 4);
 
-    // jos neljä ekaa samat lukituksen jälkeen
+    // jos neljä ekaa samaa
     if (ensimmaisetNelja.every((val, i) => val === ensimmaisetNelja[0])) {
-       
         const kaikkiRullat = document.querySelectorAll('.rulla');
-        kaikkiRullat.forEach(rulla => {
-            rulla.classList.add('vilkku');
+        kaikkiRullat.forEach((rulla) => {
+            const kuva = rulla.querySelector('img');
+            if (kuva) {
+              
+                kuva.classList.add('vilkku');
+            }
         });
     } else if (ensimmaisetNelja.slice(0, 3).every((val, i) => val === ensimmaisetNelja[0])) {
-        // jos kolme ekaa samat lukituksen jälkeen
+        // jos kolme ekaa samaa
         for (let i = 1; i <= 3; i++) {
             const rulla = document.getElementById(`rulla${i}`);
-            rulla.classList.add('vilkku');
+            const kuva = rulla.querySelector('img');
+            if (kuva) {
+             
+                kuva.classList.add('vilkku');
+            }
         }
     }
 }
+
 
 
 function voittoVilkkupois() {
@@ -825,3 +841,4 @@ function voittoVilkkupois() {
         rulla.classList.remove('vilkku');
     });
 }
+
