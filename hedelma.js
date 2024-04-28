@@ -15,12 +15,12 @@ function klikki() {
 }
 
 function panosAaniylos() {
-    const audio = new Audio('sounds/panosylos.mp3');
+    const audio = new Audio('sounds/ylos2.mp3');
     audio.play();
 }
 
 function panosAanialas() {
-    const audio = new Audio('sounds/panosalas.mp3');
+    const audio = new Audio('sounds/alas2.mp3');
     audio.play();
 }
 
