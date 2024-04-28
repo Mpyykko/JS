@@ -369,20 +369,29 @@ body{
 
     .peli-ilmoitus{
         position: absolute;
-        width: 100%;
-        top: 20%;
-        height: 50px;
+        width: 70%;
+        top: 7%;
+        height: 100px;
         margin: 0 auto;
+        left: 0;
+        right: 0;
+        color: white;
         font-family: inherit;
         font-weight: bold;
-   
+        animation: laajeneva 2s ease-out forwards;
+        animation-delay: 1600ms;
+        z-index: 500;
+        opacity: 0;
+        
     }
     @keyframes laajeneva {
         0% {
             width: 0;
+           
         }
         100% {
             width: 70%;
+            opacity: 1;
         }
     }
 
@@ -497,6 +506,47 @@ body{
         position:relative;
         margin: 0px auto;
         top: 35%;
+      }
+
+
+      .latausikkuna {
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        z-index: 9999;
+      }
+      
+      .loading-rinkula {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid rgb(9, 133, 0);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+        
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(180deg); }
+      }
+      
+      .loading-teksti {
+        font-size: 15px;
+        font-family: inherit;
+        font-weight: bold;
+        position: absolute;
+        top: calc(50% + 25px);
+        left: 51%;
+        transform: translateX(-50%);
+        text-align: center;
       }
   
 

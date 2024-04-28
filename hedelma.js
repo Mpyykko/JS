@@ -70,13 +70,22 @@ function taustaMusa() {
         musiikkiSoi = false;
       
     } else {
-        bigwin.innerHTML = '';
+        voittoTeksti.innerHTML = '';
         audio = new Audio('sounds/tausta.mp3');
         audio.loop = true;
         audio.play();
         musiikkiSoi = true;
     }
 }
+
+// latausikkuna
+window.addEventListener('load', function() {
+    
+    setTimeout(function() {
+      const loadingScreen = document.querySelector('.latausikkuna');
+      loadingScreen.style.display = 'none';
+    }, 1500);
+  });
 
 
 
@@ -92,7 +101,7 @@ const naytaUusipanos = document.getElementById('panos');
 let voitto = 0;
 const naytaVoitto = document.getElementById('voitto');
 
-let voittoTeksti = document.getElementById('voittoTeksti');
+let voittoTeksti = document.getElementById('peli-ilmoitus');
 
 const lukitseNappi1 = document.getElementById('lukitse1');
 lukitseNappi1.disabled = true;
@@ -119,17 +128,17 @@ panosSuuremmalle.addEventListener('click', suurennaPanosta);
 
 // iso voitto funktio
 
-const bigwin = document.getElementById('iso-voitto');
+let bigwin = document.getElementById('iso-voitto');
 
-// iso voitto objektiksi
-const isovoittokuva = {
-    html: "<img src='pelikuvat/isovoitto.png' class='iso-voitto'>",
-    arvo: 10
-};
+
+const isovoittokuva = "<img src='pelikuvat/isovoitto.png' class='iso-voitto'>";
+    
+   
+
 
 function isovoitto(){
 
-    bigwin.innerHTML = isovoittokuva.html;
+    bigwin.innerHTML = isovoittokuva;
     isoVoittoaani();
     
 
@@ -160,6 +169,8 @@ function suljeModaali() {
 
 // pääohjelma
 async function pelikierros() {
+    bigwin.innerHTML = '';
+
     voitto = 0;
     naytaUusiVoitto();
 
@@ -485,7 +496,7 @@ function rullatPyorii() {
    
    
     
-    bigwin.innerHTML = '';
+   
     voittoTeksti.innerHTML = '';
     voitto = 0;
 
