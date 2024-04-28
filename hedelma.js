@@ -160,6 +160,8 @@ function suljeModaali() {
 
 // pääohjelma
 async function pelikierros() {
+    voitto = 0;
+    naytaUusiVoitto();
 
   
     vapautaPanos();

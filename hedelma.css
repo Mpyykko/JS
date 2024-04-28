@@ -620,7 +620,7 @@ body{
                 position: absolute;
                 width: 90%;
                 height: 20%;
-                top: 30%;
+                top: 35%;
                 left: 0;
                 right: 0;
             
@@ -658,7 +658,7 @@ body{
 
             .peli-painikkeet{
              
-                bottom: 50px;
+                bottom: 40px;
              
             }
 
@@ -702,7 +702,7 @@ body{
             }
             .musakuva{
                 width: 50%;
-                top: 20%;
+                top: 15%;
               
             }
 
