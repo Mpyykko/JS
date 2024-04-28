@@ -142,15 +142,15 @@ body{
 
     }
 
-    .taustamusa{
+  
+    .musakuva{
+        width: 40%;
+      
         position: absolute;
-        width: 30px;
-        height: 30px;
-        right: 15px;
-        top: 8px;
-        background-image: url(pelikuvat/music.png);
-        background-size: 100% 100%;
-
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
 
     .peli-otsikko{
@@ -545,7 +545,7 @@ body{
                 position: absolute;
                 width: 80%;
                 height: 30%;
-                top: 15%;
+                top: 30%;
               
              
               
@@ -554,7 +554,7 @@ body{
 
             .peli-painikkeet{
              
-                bottom: 40px;
+                bottom: 30px;
              
             }
 
@@ -591,6 +591,11 @@ body{
             .kuvat{
                 margin: 0 auto;
                 width: 30%;
+              
+            }
+            .musakuva{
+                width: 30%;
+                top: 30%;
               
             }
 
@@ -695,6 +700,11 @@ body{
             .kuvat{
                 width: 40%;
             }
+            .musakuva{
+                width: 50%;
+                top: 30%;
+              
+            }
 
            
 
@@ -703,6 +713,7 @@ body{
         }
 
         @media only screen and (min-width: 100px) and (max-width:499px) {
+            
    
             .tippuvat {
                 width: 15%;
@@ -809,6 +820,14 @@ body{
             .kuvat{
                 width: 40%;
             }
+
+            .musakuva{
+                width: 50%;
+                top: 20%;
+              
+            }
+
+
 
 
 

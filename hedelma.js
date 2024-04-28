@@ -14,10 +14,45 @@ function klikki() {
     audio.play();
 }
 
-function panosAani1() {
-    const audio = new Audio('sounds/panos1.wav');
+function panosAaniylos() {
+    const audio = new Audio('sounds/panosylos.mp3');
     audio.play();
 }
+
+function panosAanialas() {
+    const audio = new Audio('sounds/panosalas.mp3');
+    audio.play();
+}
+
+function huom() {
+    const audio = new Audio('sounds/huom.mp3');
+    audio.play();
+}
+
+function stop() {
+    const audio = new Audio('sounds/stop2.mp3');
+    audio.play();
+}
+
+
+
+// rullien pyörimis-äänet
+const audio1 = new Audio('sounds/pyorii3.mp3');
+
+
+function pyorii() {
+    audio1.play();
+}
+
+function pysayta() {
+    audio1.pause();
+    audio1.currentTime = 0;
+}
+
+
+
+
+
 
 const aanetPaalle = document.getElementById('peli-otsikko');
 aanetPaalle.addEventListener('click', taustaMusa);
@@ -26,6 +61,8 @@ let musiikkiSoi = false;
 let audio;
 
 function taustaMusa() {
+
+    
   
     
     if (musiikkiSoi) {
@@ -111,6 +148,7 @@ let kierrokset = 0;
 
 // modaali jos saldo ei riitä
 function naytaModaali() {
+    huom();
     document.getElementById('saldo-modaali').style.display = 'block';
    
 }
@@ -123,11 +161,7 @@ function suljeModaali() {
 // pääohjelma
 async function pelikierros() {
 
-    bigwin.innerHTML = '';
-   
-    pelaaAani();
-    
-    
+  
     vapautaPanos();
     
     voittoVilkkupois();
@@ -135,8 +169,8 @@ async function pelikierros() {
   
     if (pelikierrosKaynnissa) {
         lukitsePanos();
-        
         return;
+       
     }
 
     if (saldo < panos) {
@@ -145,6 +179,8 @@ async function pelikierros() {
         return;
     }
 
+    pelaaAani();
+    
     lukitsePanos();
     pelikierrosKaynnissa = true;
     kierrokset += 1;
@@ -248,8 +284,13 @@ const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 
 
 async function ekaPelikierros(){
-
+    pyorii();
+   
     await rullatPyorii();
+
+
+    pysayta();
+   
 
      // voitot jos ei lukita
 
@@ -337,7 +378,8 @@ async function ekaPelikierros(){
 }
 
 async function tokaPelikierros() {
-
+   
+    pyorii();
     console.log('toinen kierros');
     console.log('kopiolista ennen toista kierrosta', rullienTulokset2);
     
@@ -360,7 +402,9 @@ async function tokaPelikierros() {
     }
 
     // odotetaan kaikki rullat loppuun
+   
     await Promise.all(lupaukset);
+  
 
     // voitot valitaan kopiolistalta jos lukitaan joku
 
@@ -425,6 +469,7 @@ async function tokaPelikierros() {
       
     }
     console.log('kopiolista toisen kierroksen jälkeen', rullienTulokset2);
+    pysayta();
     voittoVilkku2();
     vapautaPanos();
 
@@ -435,6 +480,9 @@ async function tokaPelikierros() {
 let rullatPyorimassa = false;
 
 function rullatPyorii() {
+   
+   
+    
     bigwin.innerHTML = '';
     voittoTeksti.innerHTML = '';
     voitto = 0;
@@ -446,6 +494,8 @@ function rullatPyorii() {
         lukitseEikaytossa();
         
         Promise.all([rullaYksi(), rullaKaksi(), rullaKolme(), rullaNelja()]).then(() => {
+           
+           
             rullatPyorimassa = false;
             lukitseKaytossa();
             resolve();
@@ -457,6 +507,7 @@ function rullatPyorii() {
 // animointi rullille
 
 function vaihdaKuva(rullaElement, kuviot, kuvaIndex) {
+   
     let kuvaHtml = kuviot[kuvaIndex].html;
 
     if (kuvaIndex === kuviot.length - 1) {
@@ -468,14 +519,20 @@ function vaihdaKuva(rullaElement, kuviot, kuvaIndex) {
     }
 
     rullaElement.innerHTML = kuvaHtml;
+    
 
     return kuvaIndex + 1;
 }
 
 
+
+
 // ekan rullan kuvion arvonta
 
 async function rullaYksi() {
+
+    
+   
     let arvotutKuviot = [];
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla1');
@@ -488,23 +545,37 @@ async function rullaYksi() {
 
     // lisätään viimeksi arvottu kuva voittokuvioksi
     rullienTulokset.push(arvotutKuviot[7].arvo);
-
+   
+    
     return new Promise((resolve) => {
+        
         let rullaPyorii = setInterval(function () {
             kuvaIndex = vaihdaKuva(rullaElement, arvotutKuviot, kuvaIndex);
             if (kuvaIndex >= arvotutKuviot.length) {
                 clearInterval(rullaPyorii);
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
-                }, 900);
+                    
+                },900);
+                stop();
+               
+                
             }
-        }, 250);
+           
+        },250);
+       
+        
+        
     });
+   
+    
+   
 }
 
 
 // tokan rullan kuvion arvonta
 async function rullaKaksi() {
+ 
     let arvotutKuviot = [];
     let kuvaIndex = 0;
     let rullaElement = document.getElementById('rulla2');
@@ -526,13 +597,17 @@ async function rullaKaksi() {
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
                 }, 900);
+                stop();
+           
             }
-        }, 300);
+        },  350);
+       
     });
 }
 
 // kolmannen rullan kuvion arvonta
 async function rullaKolme() {
+  
     return new Promise((resolve) => {
         let arvotutKuviot = [];
         let kuvaIndex = 0;
@@ -554,13 +629,19 @@ async function rullaKolme() {
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
                 }, 900);
+                stop();
+              
             }
-        }, 350);
+        }, 450);
+
+        
     });
 }
 
 // neljännen rullan kuvion arvonta
 async function rullaNelja() {
+   
+    
     return new Promise((resolve) => {
         let arvotutKuviot = [];
         let kuvaIndex = 0;
@@ -582,8 +663,11 @@ async function rullaNelja() {
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
                 }, 900);
+                stop();
+               
             }
-        }, 400);
+        },550);
+        
     });
 }
 
@@ -600,6 +684,7 @@ function naytaUusiVoitto() {
 
 // panoksen päivitys-funktio
 function vahennaPanosta() {
+    panosAanialas();
     if(panos >1){
     panos--;
     naytaUusipanos.innerHTML = (`Bet <br> ${panos} €`);
@@ -608,7 +693,7 @@ function vahennaPanosta() {
 
 // panoksen päivitys-funktio
 function suurennaPanosta() {
-    panosAani1();
+    panosAaniylos()
     if(panos <10 ){
     panos++;
     naytaUusipanos.innerHTML = (`Bet <br> ${panos} €`);
