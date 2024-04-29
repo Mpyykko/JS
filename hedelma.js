@@ -84,7 +84,7 @@ window.addEventListener('load', function() {
     setTimeout(function() {
       const loadingScreen = document.querySelector('.latausikkuna');
       loadingScreen.style.display = 'none';
-    }, 1500);
+    }, 500);
   });
 
 
@@ -568,12 +568,14 @@ async function rullaYksi() {
                 clearInterval(rullaPyorii);
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
+                    stop();
                     
                 },900);
-                stop();
+               
                
                 
             }
+            
            
         },250);
        
@@ -609,8 +611,9 @@ async function rullaKaksi() {
                 clearInterval(rullaPyorii);
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
+                    stop();
                 }, 900);
-                stop();
+                
            
             }
         },  350);
@@ -641,8 +644,9 @@ async function rullaKolme() {
                 clearInterval(rullaPyorii);
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
+                    stop();
                 }, 900);
-                stop();
+                
               
             }
         }, 450);
@@ -675,8 +679,9 @@ async function rullaNelja() {
                 clearInterval(rullaPyorii);
                 setTimeout(() => {
                     resolve(arvotutKuviot[7].arvo);
+                    stop();
                 }, 900);
-                stop();
+                
                
             }
         },550);
