@@ -190,22 +190,19 @@ body{
         overflow: hidden;
         flex: 1;
         box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.4);
-       
     }
 
 
     
     .rulla-symboli {
-    
-        width: 60%;
-        height: 50%;
-        position:relative;
-        margin: 0px auto;
-        top: 10px;
+        width: 70px;
+        height: 60px;
+        position: relative;
+        margin: 0 auto;
+        top: 15px;
         animation: liukuuAlas 300ms ease-in forwards;
-        object-fit: contain; 
-        
-     
+        object-fit: contain;
+       
     }
 
     @keyframes liukuuAlas {
@@ -222,14 +219,15 @@ body{
     
     
     .rulla-symboli2 {
-        width: 60%;
-        height: 50%;
+        width: 70px;
+        height: 60px;
         position:relative;
         margin: 0px auto;
-        top: 35%;
+        top: 20px;
         animation: liukuuAlas2 700ms ease-in forwards;
-        object-fit: contain; 
-     
+        object-fit: contain;
+        
+  
     }
   
 
@@ -311,6 +309,8 @@ body{
         width: 100px;
         padding-top: 100px;
         border: none;
+    
+        
      
    
     }
@@ -320,9 +320,6 @@ body{
     }
 
     #panosAlas-painike{
-       
-     
-       
         background-color: transparent;
         background-image: url(pelikuvat/betdown2.png);
         background-size: 100% 100%;
@@ -331,6 +328,9 @@ body{
         height: 40px;
         border: none;
         margin-bottom: 25px;
+  
+    
+
       
       
     }
@@ -503,11 +503,11 @@ body{
       
       .vilkku {
         animation: vilkutus 1000ms linear infinite;
-        width: 60%;
-        height: 50%;
+        width: 60px;
+        height: 60px;
         position:relative;
         margin: 0px auto;
-        top: 35%;
+        top: 25%;
       }
 
 
@@ -779,6 +779,7 @@ body{
             .rulla-container {
                 position: absolute;
                 width: 100%;
+            
                 left: 0;
                 right: 0;
                 top: 30%;
@@ -808,21 +809,23 @@ body{
             }
 
             .iso-voitto{
-            top:15%;
+            top:8%;
             }
        
            
             .rulla-symboli .rulla-symboli2{
-                width: 70%;
-                height: 60%;
+                width: 70px;
+                height: 60px;
                 object-fit: contain;
-                top: 40%;
+            
+             
+            
             }
          
 
             .peli-painikkeet{
                 bottom: 50px;
-             
+               
             }
 
    
