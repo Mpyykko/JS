@@ -170,17 +170,12 @@ body{
             filter: brightness(1.2) hue-rotate(0deg) saturate(1) contrast(100%);
         }
         20% {
-            filter: brightness(0.7) hue-rotate(-10deg) saturate(5) contrast(100%);
+            filter: brightness(0.7) hue-rotate(-5deg) saturate(5) contrast(100%);
         }
         40% {
-            filter: brightness(0.7) hue-rotate(-15deg) saturate(8) contrast(100%);
+            filter: brightness(0.7) hue-rotate(10deg) saturate(5) contrast(100%);
         }
-        60% {
-            filter: brightness(0.7) hue-rotate(-20deg) saturate(8) contrast(100%);
-        }
-        80% {
-            filter: brightness(0.7) hue-rotate(-10deg) saturate(6) contrast(100%);
-        }
+     
         100% {
             filter: brightness(1.2) hue-rotate(0deg) saturate(1) contrast(100%);
         }
@@ -339,11 +334,9 @@ body{
         opacity: 1;
         width: 100px;
         padding-top: 100px;
-        border: none;
-    
-        
-     
-   
+        border: 3px solid rgba(198, 197, 197, 0.63);
+        border-radius: 50%;
+  
     }
     #pelaa-painike:hover{
         transform: scale(0.95);
@@ -357,13 +350,9 @@ body{
         opacity: 1;
         width: 40px;
         height: 40px;
-        border: none;
+        border: 3px solid rgba(198, 197, 197, 0.63);
+        border-radius: 30%;
         margin-bottom: 25px;
-  
-    
-
-      
-      
     }
     #panosAlas-painike:hover{
         transform: scale(0.95);
@@ -371,14 +360,14 @@ body{
     }
 
     #panosYlos-painike{
-    
         background-color: transparent;
         background-image: url(pelikuvat/betup2.png);
         background-size: 100% 100%;
         opacity: 1;
         width: 40px;
         height: 40px;
-        border: none;
+        border: 3px solid rgba(198, 197, 197, 0.63);
+        border-radius: 30%;
         margin-bottom: 25px;
         
       
@@ -789,7 +778,7 @@ body{
             }
             .pelikone-container{
                 height: 60vh;
-                width: 100%;
+                width: 95%;
             }
 
             .rulla-container {
