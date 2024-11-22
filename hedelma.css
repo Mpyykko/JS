@@ -74,7 +74,7 @@ body{
         border: 5px solid rgba(0, 0, 0, 0.55);
         border-radius: 5px;
         height: 60vh;
-        background-image: url(pelikuvat/uusilippu.png);
+        background-image: url(pelikuvat/t2.jpeg);
         background-size: 100% 100%;
         background-position: center;
         margin-top: 50px;
@@ -107,6 +107,7 @@ body{
         z-index: 1002;
         top: 0;
         overflow-y: auto;
+     
        
     }
 
@@ -141,6 +142,7 @@ body{
         top: 5px;
         background-image: url(pelikuvat/dollar.png);
         background-size: 100% 100%;
+        cursor: pointer;
 
     }
 
@@ -160,6 +162,7 @@ body{
         width: 50%;
         top: -12%;
         animation: Liehunta 10s ease-in-out infinite;
+        cursor: pointer;
     }
 
     @keyframes Liehunta {
@@ -219,7 +222,7 @@ body{
 
     
     .rulla-symboli {
-        width: 80%;
+        width: 70%;
         height: 70%;
         position: relative;
         margin: 0 auto;
@@ -243,7 +246,7 @@ body{
     
     
     .rulla-symboli2 {
-        width: 80%;
+        width: 70%;
         height: 70%;
         position:relative;
         margin: 0px auto;
@@ -281,8 +284,7 @@ body{
         background-position: center;
         background-size: 100% 100%;
         border: none;
-        
-       
+        cursor: pointer;
     }
 
     .lukitse-napit{
@@ -293,8 +295,10 @@ body{
         justify-content: space-between;
         width:100%;
         height: 25px;
-    
+      
     }
+
+
 
    
 
@@ -305,6 +309,7 @@ body{
         right: 0;
         bottom: 10%;
         width: 100%;
+      
         
         
     }
@@ -312,6 +317,7 @@ body{
     .peli-painike {
         display: inline-block;
         margin-right: 10px;
+        cursor: pointer;
        
       
     }
@@ -320,6 +326,7 @@ body{
     .panoslukittu {
         pointer-events: none;
         opacity: 0.1;
+      
     }
    
 
@@ -329,7 +336,7 @@ body{
         background-image: url(pelikuvat/play5.png);
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.7;
+        opacity: 1;
         width: 100px;
         padding-top: 100px;
         border: none;
@@ -347,7 +354,7 @@ body{
         background-color: transparent;
         background-image: url(pelikuvat/betdown2.png);
         background-size: 100% 100%;
-        opacity: 0.7;
+        opacity: 1;
         width: 40px;
         height: 40px;
         border: none;
@@ -365,12 +372,10 @@ body{
 
     #panosYlos-painike{
     
-      
-    
         background-color: transparent;
         background-image: url(pelikuvat/betup2.png);
         background-size: 100% 100%;
-        opacity: 0.7;
+        opacity: 1;
         width: 40px;
         height: 40px;
         border: none;
@@ -527,11 +532,11 @@ body{
       
       .vilkku {
         animation: vilkutus 1000ms linear infinite;
-        width: 80%;
+        width: 70%;
         height: 70%;
         position:relative;
         margin: 0px auto;
-        top: 25%;
+        top: 22%;
       }
 
 
@@ -784,7 +789,7 @@ body{
             }
             .pelikone-container{
                 height: 60vh;
-                width: 90%;
+                width: 100%;
             }
 
             .rulla-container {
