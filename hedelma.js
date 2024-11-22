@@ -80,7 +80,6 @@ function taustaMusa() {
 
 // latausikkuna
 window.addEventListener('load', function() {
-    
     setTimeout(function() {
       const loadingScreen = document.querySelector('.latausikkuna');
       loadingScreen.style.display = 'none';
@@ -94,7 +93,7 @@ const pelaa = document.getElementById('pelaa-painike');
 pelaa.addEventListener('click', pelikierros);
 
 // muuttujat saldolle, panokselle ja voitoille
-let saldo = 50;
+let saldo = 500;
 const naytaUusisaldo = document.getElementById('saldo');
 let panos = 1;
 const naytaUusipanos = document.getElementById('panos');
@@ -297,10 +296,9 @@ const voittoKuviot = [meloni,seiska,bar,eselogo,lippu,tahti];
 
 
 async function ekaPelikierros(){
-    pyorii();
+  
    
     await rullatPyorii();
-
 
     pysayta();
    
@@ -391,8 +389,6 @@ async function ekaPelikierros(){
 }
 
 async function tokaPelikierros() {
-   
-    pyorii();
     console.log('toinen kierros');
     console.log('kopiolista ennen toista kierrosta', rullienTulokset2);
     
@@ -545,6 +541,7 @@ function vaihdaKuva(rullaElement, kuviot, kuvaIndex) {
 async function rullaYksi() {
 
     
+    
    
     let arvotutKuviot = [];
     let kuvaIndex = 0;
@@ -555,7 +552,7 @@ async function rullaYksi() {
         let indeksi = Math.floor(Math.random() * voittoKuviot.length);
         arvotutKuviot.push(voittoKuviot[indeksi]);
     }
-
+    
     // lisätään viimeksi arvottu kuva voittokuvioksi
     rullienTulokset.push(arvotutKuviot[7].arvo);
    
@@ -570,9 +567,10 @@ async function rullaYksi() {
                     resolve(arvotutKuviot[7].arvo);
                     stop();
                     
+                    
                 },900);
                
-               
+                
                 
             }
             
@@ -584,7 +582,6 @@ async function rullaYksi() {
     });
    
     
-   
 }
 
 
