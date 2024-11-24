@@ -1,7 +1,7 @@
 
 
 body{
-    background-image: url(pelikuvat/keltainentausta.png);
+    background-image: url(pelikuvat/bonustausta.jpeg);
     background-size: 100% 100%;
 }
 
@@ -94,8 +94,6 @@ body{
         width: 100%;
         height: auto;
         max-height: 100%;
-        box-sizing: border-box;
-        margin: 0 auto;
         border-radius: 2px;
         left: 0;
         right: 0;
@@ -104,11 +102,9 @@ body{
         display: none;
         justify-content: center;
         align-items: center;
-        z-index: 1002;
+        z-index: 1200;
         top: 0;
         overflow-y: auto;
-     
-       
     }
 
     #peliohjeet::-webkit-scrollbar {
@@ -136,8 +132,8 @@ body{
 
     .ohjeet{
         position: absolute;
-        width: 60px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
         left: 0;
         top: 0;
         background-image: url(pelikuvat/dollar.png);
@@ -290,6 +286,7 @@ body{
         justify-content: space-between;
         width:100%;
         height: 25px;
+        z-index: 1003;
       
     }
 
@@ -568,9 +565,101 @@ body{
         transform: translateX(-50%);
         text-align: center;
       }
+
+      .hide {
+        visibility: hidden;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(pelikuvat/uusitausta8\ .jpeg);
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        z-index: 2000;
+      }
+      
+    
+      #overlay h1 {
+        position: absolute;
+        margin-bottom: 20px;
+        font-size: 3rem;
+        text-align: center;
+        color: white;
+        top: 0px;
+
+      }
+      
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        width: 80%;
+      }
+      
+     
+      .grid-item {
+        background-image: url(pelikuvat/arkku.png);
+        background-size: 100% 100%;
+        border: none;
+        height: 80px;
+        width: 100px;
+        text-align: center;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: transparent;
+   
+      }
+      
+      
+      .grid-item:hover {
+        scale: 1.5;
+      }
+
+      #close-button {
+        position: absolute;
+        bottom: 240px;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      #close-button:hover {
+        background-color: #cc0000;
+      }
+
+      #bonusGame{
+        width: 60px;
+        max-width: 60px;
+        height: 60px;
+        max-height: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+        border: none;
+      }
+      #bonusGame img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
+   
   
-
-
     @media only screen and (min-width: 1101px) and (max-width:1300px){
         .pelikone-container{
             height: 80vh;
@@ -616,20 +705,12 @@ body{
                 width: 80%;
                 height: 30%;
                 top: 30%;
-              
-             
-              
-            
             }
 
             .peli-painikkeet{
-             
-                bottom: 30px;
-             
+                bottom: 25px;
             }
 
-            
-   
         
             #saldo{
                 position:absolute;
@@ -668,10 +749,6 @@ body{
                 top: 20%;
               
             }
-
-            
-    
-     
        
         }
 
@@ -796,7 +873,7 @@ body{
             }
          
             .rulla-symboli {
-                width: 80%;
+                width: 70%;
                 height: 70%;
                 max-height: 60px;
                 position: relative;
@@ -820,7 +897,7 @@ body{
             .lukitse-napit{
                 top: 50%;
                 gap: 2px;
-                z-index: 1001;
+          
             }
       
             .peli-otsikko{

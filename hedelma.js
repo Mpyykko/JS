@@ -280,11 +280,11 @@ const bar =  {
     arvo: 3
 };
 const eselogo = {
-    html: "<img src='pelikuvat/ese.png'>",
+    html: "<img src='pelikuvat/kolikko.png'>",
     arvo: 4
 };
 const lippu = {
-    html: "<img src='pelikuvat/omalippu.png'>",
+    html: "<img src='pelikuvat/lippu3.png'>",
     arvo: 5
 };
 const tahti = {
@@ -973,3 +973,10 @@ function voittoVilkkupois() {
     });
 }
 
+function showOverlay() {
+    document.getElementById("overlay").classList.remove("hide");
+  }
+  
+  function hideOverlay() {
+    document.getElementById("overlay").classList.add("hide");
+  }
