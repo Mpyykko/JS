@@ -132,14 +132,13 @@ body{
 
     .ohjeet{
         position: absolute;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         left: 0;
         top: 0;
         background-image: url(pelikuvat/dollar.png);
         background-size: 100% 100%;
         cursor: pointer;
-
     }
 
   
@@ -642,9 +641,7 @@ body{
 
       #bonusGame{
         width: 60px;
-        max-width: 60px;
         height: 60px;
-        max-height: 60px;
         position: absolute;
         right: 0;
         top: 0;
@@ -654,7 +651,7 @@ body{
       #bonusGame img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 
 
