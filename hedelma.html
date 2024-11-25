@@ -48,15 +48,27 @@
 
         <div id="overlay" class="hide">
             <h1>Bonus game</h1>
-            <div class="tausta">
-            <div class="grid-container">
-              <button class="grid-item"></button>
-              <button class="grid-item"></button>
-              <button class="grid-item"></button>
+            <div id="initial-options">
+              <button id="buy-bonus-button" onclick="buyBonus()">Buy bonus x100</button>
+              <button id="close-button" onclick="hideOverlay()">Back</button>
             </div>
+            <div id="bonus-selection" class="hide">
+                <div id="announcement-board">
+                    <span id="bonus-info"></span>
+                  </div>
+              <div class="tausta">
+                <div class="grid-container">
+                  <button class="grid-item" onclick="selectItem(1)"></button>
+                  <button class="grid-item" onclick="selectItem(2)"></button>
+                  <button class="grid-item" onclick="selectItem(3)"></button>
+                </div>
+              </div>
+              
             </div>
-            <button id="close-button" onclick="hideOverlay()">Close</button>
+           
           </div>
+        
+          
 
         <img src="pelikuvat/bar.png" width=5% class="tippuvat" alt="bar">
         <img src="pelikuvat/tahti.png" width=10% class="tippuvat" alt="tahti">

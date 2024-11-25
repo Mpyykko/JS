@@ -78,6 +78,7 @@ function taustaMusa() {
     }
 }
 
+
 // latausikkuna
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -288,7 +289,7 @@ const lippu = {
     arvo: 5
 };
 const tahti = {
-    html: "<img src='pelikuvat/tahti.png'>",
+    html: "<img src='pelikuvat/tahti2.png'>",
     arvo: 6
 };
 
@@ -974,9 +975,66 @@ function voittoVilkkupois() {
 }
 
 function showOverlay() {
-    document.getElementById("overlay").classList.remove("hide");
+    document.getElementById('overlay').classList.remove('hide');
+    document.getElementById("initial-options").classList.remove('hide');
+    document.getElementById('bonus-selection').classList.add('hide');
+    updateBonusInfo('Pick one');
+   
   }
   
   function hideOverlay() {
-    document.getElementById("overlay").classList.add("hide");
+    document.getElementById('overlay').classList.add('hide');
+    updateBonusInfo(''); 
   }
+  
+  function buyBonus() {
+    const bonusHinta = 100 * panos;
+  
+    if (saldo >= bonusHinta) {
+      saldo -= bonusHinta;
+ 
+      naytaSaldo();
+      document.getElementById('initial-options').classList.add('hide');
+      document.getElementById('bonus-selection').classList.remove('hide');
+    } else {
+        updateBonusInfo(`No money`);
+    }
+  }
+  
+  function selectItem(itemNumber) {
+    const items = document.querySelectorAll('.grid-item');
+
+    items.forEach((item, index) => {
+        if (index !== itemNumber - 1) {
+            item.classList.add('hidden');
+        } else {
+            item.classList.add('selected');
+        }
+    });
+
+    const randomAmount = Math.floor(Math.random() * 10 + 1) * 50;
+    const winnings = randomAmount * panos;
+    saldo += winnings;
+    naytaSaldo();
+    updateBonusInfo(`You won ${randomAmount}€!`);
+    setTimeout(() => {
+        resetItems();
+        hideOverlay();
+    }, 3000);
+}
+
+function resetItems() {
+    const items = document.querySelectorAll('.grid-item');
+
+    items.forEach(item => {
+        item.classList.remove('hidden', 'selected');
+    });
+    updateBonusInfo('');
+}
+
+
+
+function updateBonusInfo(message) {
+    document.getElementById('bonus-info').textContent = message;
+}
+

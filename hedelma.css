@@ -74,7 +74,7 @@ body{
         border: 5px solid rgba(0, 0, 0, 0.55);
         border-radius: 5px;
         height: 60vh;
-        background-image: url(pelikuvat/t2.jpeg);
+        background-image: url(pelikuvat/t3.jpeg);
         background-size: 100% 100%;
         background-position: center;
         margin-top: 50px;
@@ -139,6 +139,7 @@ body{
         background-image: url(pelikuvat/dollar.png);
         background-size: 100% 100%;
         cursor: pointer;
+        background-color: transparent;
     }
 
   
@@ -570,12 +571,13 @@ body{
       }
 
       #overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(pelikuvat/uusitausta8\ .jpeg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70vw;
+        height: 70vh;
+        background-image: url(pelikuvat/uusitausta8.jpeg);
         background-size: 100% 100%;
         display: flex;
         flex-direction: column;
@@ -583,9 +585,9 @@ body{
         align-items: center;
         color: white;
         z-index: 2000;
+        border: 2px solid black;
       }
       
-    
       #overlay h1 {
         position: absolute;
         margin-bottom: 20px;
@@ -593,7 +595,6 @@ body{
         text-align: center;
         color: white;
         top: 0px;
-
       }
       
       .grid-container {
@@ -601,6 +602,7 @@ body{
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
         width: 80%;
+        max-width: 100%;
       }
       
      
@@ -614,17 +616,20 @@ body{
         font-size: 1rem;
         cursor: pointer;
         background-color: transparent;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+  
+      .grid-item.hidden {
+        visibility: hidden;
+        pointer-events: none;
+    }
+  
+    .grid-item.selected {
+        transform: scale(2);
    
-      }
-      
-      
-      .grid-item:hover {
-        scale: 1.5;
-      }
+    }
 
-      #close-button {
-        position: absolute;
-        bottom: 240px;
+      #buy-bonus-button, #close-button {
         background-color: black;
         color: white;
         border: none;
@@ -637,6 +642,9 @@ body{
       
       #close-button:hover {
         background-color: #cc0000;
+      }
+      #buy-bonus-button:hover {
+        background-color: green;
       }
 
       #bonusGame{
@@ -653,6 +661,36 @@ body{
         height: 100%;
         object-fit: cover;
     }
+
+    #bonus-info {
+        display: block;
+        margin: 10px 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+      #announcement-board {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 100px;
+        background-color: #f4e1d2;
+        border: 2px solid #d4a373;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 36px;
+        color: #5a4631;
+        padding: 10px;
+    }
+      
+  
+   
 
 
    
@@ -958,6 +996,11 @@ body{
                 width: 60%;
                 top: 20%;
               
+            }
+
+            #overlay{
+                width: 95%;
+
             }
 
 
