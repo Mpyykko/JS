@@ -983,27 +983,36 @@ function showOverlay() {
   }
   
   function hideOverlay() {
+    noMoneyElement.style.display = 'none';
     document.getElementById('overlay').classList.add('hide');
-    updateBonusInfo(''); 
+    updateBonusInfo('');
   }
   
+  const noMoneyElement = document.getElementById('no-money');
+
   function buyBonus() {
     const bonusHinta = 100 * panos;
-  
+    
     if (saldo >= bonusHinta) {
-      saldo -= bonusHinta;
- 
-      naytaSaldo();
-      document.getElementById('initial-options').classList.add('hide');
-      document.getElementById('bonus-selection').classList.remove('hide');
+        saldo -= bonusHinta;
+        naytaSaldo();
+        document.getElementById('initial-options').classList.add('hide');
+        document.getElementById('bonus-selection').classList.remove('hide');
+       
     } else {
-        updateBonusInfo(`No money`);
+        if (noMoneyElement) {
+            noMoneyElement.style.display = 'block';
+        }
     }
-  }
+}
   
-  function selectItem(itemNumber) {
-    const items = document.querySelectorAll('.grid-item');
+let isClicked = false;
 
+function selectItem(itemNumber) {
+    if (isClicked) return;
+    isClicked = true;
+
+    const items = document.querySelectorAll('.grid-item');
     items.forEach((item, index) => {
         if (index !== itemNumber - 1) {
             item.classList.add('hidden');
@@ -1017,11 +1026,15 @@ function showOverlay() {
     saldo += winnings;
     naytaSaldo();
     updateBonusInfo(`You won ${randomAmount}€!`);
+
+
     setTimeout(() => {
         resetItems();
         hideOverlay();
+        isClicked = false;
     }, 3000);
 }
+
 
 function resetItems() {
     const items = document.querySelectorAll('.grid-item');
@@ -1029,6 +1042,7 @@ function resetItems() {
     items.forEach(item => {
         item.classList.remove('hidden', 'selected');
     });
+    noMoneyElement.textContent = ''; 
     updateBonusInfo('');
 }
 

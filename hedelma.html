@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=DynaPuff:wght@400..700&family=Joti+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hedelma.css">
     <link rel="shortcut icon" href="pelikuvat/seiska.png" type="image/x-icon">
@@ -47,8 +48,11 @@
        
 
         <div id="overlay" class="hide">
-            <h1>Bonus game</h1>
+            <h1>BONUS GAME</h1>
             <div id="initial-options">
+                <div id="no-money" style="display: none;">
+                    <span>Not enough balance</span>
+                </div>
               <button id="buy-bonus-button" onclick="buyBonus()">Buy bonus x100</button>
               <button id="close-button" onclick="hideOverlay()">Back</button>
             </div>

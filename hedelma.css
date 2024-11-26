@@ -595,6 +595,7 @@ body{
         text-align: center;
         color: white;
         top: 0px;
+        font-family: "Joti One", serif;
       }
       
       .grid-container {
@@ -617,6 +618,7 @@ body{
         cursor: pointer;
         background-color: transparent;
         transition: transform 0.5s ease, opacity 0.5s ease;
+        transform: translateY(-100px); 
       }
   
       .grid-item.hidden {
@@ -625,7 +627,7 @@ body{
     }
   
     .grid-item.selected {
-        transform: scale(2);
+        transform: scale(1.5);
    
     }
 
@@ -638,6 +640,10 @@ body{
         cursor: pointer;
         border-radius: 5px;
         transition: background-color 0.3s ease;
+        display: block;
+        margin: 20px auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+        font-family: "Joti One", serif;
       }
       
       #close-button:hover {
@@ -646,6 +652,29 @@ body{
       #buy-bonus-button:hover {
         background-color: green;
       }
+
+      #no-money {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 100px;
+        background-color: #f4e1d2;
+        border: 2px solid #d4a373;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+        color: #5a4631;
+        padding: 10px;
+        font-family: "Joti One", serif;
+    }
+      
+    
 
       #bonusGame{
         width: 60px;
@@ -667,6 +696,7 @@ body{
         margin: 10px 0;
         font-weight: bold;
         text-align: center;
+        font-family: "Joti One", serif;
     }
 
       #announcement-board {
@@ -679,7 +709,7 @@ body{
         background-color: #f4e1d2;
         border: 2px solid #d4a373;
         border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -687,6 +717,7 @@ body{
         font-size: 36px;
         color: #5a4631;
         padding: 10px;
+        font-family: "Joti One", serif;
     }
       
   
