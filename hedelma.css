@@ -218,7 +218,7 @@ body{
         position: relative;
         margin: 0 auto;
         top: 15px;
-        animation: liukuuAlas 400ms ease-out forwards;
+        animation: liukuuAlas 800ms ease-out forwards;
         object-fit: contain;
        
     }
@@ -230,7 +230,7 @@ body{
        
         
         100% {
-            transform: translateY(120px);
+            transform: translateY(550px);
          
         }
     }
