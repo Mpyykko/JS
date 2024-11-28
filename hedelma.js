@@ -78,7 +78,7 @@ function taustaMusa() {
     }
 }
 
-
+/*
 // latausikkuna
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -86,7 +86,7 @@ window.addEventListener('load', function() {
       loadingScreen.style.display = 'none';
     }, 500);
   });
-
+*/
 
 
 // pelaa-painike
@@ -887,6 +887,7 @@ async function lukotAuki(){
 // voittotaulukko
 
 function naytaVoitot() {
+    klikki()
     // pelivalikko piiloon
     document.getElementById('peli-painikkeet').style.display = 'none';
    
@@ -975,6 +976,7 @@ function voittoVilkkupois() {
 }
 
 function showOverlay() {
+    klikki()
     document.getElementById('overlay').classList.remove('hide');
     document.getElementById("initial-options").classList.remove('hide');
     document.getElementById('bonus-selection').classList.add('hide');
@@ -991,6 +993,7 @@ function showOverlay() {
   const noMoneyElement = document.getElementById('no-money');
 
   function buyBonus() {
+    klikki()
     const bonusHinta = 100 * panos;
     
     if (saldo >= bonusHinta) {
@@ -1021,11 +1024,12 @@ function selectItem(itemNumber) {
         }
     });
 
-    const randomAmount = Math.floor(Math.random() * 10 + 1) * 50;
-    const winnings = randomAmount * panos;
+    const randomMultiplier = Math.floor(Math.random() * 991 + 10);
+    const winnings = randomMultiplier * panos;
+    isoVoittoaani();
     saldo += winnings;
     naytaSaldo();
-    updateBonusInfo(`You won ${randomAmount}€!`);
+    updateBonusInfo(`You won ${winnings}€!`)
 
 
     setTimeout(() => {
