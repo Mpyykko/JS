@@ -230,7 +230,7 @@ body{
        
         
         100% {
-            transform: translateY(550px);
+            transform: translateY(350px);
          
         }
     }
@@ -1034,6 +1034,18 @@ body{
             #overlay{
                 width: 95%;
 
+            }
+
+            @keyframes liukuuAlas {
+                0% {
+                    transform: translateY(-80px);
+                }
+               
+                
+                100% {
+                    transform: translateY(350px);
+                 
+                }
             }
 
 
