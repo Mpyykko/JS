@@ -33,7 +33,6 @@ section{
 
 main{
     font-size: 1.3em;
- 
     text-align: center;
     align-items: center;
 
@@ -221,12 +220,12 @@ color: rgb(109, 159, 220);
         background-color: rgba(0, 0, 0, 0.93);
         backdrop-filter: blur(4px);
         position: relative;
+       
         
     }
     
 
     .navigointivalikko {
-      
         position: absolute;
         display: none;
         top: 50px;
@@ -241,6 +240,7 @@ color: rgb(109, 159, 220);
         z-index: 999;
         transition: max-height 2s ease;
         overflow: hidden;
+        z-index: 5000;
         
  
     }
